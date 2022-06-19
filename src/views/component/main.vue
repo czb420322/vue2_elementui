@@ -1,6 +1,6 @@
 <template>
   <div>
-    我是主体内容 <br>
+    我是主体内容123 <br>
     <div>我是来自父元素Home的数据{{ foo }}</div>
   </div>
 </template>
