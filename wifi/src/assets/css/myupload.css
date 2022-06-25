@@ -1,0 +1,346 @@
+.myupload {
+  width: 100%;
+  position: absolute;
+  top: 0.6rem;
+  bottom: 0px;
+  left: 0px;
+}
+
+.main {
+  padding: 0;
+}
+
+.main_top {
+  line-height: 0.5rem;
+  text-align: center;
+  font-size: 0;
+  /* border-bottom: 1px solid #d5dade; */
+}
+
+.main_top input {
+  width: 5rem;
+  height: 0.3rem;
+  font-size: 0.14rem;
+  border: 1px solid #8fb4d4;
+  border-radius: 0.03rem;
+  color:#99c9fa;
+  vertical-align: middle;
+  border-right:none !important
+}
+
+/* .main_top span {
+  display: inline-block;
+  width: 0.6rem;
+  line-height: 0.3rem;
+  vertical-align: middle;
+  font-size: 0.16rem;
+  background-color: #409EFF;
+  color: #fff;
+} */
+
+.main_top>>>.el-button {
+  padding: 0.07rem 0.14rem;
+  margin-left: 0;
+  vertical-align: middle;
+  border-radius: 0%;
+  background-color:#18406b;
+  border:1px solid #467283;
+}
+
+.main_btn {
+  width: 98%;
+  margin: 0 auto 0;
+  height: calc(100% - 0.65rem);
+  /* border: 1px solid #0C3465; */
+  font-size: 0.14rem;
+}
+
+.btn_top {
+  padding: 0 0.2rem;
+  line-height: 0.3rem;
+  background-color: transparent;
+  /* border: 1px solid #0C3465; */
+  display: flex;
+  color: #c5c5c5;
+  justify-content: space-between;
+}
+.btn_top p{
+  margin-top:0.24rem;
+  color:#99c9fa
+}
+.btn_top p span{
+  color:#d16f66;
+}
+.btn_top p:nth-child(2) span {
+  margin-left: 0.3rem;
+  width: 0.9rem;
+  cursor: pointer;
+  position: relative;
+}
+.showType{
+  font-size: 0.14rem
+}
+.showType span{
+  margin-left: 0.3rem;
+  width: 0.9rem;
+  cursor: pointer;
+  position: relative;
+
+}
+.items b {
+  position: absolute;
+  top: 0.02rem;
+  left: -0.25rem;
+  display: inline-block;
+  border: 1px solid #dcdfe6;
+  border-radius: 100%;
+  width: 0.14rem;
+  height: 0.14rem;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.items b i {
+  position: absolute;
+  width: 0.06rem;
+  height: 0.06rem;
+  border-radius: 100%;
+  background-color: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%)
+}
+
+.active b {
+  background-color: #409eff;
+}
+
+.results {
+  padding: 0 0.2rem 0.1rem;
+}
+
+
+.firstul,
+.twoUl {
+  height: 6.6rem;
+  max-height: 770px;
+
+  overflow-y: scroll;
+}
+
+.firstul li {
+  float: left;
+  width: 19.20%;
+  padding: 0.1rem;
+  margin-right: 1%;
+  /* height: 3.5rem; */
+  margin-bottom: 0.15rem;
+  color: #99c9fa ;
+  font-size: 0.12rem;
+  box-sizing: border-box;
+}
+
+.firstul li:nth-child(5n) {
+  margin-right: 0;
+}
+
+.firstul li div {
+  height: 2.1rem;
+  width: 100%;
+  margin-bottom: 0.05rem;
+  display: block;
+  cursor: pointer;
+  position: relative;
+  border: 1px solid #235588;
+  overflow: hidden;
+}
+.firstul li div img{
+  position: absolute;
+  max-width: 100%;
+  max-height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  object-fit:contain
+}
+
+.firstul li p {
+  padding: 0.01rem 0;
+  line-height: 0.22rem;
+  font-size: 0.12rem
+}
+.firstul .uploadtime{
+  float:left
+}
+.firstul .Icon {
+  margin-top: 0.05rem;
+  float:right
+}
+
+.firstul .Icon span {
+  display: inline-block;
+  width: 0.9rem;
+  height: 0.2rem;
+  line-height: 0.2rem;
+  text-align: center;
+  /* background: #23517c; */
+  font-size: 0.12rem;
+  /* border: 1px solid #2284b9; */
+  border-radius: 0.02rem;
+  color:#fff;
+  cursor: pointer;
+  /* -webkit-box-shadow: 1px 1px 5px 2px #ccc;
+  box-shadow: 1px 1px 5px 2px #ccc; */
+}
+
+/* .firstul .Icon .el-icon-edit-outline:hover {
+  background: #409EFF;
+  color: white;
+}
+
+.firstul .Icon .el-icon-delete:hover {
+  background: #f56c6c;
+  color: white;
+} */
+
+.firstul .Icon .el-icon-edit-outline {
+  float: left;
+}
+
+.firstul .Icon .el-icon-delete {
+  float: right;
+}
+
+.twoUl li {
+  width: 49.5%;
+  float: left;
+  padding: 0.05rem;
+  margin-bottom: 0.15rem;
+  height: 2rem;
+  margin-right: 1%;
+  position: relative;
+  box-sizing: border-box;
+  color:#99c9fa
+}
+
+.twoUl li:nth-child(2n) {
+  margin: 0;
+}
+
+.twoUl li img {
+  display: block;
+  float: left;
+  height: 100%;
+  width: 2rem;
+  cursor: pointer;
+}
+
+.twoUl li div {
+  margin-left: 2.2rem;
+}
+.twoUl li p{
+  font-size: 0.12rem;
+  line-height: 0.22rem
+}
+.twoUl li p span {
+  float: left;
+  width: 0.7rem;
+}
+
+.twoUl li p:nth-of-type(1) {
+  margin-top: 0.1rem;
+}
+
+.twoUl li p {
+  position: relative;
+  padding: 0.01rem 0;
+  overflow: hidden;
+}
+
+.twoUl li b {
+  float: left;
+  width: 50%;
+  padding-right: 0.05rem;
+  height: 100%;
+  overflow-y: auto;
+  font-weight: 400;
+  word-break: break-all;
+}
+
+.twoUl li .Icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 22%;
+  height: 100%;
+  padding-top: 0.5rem;
+  box-sizing: border-box
+}
+
+.twoUl li .Icon span {
+  color: white;
+  display: block;
+  width: 50%;
+  height: 0.25rem;
+  text-align: center;
+  line-height: 0.25rem;
+  margin: 0 auto;
+  float: none;
+  margin-bottom: 0.15rem;
+  border-radius: 0.05rem;
+  cursor: pointer;
+}
+
+.twoUl li .Icon span:hover {
+  opacity: 0.8;
+}
+
+
+.twoUl li .text {
+  height: 0.7rem;
+  white-space: inherit;
+}
+
+.twoUl li .text span {
+  height: 100%;
+}
+
+.twoUl li,
+.firstul li {
+  border: 1px solid rgba(38, 85, 134, 0.32);
+  background-color: rgba(28,60,95,0.32);
+}
+.results p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.on.el-icon-star-on{
+  color:#efb70c
+}
+.off.el-icon-star-on{
+  color:#DBDADA;
+}
+
+
+.el-pagination {
+  float: right;
+  margin-right: 0.2rem;
+  margin-top: 0.2rem;
+}
+
+.el-pagination>>>.el-select .el-input .el-input__inner,
+.el-pagination>>>.el-pagination__editor.el-input .el-input__inner {
+  height: 0.25rem;
+}
+
+.el-pagination>>>.el-pagination__sizes .el-input .el-input__inner,
+.el-pagination>>>.el-input {
+  font-size: 0.13rem;
+}
+
+.el-pagination>>>span:not([class*=suffix]) {
+  font-size: 0.1rem;
+}

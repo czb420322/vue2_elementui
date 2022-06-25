@@ -1,0 +1,116 @@
+/* 阿萨大苏打 */
+
+.bottomWarp {
+  width: 9.5rem;
+  height: 0.9rem;
+  position: absolute;
+  left: 0.5rem;
+  bottom: 0.2rem;
+  z-index: 999;
+  overflow: hidden;
+}
+
+.bottomItem {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 0.9rem;
+  transition: 0.3s;
+}
+
+.bottomItem .carouseItem {
+  height: 0.9rem;
+  width: 0.9rem;
+  float: left;
+  box-sizing: border-box;
+  margin-right:0.05rem;
+  border: 1px solid #133b66
+}
+.bottomItem .carouseItem:last-child {
+  margin-right:0
+}
+.ONcarouseItem {
+  border: 1px solid #1897f0 !important;
+}
+
+.bottomItem .carouseItem img {
+  height: 100%;
+  width: 100%;
+}
+
+.searchDetail>>>.el-dialog {
+  margin-top: 2vh !important;
+  /* margin: 0 !important; */
+  margin-left:3.96rem !important;
+  margin-bottom: 0
+}
+
+
+.searchDetail>>>.el-carousel {
+  width: 8.5rem !important;
+  margin-left: 0.5rem;
+  transform: scale(0.8);
+  transition: all 0.2s;
+  transform: rotateZ(0deg)
+}
+
+.searchDetail>>>.el-carousel__arrow {
+  background: rgba(0, 0, 0, 0.5)
+}
+
+.information {
+  position: absolute;
+  right: 0rem;
+  top: 0.2rem;
+  width: 3.5rem;
+  z-index: 1;
+  font-size: 0.15rem
+}
+.infotitle{
+  color: #409eff;
+  font-size: 0.14rem;
+}
+.information .infomain {
+  width: 3rem;
+  margin-top: 0.1rem;
+  color: #99c9fa ;
+  padding-left: 0.2rem;
+  /* border: 1px solid rgba(189, 205, 222, 0.27); */
+  font-size: 0.14rem;
+  /* background-color: rgba(215, 223, 232, 0.27); */
+  background:transparent
+}
+
+.information .item {
+  margin-bottom: 0.1rem;
+}
+
+.tool {
+  position: absolute;
+  right: 0rem;
+  bottom: -1.3rem;
+  width: 3.5rem;
+  z-index: 1;
+}
+
+.tool .el-button {
+  margin: 0;
+  padding: 0.1rem 0.15rem;
+  background: rgba(225, 225, 225, 0);
+  font-size: 0.2rem;
+}
+.toolInfo{
+  width: 3rem;
+  text-align: center;
+  line-height: 0.8rem;
+  /* border: 1px solid rgba(189, 205, 222, 0.27); */
+  background-color: rgba(215, 223, 232, 0.27);
+}
+/* .toolInfo .el-button:first-child{
+  background: url('../images/bigsmall/large.png') no-repeat center;
+} */
+
+.tool span {
+  color: white;
+  font-size: 0.14rem;
+}

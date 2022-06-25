@@ -1,0 +1,8 @@
+.gs-panel-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.gs-panel-container > *, .gs-panel-header, .gs-panel-main, .gs-panel-footer {
+  overflow: hidden;
+}

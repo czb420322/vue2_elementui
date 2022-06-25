@@ -1,0 +1,23 @@
+
+@mixin background_img($color) {
+    @include themify {
+        background: themed($color)
+    }
+};
+
+// 我的工作台-背景图片设置
+@mixin background_custom($color) {
+    @include themify {
+        background:themed($color)
+    }
+  };
+
+// 弹窗背景图片
+@mixin layer_background_img_1($color) {
+    @include themify {
+        background:themed($color)
+    }
+  };
+
+
+

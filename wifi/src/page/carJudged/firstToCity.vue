@@ -1,0 +1,567 @@
+<template>
+  <div class="wrapper">
+    <div class="topInfo">
+        <img src="../../assets/updataImg/location.png" alt="">
+       <span class="sysname childname">当前位置：</span>
+      <router-link tag="div" to="/carJudged?menuCode=300" class="sysname">车辆研判 ></router-link>
+      <div class="sysname">&nbsp;初次入城</div>
+    </div>
+
+    <div class="contentBody">
+
+      <div class="contentLeft">
+        <div class="contentHide" v-show="contentLeft"></div>
+        <div class="clItem cli1">
+          <div class="searchTitle">初次入城</div>
+          <ul class="searchCondition">
+            <li class="conditionInput">
+            <img src="../../assets/images/carJudged/search_item.png" alt="">
+              车辆搜索条件</li>
+            <li class="ftcItem">
+              <div class="left_ftci" ><span class="bt">*</span>入城时段：</div>
+              <div class="right_ftci">
+                <input style="margin-bottom:0.1rem;" type="text" readonly id="timeBegin" ref="beginDateTime" v-model.trim="beginDateTime" placeholder="请选择开始时间" @blur="checkBeginDateTime"><i class="el-icon-circle-close" @click="clear('beginDateTime')"></i>
+                <input type="text" id="timeEnd" ref="endDateTime" readonly v-model.trim="endDateTime" placeholder="请选择结束时间" @blur="checkEndDateTime"><i class="el-icon-circle-close" @click="clear('endDateTime')"></i>
+              </div>
+            </li>
+            <li>
+              <span><span class="bt">*</span>回溯时长：</span>
+              <input type="text" ref="backdate" v-model.trim="backdate" placeholder="最多不超过365天" @blur="checkBackdate"><i class="el-icon-circle-close" @click="clear('backdate')"></i><span class="unit">天</span>
+            </li>
+            <li>
+              <span>车辆品牌：</span>
+              <input type="text" readonly value="" ref="vehicleBrand" @click="getCarBrand" v-model.trim="this.vehicleBrand" placeholder="请输入车辆品牌"><i class="el-icon-circle-close" @click="clearBand();refresh()"></i>
+            </li>
+            <li>
+              <span>车辆型号：</span>
+              <input id="vModel" :title="vehicleModel" readonly type="text" ref="vehicleModel" value="" @click="getCarModule" v-model.trim="this.vehicleModel" placeholder="请输入车辆型号"><i class="el-icon-circle-close" @click="clear('vehicleModel')"></i>
+            </li>
+            <li class="plateItem">
+              <span>车牌号码：</span>
+              <el-select ref="selectValue" v-model="carplate" placeholder="请选择车牌号码">
+                <el-option v-for="(p,i) in province" :value="p" :label="p" :key="i"></el-option>
+              </el-select>
+              <input type="text" ref="plateNo" value="" placeholder="请输入车牌尾号" @keyup.enter="addPlateNum" @blur="addPlateNum" minlength="6" maxlength="7" /><i class="el-icon-circle-close" @click="clear('plateNo')"></i>
+              <div class="platNumList">
+                <span class="wholeCarPlate grayPn">例:京A*<i class="el-icon-circle-close closeCarPlate"></i></span>
+                <span class="wholeCarPlate" v-for="(item,index) in platNumArr" :key="index">{{item}}<i class="el-icon-circle-close closeCarPlate" @click="removeNum(item,index)"></i></span>
+              </div>
+            </li>
+            <li class="plateItem">
+              <span>排除车牌：</span>
+              <el-select ref="selectValue2" v-model="carplate2" placeholder="请选择排除车牌">
+                <el-option v-for="(p,i) in province2" :value="p" :label="p" :key="i"></el-option>
+              </el-select>
+              <input type="text" ref="excludePlateNo" value="" placeholder="请输入车牌尾号" @keyup.enter="addPlateNum2" @blur="addPlateNum2" minlength="6" maxlength="7"><i class="el-icon-circle-close" @click="clear('excludePlateNo')"></i>
+              <div class="platNumList">
+                <span class="wholeCarPlate grayPn">例:京A*<i class="el-icon-circle-close closeCarPlate"></i></span>
+                <span class="wholeCarPlate" v-for="(item,index) in excludePlate" :key="index">{{item}}<i class="el-icon-circle-close closeCarPlate" @click="removeNum2(item,index)"></i>
+                </span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="clItem cli2">
+          <div class="map">
+            <div class="mapHandle">
+            <img src="../../assets/images/carJudged/map_tool.png" alt="">
+              请选择地图工具</div>
+            <div class="mapItem">
+              <div class="itemIcon" @click="drawReact"></div>
+              <div class="itemIcon" @click="drawLine"></div>
+              <div class="itemIcon" @click="closeDraw"></div>
+              <div class="itemIcon" @click="toggleBar" id="menuImg"></div>
+              <div class="itemIcon" @click="clearDrawing"></div>
+            </div>
+          </div>
+          <div class="btnContainer">
+            <div class="btnReset cancleBtn" @click="reset"><i class="el-icon-refresh"></i> 重置</div>
+            <div v-show="searchBtn" class="btnSearch passBtn" @click="getCarData"><i class="el-icon-search "></i> 搜索</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div v-show="!checked" id="mapContent"></div>
+        <img v-show="!checked" class="dingwei" src="../../assets/case/quickPos.png" @click="loadMap();initPoint();" />
+        <div v-show="!checked" class="point">
+          <span>经度：{{point.lng}}</span><br>
+          <span>纬度：{{point.lat}}</span>
+        </div>
+        <!--搜索结果详情-->
+        <div class="sDetail" :style="{left: checked?'0.12rem':'100%'}">
+          <div class="contentSwitch" v-show="arrawSwitch" :style="{left:checked?'0':'-0.16rem'}">
+            <img v-if="!checked" src="../../assets/images/carJudged/arrows-left.png" @click="checked = !checked">
+            <img v-else src="../../assets/images/carJudged/arrows-right.png" @click="checked=!checked">
+          </div>
+          <first-to-city-detail v-show="checked" searchType="firstCity" port="/tvas/synthesizeAnalyze/firstcity/query" :searchParams="oldParams" :searchResult="searchResult" ></first-to-city-detail>
+        </div>
+      </div>
+
+    </div>
+
+    <div class='menu' v-show="isBar">
+      <el-input class="menuSearch"
+        placeholder="输入关键字进行过滤"
+        v-model.trim="filterText">
+      </el-input>
+      <div class="menuTree">
+        <el-tree
+          :data="treeList"
+          show-checkbox
+          default-expand-all
+          node-key="kakouId"
+          ref="tree"
+          @check='getCheckedNodes'
+          :filter-node-method="filterNode"
+          :props="defaultProps">
+        </el-tree>
+      </div>
+    </div>
+
+    <div class="err" v-if="Err.beginDateTime.flag" :style="{top: Err.beginDateTime.top}">{{Err.beginDateTime.txt}}</div>
+    <div class="err" v-if="Err.endDateTime.flag" :style="{top: Err.endDateTime.top}">{{Err.endDateTime.txt}}</div>
+    <div class="err" v-if="Err.backdate.flag" :style="{top: Err.backdate.top}">{{Err.backdate.txt}}</div>
+    <div class="err" v-if="Err.plateNo.flag" :style="{top: Err.plateNo.top}">{{Err.plateNo.txt}}</div>
+    <div class="err" v-if="Err.excludePlateNo.flag" :style="{top: Err.excludePlateNo.top}">{{Err.excludePlateNo.txt}}</div>
+
+    <div class="calDialog">
+      <casDialog vehicleKind="noKind" :showFirst="showFirst" :showSecond="showSecond" :carBrand="vehicleBrand" :carModel="vehicleModel" @passToParent="getChildData" :icoclick="icoclick" @changeicoclick='changeicoclick'></casDialog>
+    </div>
+
+  </div>
+</template>
+
+<script>
+  import  vehicle from '../../api/vehicle/vehicle.js'
+  import mapFun from '../../api/vehicle/mapFun.js'
+  import firstToCityDetail from './firstToCityDetail'
+  import casDialog from './casDialog'
+  import footerThird from '../../components/footer_third'
+
+  export default {
+    components: {
+      firstToCityDetail, casDialog, footerThird
+    },
+
+    data() {
+      return {
+        carplate:sessionStorage.getItem("provinceShort"),
+        carplate2:sessionStorage.getItem("provinceShort"),
+        searchBtn:this.$storage.getSession("308")!=null?true:false,
+        map:null,//地图对象
+        drawingManager : null,
+        overlays:[],
+        treeList:null,
+        filterText: '',
+        isBar:false,
+        defaultTime: '2014-01',
+        defaultProps: {
+          children: "apeTollgates",
+          label: "name"
+        },
+        i:0,
+        // 左侧遮罩
+        contentLeft:false,
+
+        checked: false,
+        arrawSwitch: false,  //默认不显示蓝色小箭头
+        loading: null,
+        firstCityMaxDays: sessionStorage.getItem("firstCityMaxDays"), //可配置时间
+        defaultProvice: sessionStorage.getItem("provinceShort"),
+        province: ['京', '津', '冀', '晋', '蒙', '辽', '吉', '黑', '沪', '苏', '浙', '皖', '闽', '赣', '鲁', '豫',
+          '鄂', '湘', '粤', '桂', '琼', '渝', '川', '贵', '云', '藏', '陕', '甘', '青', '宁', '新', '港', '澳', '台'],
+        platNumArr: [],
+        province2: ['京', '津', '冀', '晋', '蒙', '辽', '吉', '黑', '沪', '苏', '浙', '皖', '闽', '赣', '鲁', '豫',
+          '鄂', '湘', '粤', '桂', '琼', '渝', '川', '贵', '云', '藏', '陕', '甘', '青', '宁', '新', '港', '澳', '台'],
+        excludePlate: [],
+        imgsrc: "",
+        showFirst: false,
+        showSecond: false,
+        //时间选择控件
+        timeBegin:null,
+        timeEnd: null,
+
+        category: 0,
+        beginDateTime: this.getDateString(new Date().getTime() - 6*24*60*60*1000).split(' ')[0] + " " + "00:00:00",
+        endDateTime: (this.getCurrentDate().split(' ')[0] + " " + "23:59:59"),
+        backdate: 4,
+        vehicleBrand: "不限",
+        vehicleBrandCode: null,
+        vehicleModel: "不限",
+        vehicleModelCode: null,
+        tollgateIds: null,
+        pageNo: 1,
+        pageSize:100,
+        orderBy: 'pass_time',
+        orderType: 'desc',
+        tollgateIdsArr:[],  //总体选中的卡口列表
+        tollArr: [],  //地图选中的卡口列表
+        tollTreeArr: [], // 菜单选中的卡口列表
+
+        //搜索结果 默认
+        searchResult: {
+          code: null,
+          message: "",
+          data: {
+            pageNo: 0,
+            pageSize: 0,
+            total: 0,
+            rows:[]
+          }
+        },
+        oldParams:{},
+        icoclick:false
+      }
+    },
+    watch: {
+      filterText(val) {
+        this.$refs.tree.filter(val);
+      },
+      vehicleBrand(newVal,oldVal){
+     if(newVal!='不限'){//保证点击icon清空品牌框引发的从子组件传回的值不会把之前的车型框选的清空
+        this.vehicleModel='不限'
+        this.vehicleModelCode=null
+      }
+
+    },
+    },
+    computed: {
+      newpoints (){
+        let arr = [];
+        if(this.treeList !== null && this.treeList.length !==0){
+          for(let i=0;i<this.treeList.length;i++){
+            let apeToll = this.treeList[i].apeTollgates;
+            let temp = arr.concat(apeToll);
+            arr = temp;
+          }
+        }
+        return arr;
+      },
+      beginDateTime2 () {
+          return this.getDateString(new Date(this.beginDateTime).getTime() - this.backdate*24*60*60*1000).split(' ')[0] + " " + "00:00:00";
+      },
+      searchParams (){
+        // console.log(this.beginDateTime2,1)
+        return {
+          category: this.category,
+          vehicleBrand: this.vehicleBrand=="不限"?'':this.vehicleBrand,
+          vehicleBrandCode: this.vehicleBrandCode,
+          vehicleModel: this.vehicleModel=='不限'?'': this.vehicleModel,
+          vehicleModelCode: this.vehicleModelCode,
+          plateNo: this.platNumArr.join(','),
+          excludePlateNo: this.excludePlate.join(','),
+          beginDateTime: this.beginDateTime,
+          beginDateTime2: this.beginDateTime2,
+          endDateTime: this.endDateTime,
+          backdate: this.backdate,
+          tollgateIds: this.tollgateIds,
+          pageNo: this.pageNo,
+          pageSize: this.pageSize,
+          orderBy: this.orderBy,
+          orderType: this.orderType
+        };
+      }
+    },
+    mixins:[vehicle, mapFun],
+    methods: {
+      clearBand(){
+     this.vehicleBrand = '不限';
+     this.vehicleBrandCode= null
+    },
+    refresh(){
+      this.icoclick=true
+    },                    /* 保证在点击icon清空品牌框之后会重新请求一次车型*/
+    changeicoclick(data){
+      this.icoclick=data
+    },
+      //获取子组件的数据
+      getChildData(data1, data2, data3,data4,data5) {
+        this.vehicleBrand = data1;
+        this.vehicleModel = data2;
+        this.vehicleModelCode = data3;
+        this.showSecond = data4;
+        this.vehicleBrandCode = data5;
+      },
+
+      //添加车牌号
+      addPlateNum() {
+        let selectValue = this.$refs.selectValue.value;
+        let inputValue = this.$refs.plateNo.value.trim();
+
+        if(!inputValue){
+          return false;
+        }
+        if(inputValue.length != 6 && inputValue.indexOf('*') == -1 && inputValue.length < 6){
+            this.checkItem("plateNo", "请正确输入车牌号码！");
+            setTimeout(()=> {
+                this.clearCheck("plateNo");
+            }, 1000);
+            return;
+        }
+
+        // let xxreg = /^[A-Z]{1}[A-Z*0-9]{1,5}[A-Z*0-9挂学警港澳]{0,1}$/;   //模糊车牌
+        let xxreg = /^([A-Z*]{1}(([0-9*]{0,5}[DF])|([DF]([A-HJ-NP-Z*0-9])[0-9*]{0,4})))|([A-Z*]{1}[A-HJ-NP-Z*0-9]{0,4}[A-HJ-NP-Z*0-9挂学警港澳]{1})$/
+        if (!xxreg.test(inputValue)){
+          this.checkItem("plateNo", "请正确输入车牌号码！");
+          let _this = this;
+          setTimeout(function(){
+            _this.clearCheck("plateNo");
+          },1000);
+          return;
+        }
+
+        let platNum = selectValue + inputValue;
+        this.platNumArr.push(platNum);
+        this.platNumArr = this.uniq(this.platNumArr);
+        //this.$refs.selectValue.value = this.defaultProvice;//this.province[0];
+        this.carplate =  this.defaultProvice
+        this.$refs.plateNo.value = "";
+      },
+      //添加车牌号
+      addPlateNum2() {
+        let selectValue = this.$refs.selectValue2.value;
+        let inputValue = this.$refs.excludePlateNo.value.trim();
+
+        if(!inputValue){
+          return false;
+        }
+        if(inputValue.length != 6 && inputValue.indexOf('*') == -1 && inputValue.length < 6){
+            this.checkItem("plateNo", "请正确输入车牌号码！");
+            setTimeout(()=> {
+                this.clearCheck("plateNo");
+            }, 1000);
+            return;
+        }
+
+        let xxreg = /^[A-Z]{1}[A-Z*0-9]{1,5}[A-Z*0-9挂学警港澳]{0,1}$/;   //模糊车牌
+        if (!xxreg.test(inputValue)){
+          this.checkItem("excludePlateNo", "请正确输入车牌号码！");
+          let _this = this;
+          setTimeout(function(){
+            _this.clearCheck("excludePlateNo");
+          },1000);
+          return;
+        }
+
+        let platNum = selectValue + inputValue;
+        this.excludePlate.push(platNum);
+        this.excludePlate = this.uniq(this.excludePlate);
+        //this.$refs.selectValue2.value = this.defaultProvice;//this.province[0];
+        this.carplate2 = this.defaultProvice
+        this.$refs.excludePlateNo.value = "";
+      },
+      //删除车牌号
+      removeNum(item, index) {
+        this.platNumArr.splice(index, 1);
+      },
+      //删除车牌号
+      removeNum2(item, index) {
+        this.excludePlate.splice(index, 1);
+      },
+      //关闭弹出层
+    closeDialog(e) {
+      console.log(e.target)
+      let dialogFirst = document.getElementsByClassName("first")[0];
+      if (dialogFirst.style.display !== "none" ) {
+        let casWrapper = document.getElementsByClassName("casWrapper")[0];
+        if (!casWrapper.contains(e.target)) {
+          this.showFirst = false;
+        }
+      }
+       let dialogSecond = document.getElementsByClassName("second")[0];
+      if (dialogSecond.style.display !== "none" ) {
+        let casWrapper = document.getElementsByClassName("casWrapper")[0];
+        if (!casWrapper.contains(e.target)) {
+          this.showSecond = false;
+        }
+      }
+    },
+
+      //重置
+      reset() {
+        this.plateNo = null;
+        this.vehicleBrand = "不限";  //车辆品牌
+        this.vehicleBrandCode = null;
+        this.vehicleModel = "不限";  //车辆型号
+        this.vehicleModelCode = null;
+        this.platNumArr = [];
+        this.excludePlate = [];
+        this.backdate = 4;
+        this.beginDateTime =  this.getDateString(new Date().getTime() - 6*24*60*60*1000).split(' ')[0] + " " + "00:00:00"; //过车时段开始日期时间
+        this.endDateTime =  (this.getCurrentDate().split(' ')[0] + " " + "23:59:59");      //过车时段结束日期时间
+
+        //重置时间选择范围
+        this.timeBegin.config.max = {
+          year: new Date().getFullYear(),
+          month: new Date().getMonth(), //关键
+          date: new Date().getDate(),
+          hours: 23,
+          minutes: 59,
+          seconds: 59
+        };
+        this.timeEnd.config.min = {
+          year: new Date(new Date().getTime() - 7*24*60*60*1000).getFullYear(),
+          month: new Date(new Date().getTime() - 7*24*60*60*1000).getMonth(), //关键
+          date: new Date(new Date().getTime() - 7*24*60*60*1000).getDate(),
+          hours: 0,
+          minutes: 0,
+          seconds: 0
+        };
+        this.timeEnd.config.max = {
+          year: new Date().getFullYear(),
+          month: new Date().getMonth(), //关键
+          date: new Date().getDate(),
+          hours: 23,
+          minutes: 59,
+          seconds: 59
+        };
+
+        this.$refs.tree.setCheckedNodes([]);
+        //this.$refs.selectValue.value = this.defaultProvice;//this.province[0];
+        this.carplate = this.defaultProvice
+        this.$refs.plateNo.value = "";
+       // this.$refs.selectValue2.value = this.defaultProvice;//this.province[0];
+       this.carplate2 =  this.defaultProvice
+        this.$refs.excludePlateNo.value = "";
+        this.clearDrawing();
+      },
+
+      //按搜索条件查询
+      getCarData (){
+        if(!this.checkForm()){
+          //验证不通过则不向下执行
+          return false;
+        }
+
+        //初始时关闭搜索结果
+        this.checked = false;
+        this.loading = this.$loading({
+          lock: true,
+          background: "rgba(255,255,255,0.4)",
+          text: "加载中"
+        });
+
+        //搜索
+        let params = this.searchParams;
+        params.pageNo = 1;
+        params.pageSize = 100;
+        params.orderType = 'desc';
+        this.getVD("firstCity", params, (res)=>{
+          this.transValue(res.data, this.searchResult);
+          this.oldParams = this.searchParams;
+          if(this.searchResult.data.rows.length === 0 ){
+            //this.$alert("暂无数据","消息提示");
+             this.$notify({
+                        type: 'info',
+                        message: '抱歉，未查询到符合条件的数据！',
+                        position: 'bottom-right',
+                        duration: 3000
+                      });
+          //  layer.alert('抱歉，未查询到符合条件的数据！',{icon:5,title:"消息提示"});
+            this.checked = false;
+            this.arrawSwitch = false;
+          }else{
+            this.checked = true;
+            this.arrawSwitch = true;
+          }
+
+        });
+
+      }
+    },
+    mounted: function () {
+      this.getWeekDay();
+      this.getTreeData();
+      this.getCheckedItem(["beginDateTime", "endDateTime", "backdate"]);
+
+      let plateNo = this.$router.history.current.query.plateNo;
+      if(plateNo){
+        this.platNumArr.push(plateNo);
+      }
+
+      let _this = this;
+      _this.getLocalCoordinate();
+      _this.loadMap();
+
+      this.timeBegin = laydate.render({
+        elem: '#timeBegin',
+        type: 'datetime',
+        //min: -90, //90天前
+        max:  this.endDateTime, //0天后
+        btns: ['now','confirm'],
+        done: function(value, date, endDate){
+          _this.beginDateTime = value;
+          _this.timeEnd.config.min = {
+            year:date.year,
+            month:date.month-1, //关键
+            date: date.date,
+            hours: date.hours,
+            minutes: date.minutes,
+            seconds: date.seconds
+          };
+          let time = Number(_this.firstCityMaxDays)-1;  //可配置时间
+          let maxDate = new Date(value).getTime() + time*24*60*60*1000;
+          if(new Date().getTime() > maxDate){
+            _this.endDateTime = _this.getDateString(maxDate);
+            _this.timeEnd.config.max = {
+              year: new Date(maxDate).getFullYear(),
+              month: new Date(maxDate).getMonth(), //关键
+              date: new Date(maxDate).getDate(),
+              hours: 23,
+              minutes: 59,
+              seconds: 59
+            };
+          }else{
+            _this.endDateTime = _this.getDateString(new Date().getTime());
+            _this.timeEnd.config.max = {
+              year: new Date().getFullYear(),
+              month: new Date().getMonth(), //关键
+              date: new Date().getDate(),
+              hours: 23,
+              minutes: 59,
+              seconds: 59
+            };
+          }
+        }
+      });
+      this.timeEnd = laydate.render({
+        elem: '#timeEnd',
+        type: 'datetime',
+        min: this.beginDateTime,
+        max: this.endDateTime,
+        btns: ['now','confirm'],
+        done: function(value, date, endDate){
+          _this.endDateTime = value;
+          _this.timeBegin.config.max={
+            year:date.year,
+            month:date.month-1,//关键
+            date: date.date,
+            hours: date.hours,
+            minutes: date.minutes,
+            seconds: date.seconds
+          }
+        }
+      });
+
+      this.$nextTick(() => {
+        document.querySelector('body').addEventListener('click', this.closeDialog);
+        document.querySelector('body').addEventListener('click', this.closeBar);
+      })
+    },
+    beforeDestroy() {
+      document.querySelector('body').removeEventListener('click', this.closeDialog);
+      document.querySelector('body').addEventListener('click', this.closeBar);
+    }
+  }
+
+
+</script>
+
+
+
+<style scoped>
+  @import "../../assets/css/carJudged_third.css";
+ @import "../../assets/css/commom.css";
+</style>
+

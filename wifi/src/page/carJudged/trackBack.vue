@@ -1,0 +1,664 @@
+<template>
+  <div class="wrapper">
+    <div class="topInfo">
+      <img src="../../assets/updataImg/location.png" alt="">
+       <span class="sysname childname">当前位置：</span>
+      <router-link tag="div" to="/carJudged?menuCode=300" class="sysname">车辆研判 ></router-link>
+      <div class="sysname">&nbsp;轨迹重现</div>
+    </div>
+
+    <div class="contentBody">
+
+      <div class="contentLeft">
+        <div class="contentHide" v-show="contentLeft"></div>
+        <div class="clItem cli1">
+          <div class="searchTitle">轨迹重现分析</div>
+          <ul class="searchCondition">
+            <li class="conditionInput">
+            <img src="../../assets/images/carJudged/search_item.png" alt="">
+              车辆搜索条件</li>
+            <li class="plateItem">
+              <span><span class="bt">*</span>车牌号码：</span>
+              <el-select ref="selectValue" v-model="carplate">
+                <el-option v-for="(p,i) in province" :value="p" :label="p" :key="i"></el-option>
+              </el-select>
+              <input type="text" ref="plateNo" value="" placeholder="请输入精确车牌尾号"  @keyup.enter="addPlateNum" @blur="addPlateNum" minlength="6" maxlength="7" /><i class="el-icon-circle-close" @click="clear('plateNo')"></i>
+              <div class="platNumList">
+                <span class="wholeCarPlate grayPn">例:京A12345<i class="el-icon-circle-close closeCarPlate"></i></span>
+                <span class="wholeCarPlate" v-for="(item,index) in platNumArr" :key="index">{{item}}
+                  <i class="el-icon-circle-close closeCarPlate" @click="removeNum(item,index)"></i>
+                </span>
+              </div>
+            </li>
+            <li class="ftcItem">
+              <div class="left_ftci" ><span class="bt">*</span>过车时段：</div>
+              <div class="right_ftci">
+                <input style="margin-bottom:0.1rem;" type="text" readonly id="timeBegin" ref="beginDateTime" v-model.trim="beginDateTime" placeholder="请选择开始时间" @blur="checkBeginDateTime"><i class="el-icon-circle-close" @click="clear('beginDateTime')"></i>
+                <input type="text" id="timeEnd" ref="endDateTime" readonly v-model.trim="endDateTime" placeholder="请选择结束时间" @blur="checkEndDateTime"><i class="el-icon-circle-close" @click="clear('endDateTime')"></i>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="clItem cli2">
+          <div class="map">
+            <div class="mapHandle">
+              <img src="../../assets/images/carJudged/map_tool.png" alt="">
+              请选择地图工具</div>
+            <div class="mapItem">
+              <div class="itemIcon" @click="drawReact"></div>
+              <div class="itemIcon" @click="drawLine"></div>
+              <div class="itemIcon" @click="closeDraw"></div>
+              <div class="itemIcon" @click="toggleBar" id="menuImg"></div>
+              <div class="itemIcon" @click="clearDrawing"></div>
+            </div>
+          </div>
+          <div class="btnContainer">
+            <div class="btnReset cancleBtn" @click="reset"><i class="el-icon-refresh"></i> 重置</div>
+            <div v-show="searchBtn" class="btnSearch passBtn" @click="getCarData"><i class="el-icon-search "></i> 搜索</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div  id="mapContent">
+        </div>
+        <img v-show="!checked" class="dingwei" src="../../assets/case/quickPos.png" @click="loadMap();initPoint();" />
+        <div v-show="!checked" class="point">
+          <span>经度：{{point.lng}}</span><br>
+          <span>纬度：{{point.lat}}</span>
+        </div>
+        <!--搜索结果详情-->
+        <div class="sDetail" :style="{left: checked?'0.12rem':'100%'}">
+          <div class="contentSwitch" v-show="arrawSwitch" :style="{left:checked?'0':'-0.16rem'}">
+            <img v-if="!checked" src="../../assets/images/carJudged/arrows-left.png" @click="checked = !checked">
+            <img v-else src="../../assets/images/carJudged/arrows-right.png" @click="checked=!checked">
+          </div>
+          <!--轨迹重现-->
+          <div class="searchDetailFH">
+            <div class="resultTitle">| 轨迹重现搜索</div>
+            <div class="resultList">
+              <div class="trackInfo">
+                <div style="margin-bottom:10px;float:left;padding:0.06rem"><span>过车时段:</span> <span>{{beginDateTimeTxt}} -- {{endDateTimeTxt}}</span></div>
+                <div style="float:left;margin-left:0.2rem"><span>车牌号码:</span> <span style="color:#FD964D">{{plateNumber}}</span> <el-button style="padding: 0.06rem" type="danger" plain @click="track">模拟轨迹</el-button></div>
+              </div>
+              <div style="width: 100%;overflow:hidden;">
+              <el-table
+              ref="table1"
+              :data="actualData"
+              style="width: 86%; margin: 0.2rem auto;">
+              <el-table-column
+                type="index"
+                label="编号"
+                align="center"
+                width="50"
+              >
+              </el-table-column>
+
+              <el-table-column
+                prop="passTime"
+                align="center"
+                show-overflow-tooltip
+                label="时间"
+
+              >
+              </el-table-column>
+
+                <el-table-column
+                prop="plateNo"
+                align="center"
+                show-overflow-tooltip
+                label="车牌"
+
+              >
+              </el-table-column>
+
+              <el-table-column
+                prop="apeTollgatePlace"
+                align="center"
+                show-overflow-tooltip
+                label="位置"
+                width="300"
+
+              >
+              </el-table-column>
+
+               <el-table-column
+                prop="direction"
+                align="center"
+                show-overflow-tooltip
+                label="方向"
+
+              >
+              </el-table-column>
+            </el-table>
+               <!-- <table  class="resultTable">
+                  <tr>
+                    <th style="width: 10%;">编号</th>
+                    <th style="width: 30%;">时间</th>
+                    <th style="width: 20%;">车牌</th>
+                    <th style="width: 20%;">位置</th>
+                    <th style="width: 20%;">方向</th>
+                  </tr>
+                  <tr v-for="(item, index) in actualData">
+                    <td>{{(pageNo-1)*pageSize+index + 1}}</td>
+                    <td>{{item.passTime}}</td>
+                    <td>{{item.plateNo}}</td>
+                    <td>{{item.apeTollgatePlace}}</td>
+                    <td>{{item.direction}}</td>
+                  </tr>
+                  <tr v-if="!searchResult.data.rows.length">
+                    <td colspan="5">暂无数据</td>
+                  </tr>
+                </table>-->
+                <div class="pageNation">
+                  <el-pagination
+                    :background=true
+                    @size-change="handleSizeChange"
+                    @current-change="handleCurrentChange"
+                    :current-page="Number(pageNo)"
+                    :page-sizes="[10, 20, 30, 40, 50, 100]"
+                    :page-size="Number(pageSize)"
+                    layout="total, sizes, prev, pager, next, jumper"
+                    :total="Number(searchResult.data.total)">
+                  </el-pagination>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class='menu' v-show="isBar">
+      <el-input class="menuSearch"
+        placeholder="请输入关键字进行过滤"
+        v-model="filterText">
+      </el-input>
+      <div class="menuTree">
+        <el-tree
+          :data="treeList"
+          show-checkbox
+          default-expand-all
+          node-key="kakouId"
+          ref="tree"
+          @check='getCheckedNodes'
+          :filter-node-method="filterNode"
+          :props="defaultProps">
+        </el-tree>
+      </div>
+    </div>
+
+    <div class="err" v-if="Err.beginDateTime.flag" :style="{top: Err.beginDateTime.top}">{{Err.beginDateTime.txt}}</div>
+    <div class="err" v-if="Err.endDateTime.flag" :style="{top: Err.endDateTime.top}">{{Err.endDateTime.txt}}</div>
+    <div class="err" v-if="Err.plateNo.flag" :style="{top: Err.plateNo.top}">{{Err.plateNo.txt}}</div>
+
+  </div>
+</template>
+
+<script>
+  import  vehicle from '../../api/vehicle/vehicle.js'
+  import mapFun from '../../api/vehicle/mapFun.js'
+  import footerThird from '../../components/footer_third'
+  export default {
+    components: {
+      footerThird
+    },
+
+    data() {
+      return {
+        carplate:sessionStorage.getItem("provinceShort"),
+        searchBtn:this.$storage.getSession("313")!=null?true:false,
+        map:null,//地图对象
+        drawingManager : null,
+        overlays:[],
+        treeList:null,
+        filterText: '',
+        isBar:false,
+        defaultTime: '2014-01',
+        defaultProps: {
+          children: "apeTollgates",
+          label: "name"
+        },
+        i:0,
+        // 左侧遮罩
+        contentLeft:false,
+
+
+        checked: false,
+        arrawSwitch: false,  //默认不显示蓝色小箭头
+        loading: null,
+        trajectoryMaxDays: sessionStorage.getItem("trajectoryMaxDays"),
+        defaultProvice: sessionStorage.getItem("provinceShort"),
+        province: ['京', '津', '冀', '晋', '蒙', '辽', '吉', '黑', '沪', '苏', '浙', '皖', '闽', '赣', '鲁', '豫',
+          '鄂', '湘', '粤', '桂', '琼', '渝', '川', '贵', '云', '藏', '陕', '甘', '青', '宁', '新', '港', '澳', '台'],
+        platNumArr: [],
+        imgsrc: '',
+        showFirst: false,
+        showSecond: false,
+        plateNumber: "",
+        beginDateTimeTxt: "",
+        endDateTimeTxt: "",
+
+        //时间选择控件
+        timeBegin:null,
+        timeEnd: null,
+
+        category: 0,
+        beginDateTime: this.getDateString(new Date().getTime() - 6*24*60*60*1000).split(' ')[0] + " " + "00:00:00",
+        endDateTime: (this.getCurrentDate().split(' ')[0] + " " + "23:59:59"),
+        tollgateIds: null,
+
+        pageNo: 1,
+        pageSize:10,
+        actualData:[],
+        orderBy: 'pass_time',
+        orderType: 'desc',
+        tollgateIdsArr:[],  //总体选中的卡口列表
+        tollArr: [],  //地图选中的卡口列表
+        tollTreeArr: [], // 菜单选中的卡口列表
+
+        //搜索结果 默认
+        searchResult: {
+          code: null,
+          message: "",
+          data: {
+            pageNo: 0,
+            pageSize: 0,
+            total: 0,
+            rows:[]
+          }
+        },
+        color: ["red","blue","orange","pink","black","green","yellow","gray","purple"]
+      }
+    },
+    watch: {
+      filterText(val) {
+        this.$refs.tree.filter(val)
+      }
+    },
+    computed: {
+      newpoints (){
+        let arr = [];
+        if(this.treeList !== null && this.treeList.length !==0){
+          for(let i=0;i<this.treeList.length;i++){
+            let apeToll = this.treeList[i].apeTollgates;
+            let temp = arr.concat(apeToll);
+            arr = temp;
+          }
+        }
+        return arr;
+      },
+      searchParams (){
+        return {
+          category: this.category,
+          plateNo: this.platNumArr.join(','),
+          beginDateTime: this.beginDateTime,
+          endDateTime: this.endDateTime,
+          tollgateIds: this.tollgateIds,
+          pageNo: 1,
+          pageSize: 10000,
+          orderBy: this.orderBy,
+          orderType: this.orderType
+        };
+      }
+    },
+    mixins:[vehicle, mapFun],
+    methods: {
+      //每页val条
+      handleSizeChange(val) {
+        // this.searchResult.data.pageSize = val;
+        this.pageSize = val;
+        this.pageNo = 1;
+        this.actualData = this.searchResult.data.rows.slice((this.pageNo-1)*this.pageSize, this.pageNo*this.pageSize);
+        // this.loading = this.$loading({
+        //   lock: true,
+        //   background: "rgba(255,255,255,0.4)",
+        //   text: "加载中"
+        // });
+        // this.getVD("trajectory", this.searchParams,(res)=>{
+        //   this.transValue(res.data, this.searchResult);
+        //   this.runLine(this.searchResult.data.rows,this.color[0]);
+        // });
+      },
+      //当前页
+      handleCurrentChange(val) {
+        // this.searchResult.data.pageNo = val;
+        this.pageNo = val;
+        this.actualData = this.searchResult.data.rows.slice((this.pageNo-1)*this.pageSize, this.pageNo*this.pageSize);
+        // this.loading = this.$loading({
+        //   lock: true,
+        //   background: "rgba(255,255,255,0.4)",
+        //   text: "加载中"
+        // });
+        // this.getVD("trajectory", this.searchParams,(res)=>{
+        //   this.transValue(res.data, this.searchResult);
+        //   this.runLine(this.searchResult.data.rows,this.color[0]);
+        // });
+      },
+
+      //添加车牌号
+      addPlateNum() {
+        let selectValue = this.$refs.selectValue.value;
+        let inputValue = this.$refs.plateNo.value.trim();
+
+        if(!inputValue){
+          this.clearCheck("plateNo");
+          return false;
+        }
+
+        //let xreg = /^[A-Z]{1}[A-HJ-NP-Z0-9]{4}[A-HJ-NP-Z0-9挂学警港澳]{1}$/;   //精确车牌尾号
+        //let creg = /^[A-Z]{1}(([0-9]{5}[DF]$)|([DF][A-HJ-NP-Z0-9][0-9]{4}$))/;  //精确车牌尾号 (新能源)
+        //let xxreg = /^[A-Z]{1}[A-Z*0-9]{1,6}$/;
+        // if (inputValue.length < 6){
+        //   this.checkItem("plateNo", "请正确输入精确车牌号码！");
+        //   let _this = this;
+        //   setTimeout(function(){
+        //     _this.clearCheck("plateNo");
+        //   },1000);
+        //   return
+        // }
+        // let xxreg = /^[A-Z]{1}([A-Z0-9]{5}|[A-Z0-9]{4}[挂学警港澳]{1}|[A-Z0-9]{6})$/;   //精确车牌
+        let xxreg = /^(([A-Z](([0-9]{5}[DF])|([DF]([A-HJ-NP-Z0-9])[0-9]{4})))|([A-Z][A-HJ-NP-Z0-9]{4}[A-HJ-NP-Z0-9挂学警港澳使领]))$/
+        if (!xxreg.test(inputValue)){
+          this.checkItem("plateNo", "请正确输入车牌号码！");
+          let _this = this;
+          setTimeout(function(){
+            _this.clearCheck("plateNo");
+          },1000);
+          return;
+        }
+        this.platNumArr = [];
+        let platNum = selectValue + inputValue;
+        this.platNumArr.push(platNum);
+        //this.$refs.selectValue.value = this.defaultProvice;
+        this.carplate = this.defaultProvice;
+        this.$refs.plateNo.value = "";
+        this.clearCheck("plateNo");
+      },
+      //删除车牌号
+      removeNum(item, index) {
+        this.platNumArr.splice(index, 1);
+        this.checkPlateNo();
+      },
+      //重置
+      reset() {
+        this.plateNo = null;
+        this.platNumArr = [];
+
+        let minDates = new Date().getTime() - (Number(this.trajectoryMaxDays)-1)*24*60*60*1000;
+        this.beginDateTime = this.getDateString(minDates).split(' ')[0] + " " + "00:00:00"; //过车时段开始日期时间
+        this.endDateTime =  (this.getCurrentDate().split(' ')[0] + " " + "23:59:59");      //过车时段结束日期时间
+        this.timeBegin.config.max = {
+          year: new Date().getFullYear(),
+          month: new Date().getMonth(), //关键
+          date: new Date().getDate(),
+          hours: 23,
+          minutes: 59,
+          seconds: 59
+        };
+        this.timeEnd.config.min = {
+          year: new Date(minDates).getFullYear(),
+          month: new Date(minDates).getMonth(),
+          date: new Date(minDates).getDate(),
+          hours: 0,
+          minutes: 0,
+          seconds: 0
+        };
+        this.timeEnd.config.max = {
+          year: new Date().getFullYear(),
+          month: new Date().getMonth(),
+          date: new Date().getDate(),
+          hours: 23,
+          minutes: 59,
+          seconds: 59
+        };
+
+        this.$refs.tree.setCheckedNodes([]);
+        //this.$refs.selectValue.value = this.defaultProvice;
+        this.carplate =  this.defaultProvice;
+        this.$refs.plateNo.value = "";
+        this.clearDrawing();
+      },
+      track(){
+        this.runLine(this.searchResult.data.rows,this.color[0]);
+        console.log(this.searchResult.data.rows,333333333333333333)
+        this.checked = false;
+
+
+
+        let trajectoryLongitude = ''
+        let trajectoryLatitude = ''
+        for(let i = 0; i < this.searchResult.data.rows.length; i++){
+          trajectoryLongitude = this.searchResult.data.rows[i].longitude // 经度
+          trajectoryLatitude = this.searchResult.data.rows[i].latitude // 纬度
+          console.log(trajectoryLongitude,trajectoryLatitude,666666666666);
+          this.zuobiao2Pixel(trajectoryLongitude,trajectoryLatitude,i)
+        }
+      },
+      //将坐标转换成坐标，返回包含像素的数组
+    zuobiao2Pixel(trajectoryLongitude,trajectoryLatitude,i){
+      let pixelArray = ''
+      var point = new BMap.Point(trajectoryLongitude,trajectoryLatitude);
+      var pixel = this.map.pointToPixel(point);
+      console.log(pixel,333333333333);
+      document.getElementById('aaaa' +1).style.left =pixel.x + 'px'
+      // let mapMetu = document.getElementById('mapContent')
+      // mapMetu.style.left = (pixel.x) + 'px'
+      // mapMetu.style.top = (pixel.y) + 'px'
+      // console.log(mapMetu.style.left,mapMetu.style.top ,88888888888);
+
+
+
+
+      // pixelArray = new Array(pixel.trajectoryLongitude,pixel.trajectoryLatitude);
+      // console.log(pixelArray,4444444444444444);
+      // return pixelArray;
+    },
+
+      //按搜索条件查询
+      getCarData () {
+        if(!this.checkForm()){
+          //验证不通过则不向下执行
+          return false;
+        }
+        //初始时关闭搜索结果
+        this.checked = false;
+        this.loading = this.$loading({
+          lock: true,
+          background: "rgba(255,255,255,0.4)",
+          text: "加载中"
+        });
+        //搜索
+        this.orderBy = "pass_time";
+        this.orderType = "desc";
+        this.pageSize = 10;
+        this.pageNo = 1;
+        let params = this.searchParams;
+        this.getVD("trajectory", params, (res) => {
+          this.transValue(res.data, this.searchResult);
+          this.plateNumber = this.searchParams.plateNo;
+          this.beginDateTimeTxt = this.searchParams.beginDateTime;
+          this.endDateTimeTxt = this.searchParams.endDateTime;
+
+          if(this.searchResult.data.rows.length === 0 ){
+            //this.$alert("暂无数据","消息提示");
+             this.$notify({
+              type: 'info',
+              message: '抱歉，未查询到符合条件的数据！',
+              position: 'bottom-right',
+              duration: 3000
+            });
+           // layer.alert('抱歉，未查询到符合条件的数据！',{icon:5,title:"消息提示"});
+            this.clearDrawing();
+            console.log(this.searchResult.data.rows,6666);
+            this.checked = false;
+            this.arrawSwitch = false;
+          }else{
+            this.actualData = this.searchResult.data.rows.slice(0,this.pageSize);
+            console.log(this.actualData,999999999999);
+            this.runLine(this.searchResult.data.rows,this.color[0]);
+            this.checked = true;
+            this.arrawSwitch = true;
+          }
+
+        });
+      }
+    },
+    mounted: function () {
+      this.getWeekDay();
+      this.getTreeData();
+      this.getCheckedItem(["beginDateTime", "endDateTime","plateNo"]);
+
+      let plateNo = this.$router.history.current.query.plateNo;
+      if(plateNo){
+        this.platNumArr.push(plateNo);
+      }
+
+      let _this = this;
+      _this.getLocalCoordinate();
+      _this.loadMap();
+
+      this.beginDateTime = this.getDateString(new Date().getTime() - (Number(this.trajectoryMaxDays)-1)*24*60*60*1000).split(' ')[0] + " " + "00:00:00";
+      this.timeBegin = laydate.render({
+        elem: '#timeBegin',
+        type: 'datetime',
+        //min: -90, //90天前
+        max: this.endDateTime, //0天后
+        btns: ['now','confirm'],
+        done: function(value, date, endDate){
+          _this.beginDateTime = value;
+          _this.timeEnd.config.min = {
+            year:date.year,
+            month:date.month-1, //关键
+            date: date.date,
+            hours: date.hours,
+            minutes: date.minutes,
+            seconds: date.seconds
+          };
+          let time = Number(_this.trajectoryMaxDays)-1;
+          let maxDate = new Date(value).getTime() + time*24*60*60*1000;
+          if(new Date().getTime() > maxDate){
+            _this.endDateTime = _this.getDateString(maxDate);
+            _this.timeEnd.config.max = {
+              year: new Date(maxDate).getFullYear(),
+              month: new Date(maxDate).getMonth(), //关键
+              date: new Date(maxDate).getDate(),
+              hours: 23,
+              minutes: 59,
+              seconds: 59
+            };
+          }else{
+            _this.endDateTime = _this.getDateString(new Date().getTime());
+            _this.timeEnd.config.max = {
+              year: new Date().getFullYear(),
+              month: new Date().getMonth(), //关键
+              date: new Date().getDate(),
+              hours: 23,
+              minutes: 59,
+              seconds: 59
+            };
+          }
+        }
+      });
+      this.timeEnd = laydate.render({
+        elem: '#timeEnd',
+        type: 'datetime',
+        min: this.beginDateTime,
+        max: this.endDateTime, //0天后
+        btns: ['now','confirm'],
+        done: function(value, date, endDate){
+          _this.endDateTime = value;
+          _this.timeBegin.config.max={
+            year:date.year,
+            month:date.month-1,//关键
+            date: date.date,
+            hours: date.hours,
+            minutes: date.minutes,
+            seconds: date.seconds
+          }
+        }
+      });
+
+      this.$nextTick(() => {
+        document.querySelector('body').addEventListener('click', this.closeBar);
+      })
+    },
+    beforeDestroy() {
+      document.querySelector('body').addEventListener('click', this.closeBar);
+    }
+  }
+
+
+</script>
+
+
+<style scoped>
+
+  @import "../../assets/css/carJudged_third.css";
+@import "../../assets/css/commom.css";
+  .carsList{
+    flex: 1;
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.14rem;
+  }
+  .carsDetail {
+    width: 16%;
+    margin: 0.2rem;
+    position: relative;
+    border: 1px solid #c9cacd;
+    background:#f0f2f7;
+  }
+
+  .carsPicture {
+    width: 100%;
+    height: 65%;
+  }
+
+  .carsHandle {
+    width: 100%;
+    height: 15%;
+    position: absolute;
+    top: 50%;
+  }
+
+  .carsMessage {
+    width: 100%;
+    height: 35%;
+    display: flex;
+    flex-direction: column;
+    font-size: 0.12rem;
+    line-height: 0.2rem;
+    color:#606266;
+  }
+
+  .carsMessageTxt {
+    margin-left: 0.2rem;
+    margin-top: 2px;
+  }
+  .pageNation {
+    position: relative;
+    height: 0.32rem;
+    margin:0 auto;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 0.2rem;
+    align-items: center;
+  }
+   .el-table  /deep/ td,
+.el-table /deep/ th.is-leaf {
+  border: 1px solid rgba(12, 68, 135, 0.3) !important;
+}
+.el-table {
+  border: 2px solid rgba(12, 68, 135, 0.3) !important;
+}
+.aaaa{
+  position: absolute;
+  z-index: 9999;
+  left:0
+}
+</style>
+

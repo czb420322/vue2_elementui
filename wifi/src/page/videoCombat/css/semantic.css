@@ -1,0 +1,574 @@
+.semantic {
+  width: 100%;
+  position: absolute;
+  top: 0.6rem;
+  bottom: 0px;
+  left: 0px;
+}
+
+.topInfo {
+  width: 100%;
+  display: flex;
+  font-size: 0.18rem;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+}
+
+.childname {
+  width: 1.62rem;
+  height: 0.5rem;
+  background: url("../../../assets/images/sysmanage/bg.png");
+  background-size: 100% 100%;
+  color: #63abfe;
+  line-height: 0.5rem;
+  text-align: center;
+}
+
+.sysname {
+  width: 1.45rem;
+  height: 0.5rem;
+  line-height: 0.5rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.searchmain {
+  width: 100%;
+  position: absolute;
+  top: 0.5rem;
+  bottom: 0rem;
+  left: 0px;
+  overflow: auto;
+}
+
+.left {
+  width: 22%;
+  height: 100%;
+  float: left;
+  border: 1px solid #e4e7ed;
+  overflow-y: auto;
+  color: #606266;
+  position: relative;
+}
+
+.right {
+  width: 78%;
+  height: 100%;
+  margin-left: 22%;
+  position: relative;
+  overflow: hidden;
+}
+
+.firstp {
+  width: 22%;
+  position: fixed;
+  line-height: 0.4rem;
+  padding: 0 0.2rem;
+  /* padding: 0.1rem 0.2rem; */
+  background-color: #409eff;
+  color: #fff;
+  font-size: 0.18rem;
+  z-index: 2;
+}
+
+.firstp span {
+  font-weight: 700;
+}
+
+.twop {
+  width: 22%;
+  z-index: 2;
+  font-size: 0.16rem;
+  position: fixed;
+  margin-top: 0.4rem;
+  padding: 0 0.2rem;
+  line-height: 0.3rem;
+  color: #409eff;
+  background-color: #f6f7fb;
+}
+
+.setion,
+.captime,
+.disresult {
+  position: relative;
+  padding: 0 0.2rem;
+  padding-bottom: 0.2rem;
+  font-size: 0.14rem;
+}
+
+.setion>span,
+.captime span {
+  display: inline-block;
+  width: 0.9rem;
+}
+.disresult p span{
+  margin-right: 0.1rem;
+}
+.disresult li span{
+  display: inline-block;
+  width: 0.7rem;
+}
+
+.setion {
+  margin-top: 0.1rem;
+}
+
+.setion>div {
+  position: absolute;
+  left: 0.95rem;
+  top: 0;
+}
+
+.setion>div span {
+  margin-left: 0.3rem;
+  cursor: pointer;
+  position: relative;
+}
+
+/* 区域选择 */
+
+.items b {
+  position: absolute;
+  top: 0.04rem;
+  left: -0.25rem;
+  display: inline-block;
+  border: 1px solid #dcdfe6;
+  border-radius: 100%;
+  width: 0.14rem;
+  height: 0.14rem;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.items b i {
+  position: absolute;
+  width: 0.06rem;
+  height: 0.06rem;
+  border-radius: 100%;
+  background-color: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%)
+}
+
+.active b {
+  background-color: #409eff;
+}
+
+.disresult p {
+  color: #409eff;
+  margin-bottom: 0.05rem;
+}
+
+.disresult span {
+  text-align: right;
+}
+
+.results {
+  height: 3.1rem;
+  overflow: auto;
+}
+
+.results ul {
+  overflow: hidden;
+}
+
+.results ul li {
+  font-size: 0.12rem;
+  float: left;
+  width: 50%;
+  margin-bottom: 0.1rem;
+}
+
+.results ul li>>>.el-input {
+  /* width: calc(100% - 80px); */
+  width: 1rem;
+}
+
+.results ul li>>>.el-input__inner {
+  height: 0.3rem;
+  line-height: 0.3rem;
+  padding: 0 0.1rem;
+  font-size: 0.12rem;
+}
+
+.results ul li>>>.el-input__icon {
+  width: 0.15rem;
+}
+
+.el-select-dropdown__item {
+  padding: 0 0.1rem;
+}
+
+.captime {
+  padding-bottom: 0.1rem;
+}
+
+.captime span {
+  position: absolute;
+  line-height: 0.7rem;
+}
+
+.captime>div {
+  margin-left: 1rem;
+  width: calc(100% - 1rem);
+}
+
+.captime>>>.el-date-editor.el-input {
+  width: 2.6rem;
+}
+
+.captime>>>.el-input__inner {
+  height: 0.3rem;
+  margin-bottom: 0.1rem;
+  position: relative;
+}
+
+.captime>>>.el-input__icon {
+  position: absolute;
+  width: 0.25rem;
+  line-height: 0.3rem;
+  top: -0.06rem;
+}
+
+.btnmain {
+  width: 22%;
+  position: fixed;
+  bottom: 0rem;
+  background-color: #fff;
+}
+
+.threep {
+  background-color: #f6f7fb;
+  line-height: 0.38rem;
+  color: #409eff;
+  font-size: 0.16rem;
+  padding-left: 0.2rem;
+}
+
+.maphandle {
+  padding: 0.2rem;
+  overflow: hidden;
+  padding-bottom: 0.3rem;
+  border-bottom: 2px solid #e4e7ed;
+}
+
+.maphandle li {
+  width: 18%;
+  float: left;
+  margin-left: 2%;
+  cursor: pointer;
+}
+
+.maphandle li img {
+  width: 100%;
+}
+
+.left .button {
+  padding: 0.2rem;
+}
+
+.left .button .el-button {
+  width: 39%;
+  margin-right: 0.15rem;
+  padding: 0.1rem 0.2rem;
+}
+
+/* 区域选择 */
+
+.address {
+  width: 2.8rem;
+  height: 5rem;
+  border: 1px solid #ccc;
+  position: absolute;
+  left: 0;
+  overflow-y: auto;
+  bottom: 0.3rem;
+  background-color: #fff;
+  padding: 0 0.1rem;
+}
+
+.address p {
+  position: relative;
+  padding: 0.2rem 0;
+}
+
+.address p input {
+  height: 0.25rem;
+  border: 1px solid #e4e7ed;
+  padding-left: 0.1rem;
+  font-size: 0.12rem;
+  width: 100%;
+}
+
+.address p i {
+  position: absolute;
+  width: 0.3rem;
+  line-height: 0.25rem;
+  right: 0;
+  background-color: #409eff;
+  color: #fff;
+  text-align: center;
+}
+
+::-webkit-scrollbar {
+  width: 0.1rem;
+  height: 0.1rem;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 0.1rem;
+  background-color: #e7e9ee;
+  /* box-shadow: inset 0 0 5px #000; */
+}
+
+/* 模态框的样式 */
+
+/* .right>>>.el-dialog {
+   width: 55% !important;
+ } */
+
+.right>>>.el-dialog__header {
+  background-color: #f3f6f8;
+  text-align: left;
+}
+
+.center {
+  height: 5rem;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #000;
+}
+
+.cenmain {
+  flex: 1;
+  border: 1px solid red;
+}
+
+.cenmain>>>.el-carousel__container,
+.cenmain>>>.el-carousel {
+  height: 100%;
+}
+
+.center>p {
+  padding: 0.05rem 0;
+  color: #409eff;
+  position: relative;
+}
+
+.details {
+  position: absolute;
+  bottom: 0.3rem;
+  height: 0.8rem;
+  color: #fff;
+  background: #000;
+  width: calc(100% - 0.5rem);
+}
+
+.details ul {
+  padding: 0 0.1rem;
+}
+
+.details ul li {
+  width: 14%;
+  float: left;
+}
+
+.details ul li span:first-child {
+  display: inline-block;
+  width: 60%;
+}
+
+.rightmain {
+  width: calc(100% - 0.13rem);
+  height: 100%;
+  position: absolute;
+  top: 0.1rem;
+  z-index: 999;
+  background-color: #fff;
+  left: calc(100% + 0.13rem);
+  border: 1px solid #e7e7e9;
+}
+
+.rightmain>img {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -0.13rem;
+}
+
+.rightmain p {
+  padding-left: 10px;
+  color: #409eff;
+  line-height: 0.3rem;
+  font-size: 0.14rem;
+  border-bottom: 2px solid #dadbdb;
+}
+
+.rightmain .searchOk {
+  width: 100%;
+  height: 100%;
+  /* border: 1px solid #000; */
+}
+
+.searchOk ul {
+  width: 100%;
+  padding: 0.1rem 0.2rem;
+  overflow-y: auto;
+  height: 75%;
+}
+
+.searchOk ul li {
+ float: left;
+ width: 16%;
+ height: 2.4rem;
+ margin-right: 0.1rem;
+ margin-bottom: 0.1rem;
+ border: 1px solid #000;
+ position: relative;
+}
+.searchOk ul li:hover {
+  border: 1px solid #409eff;
+  cursor: pointer;
+}
+
+.searchOk ul li:hover p {
+  background-color: #d6e7f9;
+}
+
+.searchOk ul li:nth-child(6n) {
+  margin-right: 0px;
+}
+.searchOk ul li img {
+  width: 100%;
+  display: block;
+  height: 2rem;
+}
+
+.searchOk ul li p {
+border: 0;
+width: 100%;
+background-color: #f0f2f7;
+position: absolute;
+bottom: 0;
+}
+
+.searchOk ul li p span {
+display: block;
+font-size: 0.12rem;
+overflow: hidden;
+color: #ffa41b;
+white-space: nowrap;
+text-overflow: ellipsis;
+}
+
+.searchOk ul li p span i {
+font-style: normal;
+color: #606266;
+}
+
+.row-bg {
+  padding: 0.15rem 0;
+  border-bottom: 1px solid #dadbdb;
+}
+
+footer {
+  z-index: 99999;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  color: #909399;
+  font-size: 0.14rem;
+  transform: translateX(-25%);
+  text-align: center;
+}
+
+@media screen and (max-width:1500px) {
+  .results ul li {
+    width: 100%;
+  }
+  .disresult .results span {
+    width: 1.1rem;
+  }
+  .results ul li >>> .el-input,
+   .results .carNum,
+   .results .carModel>>>.el-input {
+    width: 1.8rem !important;
+  }
+}
+
+
+  .searchtrim {
+    font-size: 0.14rem;
+    padding-left: 0.2rem;
+    margin-top: 0.9rem;
+    margin-bottom: 0.2rem;
+  }
+  .searchtrim span:first-child{
+    margin-right: 0.3rem;
+  }
+
+  .item b {
+    width: 0.12rem;
+    height: 0.12rem;
+    vertical-align: middle;
+    border-radius: 50%;
+    display: inline-block;
+    border: 1px solid #dcdfe6;
+    position: relative;
+    background-color: #fff;
+  }
+
+  .item b i {
+    width: 0.05rem;
+    height: 0.05rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    background-color: #fff;
+    border-radius: 50%;
+  }
+
+  .active b {
+    background-color: #409eff;
+  }
+
+  #mapContent {
+    width: 100%;
+    height: 100%;
+    /* width: 1000px;
+    height: 600px; */
+  }
+
+  .dingwei {
+    position: absolute;
+    top: 210px;
+    right: 38px;
+    cursor: pointer;
+  }
+
+  .point {
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    font-size: 0.14rem;
+    /* background-color: #409eff; */
+    /* color: #fff; */
+    padding: 0 0.1rem;
+    border-radius: 5px;
+  }
+  .carNum{
+    width: 1rem;
+    height: 0.3rem;
+    border-radius: 4px;
+    border: 1px solid #dcdfe6;
+  }
+.results .carModel {
+  width: 100%;
+}
+.results .carModel >>> .el-input{
+  width:2.8rem;
+}

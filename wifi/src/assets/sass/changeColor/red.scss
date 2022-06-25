@@ -1,0 +1,80 @@
+$themes-red: (
+    // 红色系
+
+        /* 背景颜色 */
+        background_color1: red,
+        background_btnbj_4:#fff,
+        background_input_1:#fff !important,
+        background_select_1:#030810 !important, //搜索区下拉框颜色设置
+        background_depart_1:#fff, //部门管理左侧树菜单背景颜色
+        background_depart_highlight_hover:#fff, //树菜单鼠标划上每行变色
+
+
+
+       /* 1像素边框 */
+        boder1:1px solid #000,
+        border_2:1px solid #80888a,
+        border_input_1:1px solid #dcdfe6 !important,
+        border_hr_1:0.01rem solid #e1e1e1,
+        border_depart_1:1px solid #e1e1e1, //部门管理树菜单边框
+
+        /* 1像素边框 -----表格边框区 */
+        border_tab_1:2px solid #e1e1e1 !important,  //外框2像素
+
+
+         /* 底部2像素边框 */
+        border-bottom_2_enter:2px solid #000,
+
+
+
+        /* 底部1像素边框 */
+        boder_bottom1:1px solid #000,
+        border-bottom_word1:1px solid #000,
+
+
+         /* 字体颜色 */
+        font_main_color:red,
+        font_color1: #99c9fa,
+        font_color_subject1:#fff,
+        font_color_gray1:#888,
+        font_color_link1:#666,
+        font_color_white1:#fff,
+        font_color_footer1:#fff,
+        font_color_news1:#fff,
+
+
+        /* 弹窗 */
+        layer-background_color_1:#e6e7e8, //弹窗标题背景颜色
+        layer-background_color_2:red, //弹窗标题背景颜色
+        layer-background_color_affirm:#409EFF !important, //弹窗确认按钮  蓝色
+        layer-background_color_affirm_hover:#66b1ff !important,  //确认划上  蓝色
+        // layer-background_color_affirm_active:#3a8ee6 !important,  //确认划点击  蓝色
+        layer-background_color_cancel:#909399 !important, //取消
+        layer-background_color_cancel_hover:#a6a9ad !important, //取消
+        // layer-background_color_cancel_active:#909399 !important, //取消
+        layer-border-bottom_1:1px solid #000, //弹窗标题背景1像素边框--底部
+        layer-border-left_1:1px solid #000, //弹窗标题背景1像素边框--左边
+        layer-border-right_1:1px solid #000, //弹窗标题背景1像素边框--右边
+        layer-border-top_1:1px solid #000, //弹窗标题背景1像素边框--头部
+        layer_font_color_1:#303133, //弹窗标题文字颜色
+        layer_font_color_2:#80888a, //设置内容区域颜色
+        layer_background_img_1:#fff, //弹窗背景
+
+
+
+        /* 饿了么表格 */
+       el-background_color_title:rgba(12, 68, 135, 0.4) !important,
+       border_tab_2:1px solid #ebeef5 !important,  //单元格1像素
+       el-background_color_2nth:#FAFAFA !important,
+       el-background_color_hover:rgba(62, 88, 123, 0.5) !important, //鼠标划上背景颜色
+       el-background_color_before_1:rgba(12, 68, 135, 0.3) !important, //表格边框前置颜色
+
+
+       /* 饿了么---分页 */
+       el-page_background_color_1:rgba(0, 0, 0, 0.25) !important, //分页背景颜色
+       el-page_font_color_1:#80888a !important, //分页上下页颜色
+       page_background_color_2:#fff !important, //鼠标滑过分页展示的背景颜色
+
+       /* 图片 */
+
+);

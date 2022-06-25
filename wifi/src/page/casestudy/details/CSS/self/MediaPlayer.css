@@ -1,0 +1,294 @@
+@charset "utf-8";
+/* CSS Document */
+
+.MediaPlayer{
+	width:80%;
+	
+	/*规定最小尺寸，保证使用正常*/
+	min-width:590px;
+	background-color:rgba(0,0,0,1);
+	position:relative;
+	}
+	
+.Player{
+	display:block;
+	width:100%;
+	z-index:1;
+	}
+	
+.Cover{
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0;
+	left:0;
+	background:#2a2a2a url(../../img/playerImg/big-play-button.png) center center no-repeat;
+	opacity:0.5;
+	cursor:pointer;
+	}
+
+.Player-Controls{
+	display:block;
+	width:100%;
+	height:74px;
+	background-color:#040404;
+	position:absolute;
+	bottom:0;
+	left:0;
+	opacity:0;
+	/*hack*/
+	-moz-transition-delay:100ms;
+	-moz-transition-duration:1000ms;
+	-webkit-transition-delay:100ms;
+	-webkit-transition-duration:1000ms;
+	-o-transition-delay:100ms;
+	-o-transition-duration:1000ms;
+	-ms-transition-delay:100ms;
+	-ms-transition-duration:1000ms;
+	transition-delay:100ms;
+	transition-duration:1000ms;
+	}
+
+video:hover + div + div,
+.Cover:hover + div,
+.Player-Controls:hover{
+	display:block;
+	opacity:1;
+	/*hack*/
+	-moz-transition-delay:100ms;
+	-moz-transition-duration:1000ms;
+	-webkit-transition-delay:100ms;
+	-webkit-transition-duration:1000ms;
+	-o-transition-delay:100ms;
+	-o-transition-duration:1000ms;
+	-ms-transition-delay:100ms;
+	-ms-transition-duration:1000ms;
+	transition-delay:100ms;
+	transition-duration:1000ms;
+	}
+
+.Player-Row{
+	width:100%;
+	height:60px;
+	}
+
+.Progress-Bar{
+	/*width:90%;
+	*/
+	width:auto;
+	
+	height:14px;
+	float:left;
+	}
+
+.SpeedUp-Bar{
+	/*width:10%;
+	*/
+	width:auto;
+	
+	height:14px;
+	float:left;
+	}
+
+.speedPanel{
+	display:none;
+	width:110px;
+	height:auto;
+	position:absolute;
+	top:-132px;
+	right:38px;
+	background-color:#404040;
+	}	
+
+.speedUpRate{
+	width:auto;
+	height:17px;
+	line-height:14px;
+	margin:4px 4px 4px 4px;
+	font-size:14px;
+	font-family:'微软雅黑';
+	font-size:300;
+	text-align:right;
+	color:#ffffff
+	}
+
+.rate-check{
+	background:#66d131 url(../../img/playerImg/check.png) left center no-repeat;
+	}
+
+.timebar{
+	margin:2px 1px 2px 1px;
+	height:10px;
+	background:url(../../img/playerImg/timeline-base.png) left center repeat-x;
+	cursor:pointer;
+	}
+.timebar-start{
+	width:0;
+	height:10px;
+	background:url(../../img/playerImg/Timeline-Progess.png) left center repeat-x;
+	float:left;
+	}
+
+.SpeedUp{
+	margin-right:10px;
+	width:20px;
+	height:14px;
+	line-height:14px;
+	font-size:12px;
+	font-family:"微软雅黑";
+	color:#ffffff;
+	float:right;
+	}
+.speedUpBtn{
+	margin:2px 5px 2px 5px;
+	width:18px;
+	height:10px;
+	background:url(../../img/playerImg/toSpeedUpPlay.png) center center no-repeat;
+	float:right;
+	cursor:pointer;
+	}
+.speedUpBtn:hover{
+	background:url(../../img/playerImg/toSpeedUpPlay1.png) center center no-repeat;
+	}
+
+.controls-bg{
+	position:absolute;
+	top:14px;
+	left:0;
+	background:url(../../img/playerImg/controls-bg.png) left center repeat-x !important;
+	}
+
+.controls-btn{
+	width:60px;
+	height:60px;
+	float:left;
+	cursor:pointer;
+	}
+	
+.controls-play{
+	background:url(../../img/playerImg/play-icon.png) center center no-repeat;
+	}
+.controls-play:hover{
+	background:url(../../img/playerImg/play-icon2.png) center center no-repeat;
+	}
+.controls-play:active{
+	background:url(../../img/playerImg/play-icon3.png) center center no-repeat;
+	}
+.controls-pause{
+	background:url(../../img/playerImg/suspend-icon.png) center center no-repeat;
+	}
+.controls-pause:hover{
+	background:url(../../img/playerImg/suspend-icon2.png) center center no-repeat;
+	}
+.controls-pause:active{
+	background:url(../../img/playerImg/suspend-icon3.png) center center no-repeat;
+	}
+	
+.controls-stop{
+	margin:23px 23px 23px 23px;
+	width:14px;
+	height:14px;
+	float:left;
+	cursor:pointer;
+	background:url(../../img/playerImg/stop-1.png) center center no-repeat;
+	}
+.controls-stop:hover{
+	background:url(../../img/playerImg/stop-2.png) center center no-repeat;
+	}
+
+.controls-speed{
+	margin:23px 20px 23px 20px;
+	width:20px;
+	height:14px;
+	float:left;
+	cursor:pointer;
+	}
+.controls-back{
+	background:url(../../img/playerImg/play-icon-left1.png) center center no-repeat;
+	}
+.controls-back:hover{
+	background:url(../../img/playerImg/play-icon-left2.png) center center no-repeat;
+	}
+.controls-back:active{
+	background:url(../../img/playerImg/play-icon-left2.png) center center no-repeat;
+	}
+
+.controls-front{
+	background:url(../../img/playerImg/play-icon-right1.png) center center no-repeat;
+	}
+.controls-front:hover{
+	background:url(../../img/playerImg/play-icon-right2.png) center center no-repeat;
+	}
+.controls-front:active{
+	background:url(../../img/playerImg/play-icon-right2.png) center center no-repeat;
+	}
+
+.controls-time{
+	width:auto;
+	height:60px;
+	line-height:60px;
+	float:left;
+	margin-left:20px;
+	margin-right:20px;
+	color:#ffffff;
+	font-family:"微软雅黑";
+	font-size:1em;
+	}
+
+.border{
+	width:2px;
+	height:60px;
+	background-image:url(../../img/playerImg/border.png);
+	float:left;
+	}
+	
+.controls-full-screen{
+	width:60px;
+	height:60px;
+	float:right;
+	background:url(../../img/playerImg/fullscreen-open-icon.png) center center no-repeat;
+	float:right;
+	cursor:pointer;
+	}
+
+.controls-full-screen:hover{
+	background:url(../../img/playerImg/fullscreen-open-icon2.png) center center no-repeat;
+	}
+.controls-full-screen:active{
+	background:url(../../img/playerImg/fullscreen-open-icon3.png) center center no-repeat;
+	}
+	
+.controls-voice-progress{
+	margin:26.5px 18px 20.5px 18px;
+	width:60px;
+	height:7px;
+	background:url(../../img/playerImg/Volume-OFF.png) center left repeat-x;
+	float:right;
+	cursor:pointer;
+	}
+
+.voice{
+	width:50%;
+	height:7px;
+	background:url(../../img/playerImg/Volume-ON.png) center left repeat-x;
+	float:left;
+	}
+.controls-voice{
+	margin:18.5px 3.5px 18.5px 3.5px;
+	width:23px;
+	height:23px;
+	float:right;
+	cursor:pointer;
+	}
+.muted{
+	background:url(../../img/playerImg/volume-icon1.png) center center no-repeat;
+	}
+.muted:hover{
+	background:url(../../img/playerImg/volume-icon2.png) center center no-repeat;
+	}
+.mute{
+	background:url(../../img/playerImg/volume-mute1.png) center center no-repeat;
+	}
+.mute:hover{
+	background:url(../../img/playerImg/volume-mute2.png) center center no-repeat;
+	}

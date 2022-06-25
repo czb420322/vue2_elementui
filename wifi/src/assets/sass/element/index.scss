@@ -1,0 +1,158 @@
+/* 弹窗 */
+
+
+
+
+/* 表格 */
+
+/* 1、边框 */
+@mixin border_tab_1($color) {
+    @include themify {
+        border: themed($color)
+    }
+}
+
+@mixin border_tab_2($color) {
+    @include themify {
+        border: themed($color)
+    }
+}
+
+
+/* 按钮 */
+
+/* 背景颜色 */
+@mixin layer-background_color_1($color) {
+    @include themify {
+        background: themed($color)
+    }
+};
+
+@mixin layer-background_color_2($color) {
+    @include themify {
+        background: themed($color)
+    }
+};
+
+/* ----------------------------------弹窗底部提交按钮-------------------------------- */
+
+/* 1、弹窗确认按钮背景颜色 */
+@mixin layer-background_color_affirm($color) {
+    @include themify {
+        background: themed($color)
+    }
+};
+
+/* 2、弹窗取消按钮背景颜色 */
+@mixin layer-background_color_cancel($color) {
+    @include themify {
+        background: themed($color)
+    }
+};
+
+
+/* ----------------------------------表格区域--------------------------------------- */
+/* 3、饿了么表格标题栏背景颜色 */
+@mixin el-background_color_title($color) {
+    @include themify {
+        background: themed($color)
+    }
+};
+
+/* 4、饿了么表格内容各行变色背景颜色 */
+@mixin el-background_color_2nth($color) {
+    @include themify {
+        background: themed($color)
+    }
+};
+
+/* 5、饿了么表格内容鼠标划上背景更换颜色 */
+@mixin el-background_color_hover($color) {
+    @include themify {
+        background: themed($color)
+    }
+};
+
+/* 6、饿了么表格边缘前置颜色*/
+@mixin el-background_color_before_1($color) {
+    @include themify {
+        background: themed($color)
+    }
+};
+
+
+
+/* ---------------------------分页区域-------------------------------- */
+/* 1、饿了么分页背景*/
+@mixin el-page_background_color_1($color) {
+    @include themify {
+        background: themed($color)
+    }
+};
+
+/* 2、分页上下箭头颜色*/
+@mixin el-page_font_color_1($color) {
+    @include themify {
+        color: themed($color)
+    }
+  }
+
+  /* 3、饿了么分页*/
+@mixin el-page_background_color_2($color) {
+    @include themify {
+        background: themed($color)
+    }
+};
+
+
+
+
+
+
+/* 底部边框1像素 */
+@mixin layer-border-bottom_1($color) {
+    @include themify {
+      border-bottom:themed($color)
+    }
+}
+
+
+/* 左边边框1像素 */
+@mixin layer-border-left_1($color) {
+    @include themify {
+      border-left:themed($color)
+    }
+}
+
+/* 右边边框1像素 */
+@mixin layer-border-right_1($color) {
+    @include themify {
+      border-right:themed($color)
+    }
+}
+
+
+/* 顶部边框1像素 */
+@mixin layer-border-top_1($color) {
+    @include themify {
+      border-top:themed($color)
+    }
+}
+
+
+/* 文字颜色设置--深色 */
+@mixin layer_font_color_1($color) {
+    @include themify {
+        color: themed($color)
+    }
+  }
+
+ /* 文字颜色设置--浅色 */
+@mixin layer_font_color_2($color) {
+    @include themify {
+        color: themed($color)
+    }
+  }
+
+
+/* 边框 */

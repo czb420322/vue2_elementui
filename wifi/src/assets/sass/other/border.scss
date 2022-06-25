@@ -1,0 +1,41 @@
+
+// 设置1px边框
+@mixin border($color) {
+  @include themify {
+      border: themed($color)
+  }
+}
+
+// 编辑按钮边框
+@mixin border_2($color) {
+    @include themify {
+        border: themed($color)
+    }
+}
+
+
+// 搜索区文本框边框
+@mixin border_input_1($color) {
+    @include themify {
+        border: themed($color)
+    }
+}
+
+
+/* hr线 */
+// 编辑按钮边框
+@mixin border_hr_1($color) {
+    @include themify {
+        border: themed($color)
+    }
+}
+
+
+/* 部门管理 */
+
+/* 1、左侧树彩色边框*/
+@mixin border_depart_1($color) {
+    @include themify {
+        border: themed($color)
+    }
+}

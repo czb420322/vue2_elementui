@@ -1,0 +1,750 @@
+.wrapper {
+  margin-top: 0.6rem;
+  padding-top: 1px;
+}
+
+.topNav {
+  position:fixed;
+  top: 0.6rem;
+  left:0;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  width: 100%;
+  height: 0.54rem;
+  background: #F5F7FA;
+  border-bottom: 1px solid #dcdfe6;
+  box-shadow: 0 1px 1px #cdcdcd;
+}
+
+.nav-item {
+  min-width: 2.05rem;
+  line-height: 0.54rem;
+  text-align: center;
+  /* font-size: 0.2rem; */
+  cursor:pointer;
+  font-size: 0.18rem;
+}
+.nav-item-second{
+  background: url(../images/sysmanage/bg-02.png);
+  height: 100%;
+  margin-right: -0.13rem;
+  background-size: 100% 100%;
+}
+.nav-item-search {
+  height: 100%;
+  background: url(../images/sysmanage/bg.png);
+  color: #63abfe;
+  text-align: center;
+  background-size: 100% 100%;
+}
+.contentBody{
+    padding: 0.1rem 0.1rem;
+    padding-bottom: 0rem;
+    display: flex;
+    height: calc(100vh - .9rem - 2px);
+    overflow: hidden;
+  /* border-top: 2px solid #213147 */
+}
+.contentLeft{
+  position: relative;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* width: 22%; */
+  width: 3.58rem;
+  /*box-shadow:1px 0 0 #cdcdcd;*/
+  background-color: rgba(16, 35, 56, 0.5);
+   border: 3px solid #1a3659;
+   border-right: none;
+}
+/* .contentLeft::after{
+  content:"";
+  position:absolute;
+  width:3px;
+  height: calc(100vh - 1.14rem - 1px);
+   background:-webkit-gradient(linear,0 50%,100% 50%,from(rgba(61, 62, 62, 0.3)),to(rgba(255,255,255,0)));
+  top:1.14rem;
+  left: 4rem;
+  z-index:1;
+} */
+.contentHide{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background: #217ddd; */
+  z-index: 9;
+}
+.clItem{
+  display: flex;
+  flex-direction: column;
+}
+.cli1{
+  flex:1;
+  height: 75%;
+}
+.cli2{
+  height:2.76rem;
+}
+
+.searchTitle {
+  height:0.38rem;
+  padding-left: 0.2rem;
+  line-height: 0.38rem;
+  font-size: 0.18rem;
+  color: #c0c0c0;
+  background-color: rgba(19, 41, 66, .9);
+}
+.searchCondition {
+  flex: 1;
+  position: relative;
+  overflow-y: auto;
+}
+.searchCondition li {
+  position:relative;
+  width: 100%;
+  font-size: 0.14rem;
+  line-height: 0.32rem;
+  margin-bottom: 0.15rem;
+  color:#99c9fa ;
+}
+.searchCondition li::after{
+  content: "";
+  display:block;
+  clear:both;
+}
+.searchCondition .carColorItem{
+  position: static;
+}
+.searchCondition li span{
+  float:left;
+  width: 0.98rem;
+  text-align:right;
+}
+.searchCondition li .bt{
+  color:red;
+  float:none;
+}
+.searchCondition .searchImg{
+  padding-left: 0.2rem;
+}
+ .map .mapHandle {
+  height: 0.3rem;
+  padding-left: 0.2rem;
+  /* background-color: #F6F7FB; */
+  color: #78B5FE;
+  font-size: 0.16rem;
+  line-height: 0.3rem;
+  font-weight: bold;
+  margin-bottom: 0px !important
+}
+.searchCondition .conditionInput {
+  display: flex;
+  align-items: center;
+  line-height: 0.58rem;
+  margin-bottom: 0;
+  padding-left:0.2rem;
+  font-size: 0.16rem;
+  color:#3894f3;
+  font-weight: bold
+}
+.searchCondition .conditionInput img{
+  width: 0.18rem;
+  height: 0.15rem;
+  margin-right: 0.08rem
+}
+.searchCondition>>> .el-select  {
+  width: 2.2rem;
+  height: 0.32rem;
+  /* border: 1px solid #E6E8ED; */
+  /* padding-left: 0.05rem; */
+  font-size: 0.14rem;
+  color:#99c9fa ;
+}
+
+.searchCondition>>>.el-select .el-input__inner{
+  height: 0.32rem;
+  /* border: 1px solid #2A2D30 !important; */
+  font-size: 0.14rem;
+  padding-left:0.06rem;
+  border-radius: 2px;
+
+}
+.searchCondition .photoTo>>> .el-select{
+  width: 1rem;
+  height: 0.32rem;
+  font-size: 0.14rem;
+  color:#99c9fa ;
+}
+.searchCondition  .photoTo>>>.el-select .el-input__inner{
+  height: 0.32rem;
+  /* border: 1px solid #2A2D30 !important; */
+  font-size: 0.14rem;
+  padding-left:0.06rem;
+  border-radius: 2px;
+
+}
+.searchCondition .diffnumber>>> .el-select{
+  width: 1rem;
+  height: 0.32rem;
+  font-size: 0.14rem;
+  color:#99c9fa ;
+}
+.searchCondition  .diffnumber>>>.el-select .el-input__inner{
+  height: 0.32rem;
+  /* border: 1px solid #2A2D30 !important; */
+  font-size: 0.14rem;
+  padding-left:0.06rem;
+  border-radius: 2px;
+
+}
+.searchCondition input {
+  width: 2.2rem;
+  height: 0.32rem;
+  border: 1px solid #E6E8ED;
+  padding-left: 0.05rem;
+  font-size:0.14rem;
+  color:#606266;
+}
+.searchCondition textarea{
+  width: 2.2rem;
+  border: 1px solid #E6E8ED;
+  padding: 0.05rem;
+  color: #606266;
+  font-family: Arial;
+}
+.searchCondition .backItem  span{
+  width: 1.26rem;
+}
+.searchCondition .backItem input{
+  width: 1.9rem;
+}
+.searchCondition .backItem select{
+  width: 1.9rem;
+}
+.searchCondition .followItem input{
+  width:1.8rem;
+}
+.searchCondition .followItem .lt{
+  float: none;
+  width:auto;
+}
+.searchCondition .plateItem >>>.el-select{
+  width:0.67rem;
+}
+.searchCondition .plateItem input{
+  width: 1.6rem;
+  margin-left: -0.06rem;
+  vertical-align: top;
+}
+.searchCondition input:focus {
+  border: 1px solid #409EFF;
+}
+/* 验证消息提示 */
+.err{
+  position: absolute;
+  /* display: inline-block; */
+  top:0;
+  left:3.8rem;
+  /* width: 2rem; */
+  /* height: 0.31rem; */
+  max-width: 2rem;
+  background:red;
+  color:#fff;
+  font-size:0.14rem;
+  line-height: 0.24rem;
+  padding: 0.04rem;
+  padding-left: 0.08rem;
+  z-index: 99;
+}
+.err::after{
+  content: " ";
+  position: absolute;
+  top: 0.1rem;
+  left: -1px;
+  height: 0.09rem;
+  width: 0.09rem;
+  margin-left: -0.03rem;
+  transform: rotate(-45deg);
+  background: red;
+}
+
+.searchCondition .el-icon-circle-close {
+  color: #E1E3E9;
+  right: 0.25rem;
+  position: relative;
+  cursor: pointer;
+}
+.searchCondition .el-icon-circle-plus {
+  cursor: pointer;
+  position: relative;
+  right: 0.12rem;
+  color:#67C23A;
+}
+
+.searchCondition >>> .el-radio__label{
+  font-size: 0.14rem;
+  padding-left: 0.1rem;
+}
+.searchCondition >>>.el-radio+.el-radio{
+  margin-left:0.2rem
+}
+.searchCondition .err{
+  border-color:red;
+}
+.searchCondition .followTimeIn{
+  width: 12%;
+  margin: 0 0.05rem;
+}
+
+.map .mapHandle{
+  padding-left: 0.2rem;
+  display: flex;
+  align-items: center;
+  color:#3894f3
+}
+.map .mapHandle img{
+  width: 0.16rem;
+  height: 0.16rem;
+  margin-right: 0.08rem
+}
+.map  .arshmapHandle img{
+  width: 0.18rem;
+  height: 0.17rem;
+}
+.map .mapItem {
+  display: flex;
+  height: 0.63rem;
+  padding-left: 0.1rem;
+  align-items: center;
+  margin-bottom: 0.33rem
+}
+.map .crashmapItem{
+  margin-bottom: 0
+}
+.map .itemIcon {
+  width: 0.49rem;
+  height: 0.49rem;
+  margin-left: 0.15rem;
+  cursor: pointer;
+}
+.map .itemIcon:nth-child(1){
+  background:url(../images/carJudged/frame-1.png) center no-repeat;
+  background-size: 100% 100%
+}
+.map .itemIcon:nth-child(1):hover{
+  background:url(../images/carJudged/frame-1-h.png) center no-repeat;
+  background-size: 100% 100%
+}
+.map .itemIcon:nth-child(2){
+  background:url(../images/carJudged/drawALine-1.png) center no-repeat;
+  background-size: 100% 100%
+}
+.map .itemIcon:nth-child(2):hover{
+  background:url(../images/carJudged/drawALine-1-h.png) center no-repeat;
+  background-size: 100% 100%
+}
+.map .itemIcon:nth-child(3){
+  background:url(../images/carJudged/move-1.png) center no-repeat;
+  background-size: 100% 100%
+}
+.map .itemIcon:nth-child(3):hover{
+  background:url(../images/carJudged/move-1-h.png) center no-repeat;
+  background-size: 100% 100%
+}
+.map .itemIcon:nth-child(4){
+  background:url(../images/carJudged/meun.png) center no-repeat;
+  background-size: 100% 100%
+}
+.map .itemIcon:nth-child(4):hover{
+  background:url(../images/carJudged/meun-h.png) center no-repeat;
+  background-size: 100% 100%
+}
+.map .itemIcon:nth-child(5){
+  background:url(../images/carJudged/delete-1.png) center no-repeat;
+  background-size: 100% 100%
+}
+.map .itemIcon:nth-child(5):hover{
+  background:url(../images/carJudged/delete-1-h.png) center no-repeat;
+  background-size: 100% 100%
+}
+
+.map .itemIcon img {
+  width: 100%;
+  height: 100%;
+}
+
+.btnContainer {
+  height: 1.36rem;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 2px solid #11263d;
+}
+.btnContainer div{
+  width: 1.17rem;
+  height: 0.33rem;
+  text-align: center;
+  line-height: 0.33rem;
+  border-radius: 0.05rem;
+  font-size: 0.16rem;
+  cursor:pointer;
+  color: white;
+}
+.btnContainer .btnSearch {
+  /* background-color: #409EFE; */
+  margin-left: 0.35rem;
+}
+.btnContainer .btnAys{
+  background-color: #409EFE;
+  width: 50%;
+}
+
+.bc2{
+  height:0.6rem;
+  border-top: none;
+  justify-content: space-between;
+  margin-left:0.28rem
+}
+.bc2 .el-button{
+  padding: 0.08rem 0.12rem;
+}
+.bc3{
+  border-top: none;
+}
+
+.calDialog {
+  position: absolute;
+  z-index: 9999;
+  left: 3.85rem;
+  top: 1.43rem;
+}
+
+.content {
+  position: relative;
+  flex:1;
+  display: flex;
+  overflow: hidden;
+  border: 3px solid #1a3659;
+}
+
+.sDetail{
+  position: absolute;
+  z-index: 9;
+  /*width: calc(100% - 0.10rem);*/
+  width: calc(100% - 0.24rem);
+  height: calc(100% - 0.24rem);
+  top: 0.12rem;
+  left:100%;
+  transition: left 0.1s;
+}
+
+.sDetail .contentSwitch {
+  position: absolute;
+  left: -16px;
+  top: 45%;
+  width: 16px;
+  height:132px;
+  z-index: 999;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+#mapContent {
+  width: 100%;
+  height: 100%;
+}
+
+.searchCondition .timeWrap{
+  /* float:left; */
+  /* margin-left: 0.98rem; */
+  /* margin-top: -0.32rem; */
+  position: relative;
+}
+.searchCondition .timeWrap .carTime{
+  margin-left: 0.98rem;
+}
+.searchCondition .timeWrap .carTime input{
+  margin-bottom: 0.1rem;
+}
+.searchCondition .timeWrap .cirTime{
+  display: flex
+}
+.searchCondition .timeWrap .cirTime .el-icon-circle-close{
+  top:0.08rem;
+  right:0.2rem;
+}
+.searchCondition .timeWrap .cirTime input{
+  width: 1.1rem;
+  margin-bottom: 0.1rem;
+}
+
+.carNumPlate {
+  width: 15%;
+  height: 0.27rem;
+  border: 1px solid #E6E8ED;
+}
+
+.carNum {
+  width: 53%;
+}
+
+
+.picType{
+  width: 69%;
+  height: 0.28rem;
+  border: 1px solid #E6E8ED;
+  padding-left: 0.05rem;
+}
+.carType{
+  width: 69%;
+  height: 0.28rem;
+  border: 1px solid #E6E8ED;
+  padding-left: 0.05rem;
+}
+.platNumList{
+  margin-left: 0.98rem;
+  margin-top: 0.1rem;
+  overflow: hidden;
+}
+.searchCondition li .wholeCarPlate {
+  display: inline-block;
+  width: 1.25rem;
+  height: 0.3rem;
+  margin-right: 0.04rem;
+  margin-bottom: 0.04rem;
+  background-color: #163251;
+  color: #99c9fa;
+  text-align: center;
+  line-height:  0.3rem;
+  border-radius:  0.05rem;
+}
+.searchCondition li .grayPn{
+  background-color: #163251;
+  color:#99c9fa;
+}
+.searchCondition .closeCarPlate{
+  right:-0.05rem;
+  color:#ffb3a7;
+}
+.searchCondition .grayPn .closeCarPlate{
+  color:#909399
+}
+.searchCondition  .ftcItem{
+  display: flex;
+  align-items: center;
+}
+.searchCondition  .left_ftci{
+  width: 0.98rem;
+  text-align: right;
+}
+.searchCondition  .right_ftci{
+  flex: 05;
+}
+.searchCondition li .unit{
+  float:none;
+  width: auto;
+  margin-left: -0.78rem;
+}
+
+.menu{
+  position:absolute;
+  top: 50%;
+  left: 4rem;
+  /* background:#fff; */
+  background-color: rgba(32,49,67,.9);
+  height:4rem;
+  padding: 0.1rem;
+  z-index: 10;
+}
+.menu .el-input{
+  margin-bottom: 0.1rem;
+}
+.menu >>> .el-input__inner{
+  font-size:0.14rem;
+  height:0.4rem;
+  line-height:0.4rem;
+  padding: 0 0.15rem;
+}
+.menuTree{
+  width:3.5rem;
+  height: 3.27rem;
+  overflow: auto;
+}
+.menuTree >>> .el-tree-node__label{
+  font-size: 0.14rem;
+}
+
+.carhide /deep/ .el-collapse{
+  border-top: none;
+  border-bottom: none;
+  background-color: #F6F7FB;
+}
+.carhide /deep/ .el-collapse-item__header{
+  border-bottom: none;
+  background-color:#F6F7FB ;
+  color:#78B5FE;
+  font-size: 0.16rem;
+  font-weight: 600;
+  padding-left: 0.2rem;
+}
+.carhide /deep/ .el-collapse-item__wrap{
+  padding-left: 0.2rem;
+}
+/*落脚点分析搜索结果页*/
+.searchDetailFH {
+  width: 100%;
+  height: 100%;
+  display:flex;
+  flex-direction: column;
+  background-color: #f9fafb;
+  transition: all 1s;
+  border: 1px solid #36506d;
+  border-top:none;
+  background-image: url("../updataImg/home-bg.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.resultTitle{
+  height: 0.5rem;
+  padding-left: 0.2rem;
+  line-height: 0.5rem;
+  font-size: 0.18rem;
+  color:#c0c0c0;
+  border-bottom: 1px solid #1f3b50;
+  border-top: 1px solid #264565;
+  background-color: rgba(19, 41, 66, .9);
+}
+.resultList {
+  width: 100%;
+  padding: 1%;
+  flex:1;
+  /*display: flex;*/
+  /*flex-direction: column;*/
+  overflow-y: auto;
+  /*justify-content: center;*/
+  /*align-items: center;*/
+
+}
+.trackInfo{
+  font-size:0.14rem;
+  color:#99c9fa;
+  overflow: hidden;
+}
+.trackInfo .el-button{
+  font-size:0.14rem;
+}
+.resultTable{
+  width: 86%;
+  margin: 0.2rem auto;
+}
+.resultTable th{
+  background:#e9eef1;
+  height:0.6rem;
+  text-align: center;
+  font-size:0.16rem;
+  color:#808080;
+  border: 1px solid #d4d4d4;
+}
+.resultTable td{
+  font-size:0.14rem;
+  text-align: center;
+  height:0.38rem;
+  color:#808080;
+  border: 1px solid #d4d4d4;
+}
+.resultTable tr:hover{
+  background:#e0eefb;
+}
+.resultTable tr:nth-child(2n+1){
+  background:#f9fafb;
+}
+
+.resultTable td .desc{
+  border:1px solid #217ddd;
+  background:#3893f2;
+  padding: 0.02rem 0.1rem;
+  color:#fff;
+  border-radius: 0.05rem;
+  font-size: 0.14rem;
+  line-height:0.22rem;
+  cursor: pointer;
+}
+
+.pageNation {
+  width: 86%;
+  margin: 0.5rem auto 0;
+  text-align: right;
+  height:0.5rem;
+}
+
+
+.searchCondition .carColor {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+.searchCondition .carColor .text{
+  width: 0.98rem;
+  text-align: right;
+}
+.searchCondition li .choose span{
+  float:none;
+}
+.searchCondition li .choseResult  {
+  display: inline-block;
+  width: 0.3rem;
+  height: 0.3rem;
+  border: 1px solid #235588;
+  vertical-align: middle;
+  cursor: pointer;
+  background:url(../images/carJudged/undefined.png) no-repeat;
+}
+.searchCondition li .choose .choseResult span{
+  display:block;
+  width: 0.3rem;
+  height: 0.3rem;
+}
+.searchCondition li .choose .choseResultTxt{
+  display: inline-block;
+  width: auto;
+  height: 0.3rem;
+  line-height:0.3rem;
+  vertical-align: middle;
+}
+
+
+
+
+.point{
+  position: absolute;
+  left: 0.22rem;
+  bottom: 0.12rem;
+  width: 2rem;
+  font-size: 0.14rem;
+}
+.dingwei{
+  position: absolute;
+  top: 211px;
+  right: 49.8px;
+}
+.contentLeft>>>.el-icon-circle-close{
+  color:#99c9fa !important
+}
+.choose .colorList{
+  top:30% !important;
+  left:1rem !important
+}
+.carhide >>>.el-collapse{
+  background-color:transparent !important
+}
+.carhide >>>.el-collapse-item__wrap{
+  border: none;
+  background-color:transparent !important
+}
+.carhide>>>.el-collapse-item .el-collapse-item__header{
+  background-color: rgba(19, 41, 66, .9) !important;
+}

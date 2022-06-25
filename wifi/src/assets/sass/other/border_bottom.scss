@@ -1,0 +1,23 @@
+
+
+// 我的工作台--底部1像素的边框
+@mixin border-bottom($color) {
+    @include themify {
+      border-bottom:themed($color)
+    }
+  }
+
+  // 合作伙伴区域底部线颜色
+  @mixin border-bottom_word($color) {
+    @include themify {
+      border-bottom:themed($color)
+    }
+  }
+
+
+  /* 我的事件 */
+  @mixin border-bottom_2_enter($color) {
+    @include themify {
+      border-bottom:themed($color)
+    }
+  }

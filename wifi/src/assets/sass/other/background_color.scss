@@ -1,0 +1,73 @@
+// 背景颜色
+@mixin background_color($color) {
+    @include themify {
+        background: themed($color)
+    }
+};
+
+// 首页-关于-合作伙伴
+@mixin background_partner($color) {
+    @include themify {
+        background:themed($color)
+    }
+  };
+
+//   弹窗底部按钮背景
+  @mixin background_btnbj($color) {
+    @include themify {
+        background:themed($color)
+    }
+  };
+
+  @mixin background_btnbj_2($color) {
+    @include themify {
+        background:themed($color)
+    }
+  };
+
+  @mixin background_btnbj_3($color) {
+    @include themify {
+        background:themed($color)
+    }
+  };
+
+  @mixin background_btnbj_4($color) {
+    @include themify {
+        background:themed($color)
+    }
+  };
+
+
+  /* 文本框 */
+  @mixin background_input_1($color) {
+    @include themify {
+        background:themed($color)
+    }
+  };
+
+/* 下拉框背景颜色 */
+@mixin background_select_1($color) {
+    @include themify {
+        background:themed($color)
+    }
+  };
+
+
+
+  /* 部门管理-左侧树菜单背景颜色 */
+@mixin background_depart_1($color) {
+    @include themify {
+        background:themed($color)
+    }
+  };
+
+
+/* 部门管理-左侧树菜单鼠标划上每行加上背景划上颜色 */
+@mixin background_depart_highlight_hover($color) {
+    @include themify {
+        background:themed($color)
+    }
+  };
+
+
+

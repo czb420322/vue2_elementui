@@ -1,0 +1,151 @@
+/* 通过按钮 */
+@import "../../../assets/sass/globaldialog.scss"; //引入全局弹层的样式
+
+// 公共按钮
+
+/* 1、弹窗页面底部确认按钮 */
+.passBtn {
+    @include layer-background_color_affirm("layer-background_color_affirm");
+}
+
+.passBtn:hover,
+.passBtn:active {
+    @include layer-background_color_affirm("layer-background_color_affirm_hover");
+}
+
+/* 1、弹窗页面底部取消按钮 */
+.cancleBtn {
+    @include layer-background_color_cancel("layer-background_color_cancel");
+    // @include font_color_news("font_color_news1");
+    // @include layer_font_color_1("layer_font_color_1");
+}
+
+.cancleBtn:hover,
+.cancleBtn:active {
+    @include layer-background_color_cancel("layer-background_color_cancel_hover");
+}
+
+
+// 公共底部线
+
+/* 1、当前位置 */
+.topInfo {
+    @include border-bottom_2_enter("border-bottom_2_enter");
+}
+
+.sysname {
+    @include font_color_subject("font_color_subject1");
+}
+
+.titleColor {
+    @include font_color_subject("font_color_subject1");
+}
+
+/* 文本框 */
+
+/* 1.搜索区输入框 */
+input {
+    @include background_input_1("background_input_1");
+    @include border_input_1("border_input_1");
+    @include font_color_subject("font_color_subject1");
+}
+
+textarea,
+.el-textarea /deep/ .el-textarea__inner {
+    @include border_input_1("border_input_1");
+    @include font_color("font_main_color");
+}
+
+textarea,
+.el-textarea .el-textarea__inner {
+    @include border_input_1("border_input_1");
+    @include font_color("font_main_color");
+}
+
+.el-radio {
+    @include font_color("font_main_color");
+}
+
+
+/* 饿了么组件---表格 */
+
+.el-table {
+    @include border_tab_1("border_tab_1");
+}
+
+.el-table--border {
+    @include border_tab_1("border_tab_1");
+}
+
+// 表格边框区
+.el-table /deep/ th {
+    @include el-background_color_title("el-background_color_title");
+}
+
+.el-table--border /deep/ td,
+.el-table /deep/ td,
+.el-table /deep/ th.gutter:last-of-type,
+.el-table /deep/ th.is-leaf {
+    @include border_tab_2("border_tab_2");
+}
+
+.el-table /deep/ th /deep/.cell,
+.el-table /deep/.cell,
+.titleColor {
+    @include font_color_subject("font_color_subject1");
+}
+
+.el-table /deep/ tr:nth-child(2n) {
+    @include el-background_color_2nth("el-background_color_2nth");
+}
+
+
+
+.el-table th {
+    @include el-background_color_title("el-background_color_title");
+}
+
+.el-table--border td,
+.el-table td,
+.el-table th.gutter:last-of-type,
+.el-table th.is-leaf {
+    @include border_tab_2("border_tab_2");
+}
+
+.el-table th .cell,
+.el-table .cell,
+.titleColor {
+    @include font_color_subject("font_color_subject1");
+}
+
+.el-table tr:nth-child(2n) {
+    @include el-background_color_2nth("el-background_color_2nth");
+}
+
+.el-table--border::after,
+.el-table--group::after,
+.el-table::before {
+    @include el-background_color_before_1("el-background_color_before_1");
+}
+
+
+
+/* 分页 */
+.el-pagination /deep/ .el-pagination__total,
+.el-pagination /deep/ .el-pagination__jump {
+    @include font_color_subject("font_color_subject1");
+}
+
+.el-pagination .el-pagination__total,
+.el-pagination .el-pagination__jump {
+    @include font_color_subject("font_color_subject1");
+}
+
+
+
+
+
+/* 底部公司名称 */
+footer {
+    @include font_color_footer("font_color_footer1");
+}

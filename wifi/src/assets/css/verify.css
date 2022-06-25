@@ -1,0 +1,27 @@
+.mustText {
+  width: 1.5rem;
+  background: red;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 0.3rem;
+  color: white;
+  font-size: 0.12rem;
+  line-height: 0.3rem;
+  text-align: center;
+  z-index: 9999;
+}
+.mustText i {
+  display: block;
+  height: 0.1rem;
+  width: 0.1rem;
+  background: red;
+  position: absolute;
+  left: -0.05rem;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  transform: rotateZ(45deg);
+  -moz-transform: rotateZ(45deg);
+  -webkit-transform: rotateZ(45deg);
+}

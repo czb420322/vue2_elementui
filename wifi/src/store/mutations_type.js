@@ -1,0 +1,3 @@
+
+export const GET_NEWSLIST = 'GET_NEWSLIST'
+export const TOGGLE_PIC_DIV = 'TOGGLE_PIC_DIV'

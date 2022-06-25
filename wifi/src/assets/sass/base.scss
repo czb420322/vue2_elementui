@@ -1,0 +1,55 @@
+// 定义主题类型及各类型下所有的变量
+
+// 切换换肤样式
+@import './changeColor/red.scss';  //红色系
+@import './changeColor/default.scss';  //默认
+@import './changeColor/white.scss';   //白色
+
+
+
+// 设置其他属性样式
+@import './other/border.scss'; // 边框
+@import './other/border_bottom.scss'; // 底部边框
+@import './other/background_color.scss'; // 背景颜色
+@import './other/background_img.scss'; // 背景图片
+@import './other/font_color.scss'; // 文字颜色
+
+// 饿了么组件样式
+@import './element/index.scss';
+
+
+$themes: (
+    // 红色系
+    red:$themes-red,
+    // 默认深蓝色系
+    blue:$themes-blue,
+    // 白色系
+    white:$themes-white,
+
+);
+// sass的map方法添加对应主题的类名
+@mixin  themify($themes: $themes) {
+   @each $theme-name,
+   $map in $themes {
+       .theme-#{$theme-name} & {
+           $theme-map: () !global;
+           @each $key,
+           $value in $map {
+               $theme-map: map-merge($theme-map, ($key: $value)) !global;
+           }
+           @content;
+           $theme-map: null !global;
+       }
+   }
+};
+
+
+// 声明一个根据key获取颜色的方法
+@function themed($key) {
+    @return map-get($theme-map, $key)
+};
+
+
+
+
+

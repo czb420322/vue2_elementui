@@ -1,0 +1,65 @@
+//全局弹层的样式
+.el-dialog__wrapper /deep/ .el-dialog .el-dialog__header,
+.el-tabs--border-card /deep/ .el-tabs__header {
+    @include background_color('background_eleheader')
+}
+
+.el-dialog__wrapper /deep/ .el-dialog .el-dialog__title {
+    @include font_color('font_color_white1');
+}
+
+.el-dialog__wrapper /deep/ .el-dialog__body {
+    @include font_color('font_main_color');
+}
+
+.el-dialog__wrapper /deep/ .el-dialog {
+    @include background_img('background_img1')
+}
+
+.el-tabs--border-card /deep/ .el-tabs__header,
+.el-table thead,
+.el-table tbody {
+    @include font_color('font_color1');
+}
+
+
+//树形列表hover效果
+.el-tree /deep/ .el-tree-node__content:hover,
+.el-tree /deep/ .el-tree-node:focus /deep/ .el-tree-node__content {
+    @include background_color('background_depart_highlight_hover');
+}
+
+
+.el-dialog__wrapper .el-dialog .el-dialog__header,
+.el-tabs--border-card .el-tabs__header {
+    @include background_color('background_eleheader')
+}
+
+.el-dialog__wrapper .el-dialog .el-dialog__title {
+    @include font_color('font_color_white1');
+}
+
+.el-dialog__wrapper .el-dialog__body {
+    @include font_color('font_main_color');
+}
+
+.el-dialog__wrapper .el-dialog {
+    @include background_img('background_img1')
+}
+
+.el-tabs--border-card .el-tabs__header,
+.el-table thead,
+.el-table tbody {
+    @include font_color('font_color1');
+}
+
+
+//树形列表hover效果
+.el-tree .el-tree-node__content:hover,
+.el-tree .el-tree-node:focus .el-tree-node__content {
+    @include background_color('background_depart_highlight_hover');
+}
+
+
+
+// 按钮的公共样式
