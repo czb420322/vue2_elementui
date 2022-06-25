@@ -1,0 +1,97 @@
+@charset "utf-8";
+
+.wodejifen-page{
+   background: #f7f7f7;
+   
+   .mytop {
+	  position: relative;
+	  .quan {
+	    position: absolute;
+	    top: 50%;
+	    left: 50%;
+	    margin-left: -3rem;
+	    margin-top: -3rem;
+	    text-align: center;
+	    color: #fff;
+	    width: 6rem;
+	    height: 6rem;
+	    background: url(../../public/img/page/wodejifen/quan.png) top center no-repeat;
+	    background-size: 100%;
+	    .txt {
+	      font-size: 0.7rem;
+	      margin-top: 1rem;
+	    }
+	    .myinte {
+	      font-size: 1.6rem;
+	    }
+	  }
+	  img {
+	    width: 100%;
+	  }
+	  .help {
+	    position: absolute;
+	    top: 0.6rem;
+	    right: 0.6rem;
+	    height: 1.2rem;
+	    color: #ffa8a8;
+	    display: block;
+	    background: #bb0e17;
+	    border-radius: 0.7rem;
+	    border: 1px #ffa8a8 solid;
+	    padding: 0px 0.3rem;
+	    font-size: 0.6rem;
+	    .iconfont2 {
+		    font-size: 0.8rem;
+		}
+	  }
+	}
+	.levelbox {
+	  margin-top: -1rem;
+	  text-align: center;
+	  padding: 0.3rem 0;
+	  position: relative;
+	  &::before {
+	    content: '';
+	    position: absolute;
+	    top: 1.6rem;
+	    height: 1px;
+	    background: #eee;
+	    left: 2rem;
+	    right: 2rem;
+	    z-index: 1;
+	  }
+	  img {
+	    width: 2.8rem;
+	    position: relative;
+	    z-index: 2;
+	  }
+	  div {
+	    font-size: 0.7rem;
+	    line-height: 0.8rem;
+	  }
+	  .grey {
+	    color: #999;
+	  }
+	}
+	.mycard {
+	  padding: 0.5rem;
+	  .mycard_title {
+	    padding-bottom: 0.2rem;
+	    font-size: 0.8rem;
+	  }
+	  .flex {
+	    padding: 0.2rem 0;
+	    .date {
+	      width: 4rem;
+	    }
+	    .num {
+	      width: 4rem;
+	      text-align: right;
+	    }
+	  }
+	  .flexitem {
+	    line-height: 0.9rem;
+	  }
+	}
+   
+}

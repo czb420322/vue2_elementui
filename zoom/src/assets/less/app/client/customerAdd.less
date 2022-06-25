@@ -1,0 +1,98 @@
+﻿@charset "utf-8";
+
+
+.customer-detail-page{
+	.list-block{
+		margin: 0;
+	}
+    .clientInfo-title {
+	  margin: 0.7rem 0px 0.5rem;
+	  font-weight: normal;
+	  color: #5f5f5f;
+	  padding-left: 0.5rem;
+	  
+	  .index-content-title {
+	  	span {
+		  display: inline-block;
+		  width: 0.2rem;
+		  height: 0.85rem;
+		  background: #fe7735;
+		  position: relative;
+		  top: 0.1rem;
+		  margin-right: 0.3rem;
+		}
+	  	h4 {
+		  margin-top: 0px;
+		  margin-bottom: 0px;
+		}
+	  }
+		
+	}
+	.clientInfo-div{
+		margin-top: 0.5rem;
+		&:first-child{
+			margin-top: 0;
+		}
+		.item-right{
+			text-align: right;
+		}
+		.field-title{
+			padding: 0.4rem 0 0 0.6rem;
+		}
+		.van-field{
+			padding-left: 0;
+		}
+	}
+	select option {
+		direction: ltr;
+	}
+	.label-required{
+		&:after{
+			content: '*';
+			display: inline-block;
+			color: #DF4E4E;
+			line-height: 0.75rem;
+			font-weight: bold;
+		}	
+	}
+	.scanid{
+		position: relative;
+		width: 4rem;
+		height: 2rem;
+		overflow: hidden;
+		input{
+			opacity: 0;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 4rem;
+			height: 2rem;
+			z-index: 999;
+		}
+		img {
+			position: absolute;
+			top: 0.4rem;
+			left: .9rem;
+			width: 1.2rem;
+			height: 1.2rem;
+			display: block;
+		}
+		.van-uploader {
+			width: 1.6rem;
+			height: 1.6rem;
+			img{
+				width: 1.2rem;
+				height: 1.2rem;
+				margin-left: 0.4rem;
+			}
+		}
+	}
+	.seller{
+		.van-cell{
+			padding-left: 0;
+		}
+	}
+	.btnbox{
+		padding: 1rem 1.5rem;
+	}
+} 

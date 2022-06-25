@@ -1,0 +1,75 @@
+@charset "utf-8";
+
+.promotePage {
+	margin    : 45px auto 60px;
+	margin-top: 45px;
+
+	.tabs-box {
+		background-color: #0252ff;
+		margin          : auto;
+		padding-bottom  : 24px;
+		position: fixed;
+		top: 70px;
+		left: 0;
+		right: 0;
+
+		.van-tabs {
+			width : 92%;
+			margin: auto;
+		}
+
+		.van-tabs__line {
+			width           : 1.25em !important;
+			background-color: #EB9620;
+			bottom          : 20px;
+		}
+
+		.van-tab--active {
+			font-weight: normal;
+		}
+	}
+
+	.list-box {
+		bottom                    : 75px;
+		position                  : fixed;
+		top                       : 95px;
+		left                      : 4%;
+		right                     : 4%;
+		z-index                   : 1;
+		background                : white;
+		overflow-y                : scroll;
+		-webkit-overflow-scrolling: touch;
+		border-radius             : 5px;
+		box-shadow                : 0 0 10px rgba(0, 0, 0, 0.1);
+		display                   : flex;
+		flex-wrap                 : wrap;
+		align-content             : baseline;
+		margin-bottom: constant(safe-area-inset-bottom); /* 兼容 iOS < 11.2 */
+		margin-bottom: env(safe-area-inset-bottom); /* 兼容 iOS >= 11.2 */
+		.item {
+			width : 30%;
+			margin: 2.5% 0 2.5% 2.5%;
+
+			.list {
+
+				.poster {
+					height: 44vw;
+					width  : 100%;
+					display: block;
+				}
+
+				.van-ellipsis {
+					font-size : .75rem;
+					text-align: center;
+				}
+			}
+		}
+	}
+
+	p.tip {
+		color     : #999;
+		text-align: center;
+		font-size : 14px;
+		width     : 100%;
+	}
+}

@@ -1,0 +1,37 @@
+{
+	"projectName": "rbt-app-h5",
+	"buildName": "rbt-app-h5",
+	"config": {
+		"ctx_base": "/rbt-h5",
+		"http_base": "https://grrbtp.guorenpcic.com",
+		"guorenpcic": "https://glutton.guorenpcic.com",
+		"picture_base": "https://grrbtp.guorenpcic.com:21000",
+		"http_check_url": "https://rbt.guorenpcic.com/agent-restful/restful/agent/common/check",
+		"http_base_agent": "https://grrbtp.guorenpcic.com/agent/rbt-agent",
+		"http_base_verify": "https://devyun.guorenpcic.com/rbt-agent",
+		"http_base_proposal": "https://rbt.guorenpcic.com/proposal-restful/restful/proposal",
+		"http_base_calculation": "https://grrbtp.guorenpcic.com/noncar/rbt-noncar",
+		"http_base_esp": "https://rbt.guorenpcic.com/esp-restful/restful/esp",
+		"http_base_life": "https://grrbtp.guorenpcic.com/noncar/rbt-noncar",
+		"http_base_print": "https://rbt.guorenpcic.com/print-api",
+		"http_base_customer": "https://rbt.guorenpcic.com/customer-restful/restful/customer",
+		"http_base_car": "https://grrbtp.guorenpcic.com/car/rbt-car",
+		"http_base_study": "//rbt.guorenpcic.com/study-restful/restful/",
+		"http_base_shop": "//rbt.guorenpcic.com/mircoshop-restful/restful",
+		"collectLog": "//rbt.guorenpcic.com/log/collectLog",
+		"appid_wx": "wx12d582fbd179e55c",
+		"agent_wx": "1000016",
+		"appid_alipay": "204400000000000000",
+		"platForm": ""
+	},
+	"shenzhenzhuanban":{
+		"sz_appid":"wx4c1cd0674d74c561"
+	},
+	"APPID": "wx12d582fbd179e55c",
+	"appKey": "d4c38484f1eeb5ebfb999e8a2a0727ce",
+	"redirect": "https://76543.activity-1.m.duiba.com.cn/projectx/pde0fa17e/index.html?appID=76543",
+	"download": {
+		"ios": "itms-services://?action=download-manifest&url=https://rbt.guorenpcic.com/grmit-download/app-ios/igrmit-prd.plist",
+		"android": "https://produnderwrite.oss-cn-beijing.aliyuncs.com/fxgfgfds/app/fcd0db6082a341c68b7737dd9773f772.apk?Expires=1641882556&OSSAccessKeyId=LTAI3qJF5LvvqmHA&Signature=AMl6pYKFsksZS9Jc5ooULHOlv64%3D"
+	}
+}

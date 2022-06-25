@@ -1,0 +1,131 @@
+@charset "utf-8";
+
+.productDetailPage {
+	margin: 0 0 56px 0;
+	.van-nav-bar__arrow {
+		font-size: 20px;
+		opacity  : 0.85;
+	}
+
+	.van-nav-bar__title {
+		color      : #3B3B3B;
+		font-size  : 17px;
+		font-weight: normal;
+	}
+
+	.banner {
+		width: 100%;
+	}
+
+	.list-box {
+		.item {
+			.name {
+				display      : flex;
+				margin       : 0;
+				padding      : 0.5rem;
+				align-items  : center;
+				align-content: center;
+				color: #0252FF;
+
+				.icon {
+					display     : block;
+					width       : .95rem;
+					margin-right: 0.2rem;
+				}
+			}
+
+			.van-card__title {
+				font-weight: normal;
+				font-size  : 16px;
+				color      : #333;
+				margin     : 2px 0 4px;
+			}
+
+			.list-content {
+				display        : flex;
+				justify-content: space-between;
+				margin-top     : 12px;
+
+				.price {
+					color    : #fb7125;
+					font-size: 14px;
+
+					span {
+						font-size: 18px;
+					}
+				}
+			}
+
+			.van-card:not(:first-child) {
+				margin-top: 0;
+			}
+
+			.van-card:not(:first-child)::after {
+				position         : absolute;
+				box-sizing       : border-box;
+				content          : ' ';
+				pointer-events   : none;
+				top              : -50%;
+				right            : -50%;
+				bottom           : -50%;
+				left             : -50%;
+				border           : 0 solid #ebedf0;
+				-webkit-transform: scale(0.5);
+				transform        : scale(0.5);
+				border-width     : 1px 0;
+			}
+		}
+	}
+	.confirm_bar{
+		position: fixed;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		height: 50px;
+		display: flex;
+		align-items: center;
+		background-color: white;
+		box-shadow: 0 0 10px rgba(0,0,0,0.13);
+		margin-bottom: constant(safe-area-inset-bottom);
+		margin-bottom: env(safe-area-inset-bottom);
+		.name{
+			font-size: 12px;
+			margin: 0 12px 0 24px;
+		}
+		.price{
+			flex: 1.5;
+			color: #FB7125;
+			font-size: 22px; 
+			.originalPrice{
+				text-decoration: line-through;
+				font-size: .75rem;
+				margin-left: .4rem;
+				color: #999;
+			}
+		}
+		.btn{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: inherit;
+			flex: 1;
+			background-color: #0252FF;
+			color: rgba(255,255,255,.8);
+		}
+		.PhoneBtn{
+			background-color: #07c160;
+		}
+	}
+	.van-tab.van-tab--active{
+		font-weight: normal;
+    	color: #0252FF;
+	}
+	.van-tabs__line{
+		background-color: #0252FF;
+	}
+	.list-box.mainRiskList{
+		.van-cell__title{
+			flex: 2;
+		}
+	}
+}

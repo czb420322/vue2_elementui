@@ -1,0 +1,80 @@
+@charset "utf-8";
+a{color:#333;}
+.brokerage-page{
+
+	.yjtop {
+	  background: -webkit-linear-gradient(left,#ff5a5b,#c9151e);
+	  background: -o-linear-gradient(right,#ff5a5b,#c9151e);
+	  background: -moz-linear-gradient(right,#ff5a5b,#c9151e);
+	  background: linear-gradient(to right,#ff5a5b,#c9151e);
+	  height: 4rem;
+	  width: 100%;
+	  position: relative;
+	  
+	  .flex {
+	    display: flex;
+	    position: absolute;
+	    right: 0.8rem;
+	    top: 1rem;
+	    
+	    input {
+		    background: none;
+		    border: none;
+		    color: #fff;
+		    text-align: right;
+		  }
+	    .icon {
+		    color: #fff;
+		  }
+	  }
+	}
+
+	.cardtop {
+	  margin-top: -1rem;
+	  text-align: center;
+	  padding: 1rem 0 0.8rem 0;
+	  
+	  .num {
+	    font-size: 1.6rem;
+	    color: #e83c3c;
+	  }
+	}
+
+	.yjcard {
+	  padding: 0.6rem;
+	  
+	  .yjtitle {
+		  padding-bottom: 0.4rem;
+		}
+	
+	  .flex {
+	    display: table;
+	    width: 100%;
+	    .flexitem {
+	      -webkit-box-flex: 1;
+		  flex: 1;
+	      line-height: 1.2rem;
+	      text-align: center;
+	      padding: 0.7rem 0;
+	      display: table-cell;
+    	  vertical-align: middle;
+    	  width: 50%;
+	    }
+	    &:nth-child(even) {
+	      .flexitem {
+	        &:first-child {
+	          background: #f7e2b6;
+	          
+	        }
+	        &:last-child {
+	          	  background: #f8f8f8;
+	              display: table-cell;
+    			  vertical-align: middle;
+    			  width: 50%;
+	        }
+	      }
+	    }
+	  }
+	}
+	
+}

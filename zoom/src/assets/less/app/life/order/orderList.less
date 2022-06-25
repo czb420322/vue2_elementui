@@ -1,0 +1,95 @@
+@charset "utf-8";
+
+p {
+	margin: 0;
+}
+
+.orderListPage {
+	margin-top: 45px;
+
+	.tabs-box {
+		background-color: #0252ff;
+		margin          : auto;
+
+		.van-tabs {
+			// width : 90%;
+			// margin: auto;
+		}
+
+		.van-tabs__line {
+			width           : 1.5em !important;
+			background-color: white;
+			bottom          : 20px;
+		}
+
+		.van-tab--active {
+			font-weight: normal;
+		}
+	}
+
+	.list-box {
+		margin-bottom: 0.65rem;
+
+		.list {
+			margin: 12px;
+			background: #fff;
+			border-radius: 6px;
+			.van-cell__title {
+				flex: 3;
+			}
+
+			.van-cell-group {
+				.van-panel__footer {
+					display        : flex;
+					justify-content: flex-end;
+
+					.van-button {
+						margin-left: .5rem;
+					}
+				}
+
+				.van-panel__header-value {
+					color: #fb7125;
+				}
+
+				.price {
+					font-size: .8rem;
+					font-weight: initial;
+				}
+
+				.van-card__title {
+					font-size    : .8rem;
+					margin-bottom: .3rem;
+				}
+			}
+
+			.footer_bar {
+				display        : flex;
+				justify-content: space-between;
+				align-items    : center;
+				width          : 100%;
+
+				.price_bar {
+					color    : #333333;
+					font-size: 0.75rem;
+					flex: 1;
+					.price {
+						font-weight: 500;
+						color    : #fb7125;
+						font-size: 1rem;
+		
+					}
+				}
+			}
+			.order_commission{
+				font-size: 12px;
+				color: #aabee7;
+				padding: 10px;
+				background: #fff;
+				.order_commission_money{
+					color: #fb7125;
+				}
+			}
+		}
+	}
+}

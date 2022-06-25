@@ -1,0 +1,161 @@
+.layoutPage {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: -moz-box;
+    display: -webkit-box;
+    display: box;
+    -moz-box-orient: vertical;
+    -webkit-box-orient: vertical;
+    box-sizing: border-box;
+
+    .layoutContent {
+        box-sizing: border-box;
+        position: relative;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+        -moz-box-flex: 1;
+        -webkit-box-flex: 1;
+    }
+}
+
+.shopPage {
+    .van-nav-bar {
+        background: #0252ff;
+    }
+
+    .nav_bar_left {
+        display: flex;
+        align-items: center;
+        opacity: 0.85;
+        font-size: .85rem;
+    }
+
+    .round_bg {
+        background-color: #0252ff;
+        position: absolute;
+        top: 0;
+        height: 7rem;
+        left: -25%;
+        right: -25%;
+        border-radius: 50%;
+        z-index: -1;
+    }
+
+    .banner {
+        margin: 0 3% 3% 3%;
+        border-radius: 5px;
+        overflow: hidden;
+        min-height: auto;
+        height: 37vw;
+
+        .van-swipe-item {
+            img {
+                display: block;
+                width: 100%;
+                height: 37vw;
+            }
+        }
+    }
+
+    .van-tab--active {
+        font-size: 16px;
+    }
+
+    .van-tabs__line {
+        bottom: 20px;
+    }
+
+    .product_list {
+        border-top: 1px solid #eeeeee;
+
+        p {
+            margin: 0;
+        }
+
+        .desc-box {
+            display: flex;
+            flex-wrap: wrap;
+            opacity: 0.5;
+        }
+
+        .name {
+            display: flex;
+            margin: 0;
+            padding: 0.5rem;
+            align-items: center;
+            align-content: center;
+
+            .icon {
+                display: block;
+                width: 1rem;
+                margin-right: 0.2rem;
+            }
+        }
+
+        .van-card__title {
+            font-size: 16px;
+            color: #333;
+            margin: 2px 0 4px;
+            font-weight: bold;
+            line-height: 1.1em;
+            margin-right: 3rem;
+            width: 100%;
+
+            .van-card__title_icon {
+                position: absolute;
+                top: -1rem;
+                right: -0.5rem;
+                width: 3.3rem;
+            }
+        }
+
+        .tag {
+            margin: 0.2rem 0 0;
+
+            .van-tag--default.van-tag--plain {
+                margin: 0.2rem 0.4rem 0.2rem 0;
+            }
+        }
+
+        .list-content {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2px;
+
+            .price {
+                color: #fb7125;
+                font-size: 0.75rem;
+                font-weight: bold;
+
+                span {
+                    font-size: 1.1rem;
+                    font-weight: bold;
+                }
+            }
+
+            .add_bar {
+                display: flex;
+                align-items: center;
+                font-size: 0.75rem;
+                color: #fb7125;
+
+                .drill {
+                    display: block;
+                    width: 1em;
+                }
+
+                .saleDesc {
+                    display: flex;
+                    align-items: center;
+                }
+            }
+        }
+
+        .van-card {
+            background-color: #fbfbfb;
+            padding: 1rem;
+            margin: 0;
+        }
+    }
+}

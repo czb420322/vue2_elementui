@@ -1,0 +1,236 @@
+.teamPage {
+    margin: 45px auto 70px;
+    .bg {
+        position        : fixed;
+        top             : 0;
+        left            : 0;
+        right           : 0;
+        bottom          : 0;
+        z-index         : -1;
+        background-color: white;
+    }
+
+    .header-bar {
+        .top-bar {
+            display      : flex;
+            background   : #0252ff;
+            position     : relative;
+            width        : 100%;
+            align-items  : center;
+            align-content: center;
+            padding      : 20px 5% 10px;
+
+            .my-photo {
+                display: block;
+                width  : 55px;
+                height : 55px;
+                border-radius: 50%;
+            }
+
+            .content-box {
+                margin-left: 15px;
+                flex       : 1;
+
+                .name-bar {
+                    display      : flex;
+                    align-items  : center;
+                    margin-bottom: 6px;
+
+                    .name {
+                        margin      : 0;
+                        color       : white;
+                        font-size   : 0.88rem;
+                        margin-right: 20px;
+                    }
+
+                    .tag {
+                        background-color: #70B5E0;
+                        font-size       : 12px;
+                        height          : 1.4em;
+                        line-height     : 1.4em;
+                        padding         : .35rem;
+                        color           : rgba(255, 255, 255, .8);
+                        display         : flex;
+                        align-items     : center;
+                        border-radius   : 2rem;
+                    }
+                }
+
+                .txt {
+                    font-size: 0.5rem;
+                    margin   : 0;
+                    color    : rgba(255, 255, 255, 0.5);
+                    font-size: 0.65rem;
+                }
+            }
+        }
+
+        .botton-bar {
+            position: relative;
+
+            .card-txt {
+                position  : absolute;
+                top       : 50%;
+                left      : 13%;
+                right     : 55%;
+                margin-top: -1em;
+                font-size : .72rem;
+                color     : white;
+                margin-right: 5%;
+            }
+
+            .card-box {
+                display: block;
+                width  : 100%;
+                height: 60px;
+            }
+        }
+    }
+
+    .tabs-bar {
+        margin-top: 10px;
+
+        .van-tabs {
+            width : 68%;
+            margin: auto;
+        }
+
+        .van-tabs__line {
+            width           : 1.65em !important;
+            background-color: #0252ff;
+            bottom          : 20px;
+        }
+
+        .van-tab--active {
+            font-weight: normal;
+        }
+    }
+
+    .list-box {
+        margin    : 4%;
+        background: white;
+        box-shadow: 0 0 12px rgba(2, 82, 255, .15);
+
+        .header {
+            display: flex;
+
+            .item {
+                flex      : 1;
+                text-align: center;
+                padding   : .8rem 0;
+
+                .number {
+                    color    : #FB7125;
+                    font-size: 1.1rem;
+                    margin   : 0;
+
+                    span {
+                        color: #999999;
+                    }
+                }
+
+                .name {
+                    font-size: .7rem;
+                }
+            }
+        }
+    }
+    .cheng_box{
+        margin-bottom: 60px;
+        overflow: scroll;
+        -webkit-overflow-scrolling: touch;
+        position: fixed;
+        width: 92%;
+        bottom: 0;
+    }
+
+    .content_table {
+        padding-bottom: .6rem;
+
+        >.name {
+            margin     : 0;
+            padding    : .8rem 2% .4rem;
+            font-size  : .85rem;
+            font-weight: normal;
+
+            span {
+                color: rgba(0, 0, 0, 0.4)
+            }
+        }
+
+        .row {
+            display  : flex;
+            margin   : 0 2%;
+            font-size: .8rem;
+            padding  : .3rem 0;
+            justify-content: space-between;
+            p {
+                margin: 0;
+            }
+
+            .name {
+                flex       : 2.5;
+                display    : flex;
+                align-items: center;
+
+                .vip {
+                    // padding      : 0 .2rem;
+                    // border       : 1px solid #007BC7;
+                    // border-radius: 1rem;
+                    color        : #007BC7;
+                    font-size    : .65rem;
+                    margin-left  : .4rem;
+                }
+            }
+
+            .type {
+                flex: 1;
+            }
+
+            .price {
+                flex           : 2;
+                text-align     : right;
+                display        : flex;
+                align-items    : center;
+                justify-content: flex-end;
+            }
+        }
+    }
+
+    .content_table.member {
+        padding: 0.6rem 0;
+
+        .name {
+            flex: 2.2;
+
+            .vip {
+                border: 0;
+            }
+
+            .group {
+                padding     : 0 0.2rem;
+                color       : #FB9A31;
+                font-size   : 0.65rem;
+                padding-left: 0.4rem;
+                margin-left : .2rem;
+                border-left : 1px solid #999;
+                line-height : 1.1em;
+            }
+        }
+
+        .type {
+            flex      : 1;
+            text-align: center;
+        }
+
+        .time {
+            flex      : 1;
+            text-align: center;
+        }
+
+        .price {
+            flex      : 1;
+            text-align: center;
+        }
+    }
+}

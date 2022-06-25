@@ -1,0 +1,448 @@
+.attendance-page{
+
+  .wx-banner{
+    height: 30%;
+    width: 100%;
+    background-size: 100%;
+  }
+  .wx-banner-morning{
+    background: url("../img/demo/attendance/morning.jpg") no-repeat;
+    background-size: 100%;
+  }
+  .wx-banner-noon{
+    background: url("../img/demo/attendance/noon.jpg") no-repeat;
+    background-size: 100%;
+  }
+  .wx-banner-night{
+    background: url("../img/demo/attendance/night.jpg") no-repeat;
+    background-size: 100%;
+  }
+  .date-info{
+    display: inline-block;
+    color:#fff;
+    width: 100%;
+    text-align: center;
+    height: 35%;
+    font-size: 0.75rem;
+    padding: 5% 0;
+  }
+  .time-info{
+    display:inline-block ;
+    color:#fff;
+    width: 100%;
+    text-align: center;
+    height: 40%;
+    padding: 0;
+    font-size: 2rem;
+  }
+  .wx-rules{
+    display: flex;
+    justify-content: space-between;
+    padding: 2% 5% 2% 5%;
+    height: 25%;
+    a{
+      text-decoration: none;
+      color:#fff;
+    }
+  }
+  .description{
+    padding: 0 3% 0 5%;
+    height: 8%;
+    width: 100%;
+    background: #fff;
+    border-bottom: 0.1rem solid #e7e7e7;
+    .current-description{
+      height: 100%;
+      text-align: justify;
+      a.check{
+        color:#3d4145;
+        text-decoration: underline;
+      }
+      .reget{
+        display: inline-block;
+        width: 30%;
+        text-align: right;
+      }
+      .main-description{
+        display: inline-block;
+        width: 67%;
+        text-align: left;
+      }
+    }
+    .current-description:after{
+      content:'';
+      width:0;
+      height:100%;
+      display:inline-block;
+      vertical-align:middle;
+    }
+
+  }
+  .pro-items{
+    padding-left: 5% !important;
+  }
+  .sign-info{
+    font-size: 0.85rem;
+  }
+  .clock-time{
+    font-size: 0.7rem;
+    color:#929292;
+  }
+  .signIn{
+    height: 1.6rem;
+    width: 3.5rem;
+    border:none;
+    border-radius: 0.3rem;
+    background-color: #da5752;
+    color:#fff;
+  }
+ .dis {
+  	background-color: #c8c9cb !important;
+  }
+  .signBack{
+    height: 1.6rem;
+    width: 3.5rem;
+    border:none;
+    border-radius: 0.3rem;
+    background-color: #da5752;
+    color:#fff;
+  }
+  .list-box{
+    border-bottom: 1px solid #e7e7e7;
+  }
+  .success-sign{
+    span{
+      font-size: 0.75rem;
+      color: #929292;
+    }
+  }
+  .cards-info{
+    //display: flex !important;
+  }
+  .show-rule-modal{
+	  position: fixed;
+	  top: 0;
+	  left: 0;
+	  right: 0;
+	  bottom: 0;
+	  background: rgba(0, 0, 0, 0.6);
+	  text-align: center;
+	  z-index: 300;
+ 
+	 .modal-lt{
+    	    width: 90%;
+		    position: absolute;
+		    z-index: 11000;
+		    left: 50%;
+		    margin-left: -45%;
+		    margin-top: 0;
+		    top: 25%;
+		    text-align: center;
+		    border-radius: 0.35rem;
+		   .modal-title{
+		   		border-radius: 0.35rem 0.35rem 0 0;
+		   		padding: 0.45rem;
+	   		    background: #da5752;
+	   		    .modal-title-text{
+   		    	    font-weight: 500;
+				    font-size: 0.9rem;
+				    text-align: center;
+	   		    }
+		   } 
+		   .modal-lt-text{
+		   		background: #ffffff;
+			    border-radius: 0 0 0.35rem 0.35rem;
+			    padding: 0.5rem;
+			    text-align: left;
+		   }
+		    
+     }
+    
+  }
+  
+
+
+}
+.attendanceRecord-content{
+  .clear{clear: both;}
+  .pic_head{
+  	width: 100%;
+  	height:2.5rem;
+  	line-height:2.5rem;
+  	cursor: pointer;
+  	background: #fff;
+  	.prev,.next{
+  		width: 20%;
+  		text-align: center;
+  		float: left;
+  		line-height: 2.5rem;
+  		font-size:1rem;
+  		font-weight: bold;
+  	}
+  	.tomon{
+  		width: 60%;
+  		float: left;
+  		text-align: center;
+  		line-height: 2.5rem;
+  		font-size: 1rem;
+  	}
+  	
+  }
+  .date{
+  		background: #fff;
+  		ol{
+  			width: 100%;
+  			height: 2rem;
+  			line-height: 2rem;
+  			background: #F2F2F2;
+  			padding: 0 0 0.3rem 0;
+  			border-bottom: 1px solid #DDDDDD;margin: 0;
+  			li{
+  				display:block;
+  				float: left;
+  				width: 14.2857%;
+  				text-align: center;
+  				font-size: 0.85rem;
+  				color: #999999;
+  				border: none;
+  				padding: 0;
+  				line-height: 2rem;
+  				height: 2rem;
+  			}
+  		}
+  		
+  		ul{
+  			width: 100%;
+  			display: flex;
+  			flex-direction: row;
+  			flex-wrap: wrap;
+  			font-size: 0.85rem;
+  			margin : 0;
+  			padding : 0;
+  			li{
+  				display: block;
+  				width: 14.2857%;
+  				height: 2rem;
+  				text-align: center;
+  				font-size: 0.85rem;
+  				background: #fff;
+  				position: relative;
+  				i{
+  					font-size: 0.55rem;
+  					position: absolute;
+  					right: 0;
+  					bottom:0.3rem;
+  					display:block;
+  					height: 15px;
+  					line-height: 15px;
+  					width: 100%;
+  					text-align: center;color: #e35925;
+  				}
+  				span{
+  					display: block;
+  					width: 100%;
+  					height: 100%;
+  					line-height: 1.5rem;
+  					text-align: center;
+  				}
+  			}
+  			.no_date{
+  				background: #fafafa;
+  				color: #999;
+  				line-height:2rem;
+  			}
+  			.act_wk{color: #999;}
+  			.act_date span:first-child{display:inline-block;position:relative;z-index:3;background: #60A0F4;color: #fff;border-radius: 50%;width: 1.5rem;height: 1.5rem;margin: 0 auto;}
+  			.act_ds{background: #005bac;color: #fff;}
+  		}
+  		
+  }
+  .date ul .no_date{background: #fafafa;color: #999;line-height:2rem;}
+  .date ul .act_wk{color: #999;}
+  .date ul .act_date span:first-child{display:inline-block;position:relative;z-index:3;background: #60A0F4;color: #fff;border-radius: 50%;width: 1.5rem;height: 1.5rem;margin: 0 auto;}
+  .date ul .act_ds{background: #005bac;color: #fff;}
+   //打卡正常
+  .sign-mark-normal{
+    position: absolute;
+      left: 0;
+      bottom:-44%;
+      display: block;
+      z-index: 1;
+      transform: scale(0.3);
+  }
+  //打卡异常
+  .sign-mark-abnormal{
+    position: absolute;
+    left: 0;
+    bottom:-44%;
+    display: block;
+    z-index: 1;
+    transform: scale(0.3);
+  }
+  .des{
+    position: relative;
+    text-align: center;
+    height: 1.5rem;
+    line-height: 1.9rem;
+    font-size: 0.5rem;
+    color:#D1D1D1;
+    .sign-normal,.sign-abnormal{
+      position:relative;
+      display: inline-block;
+      padding-left: 1rem;
+    }
+	.sign-normal img{
+	      position: absolute;
+	      left: 4%;
+	      bottom: 24%;
+	      display: block;
+	      z-index: 1;
+	      transform: scale(0.3);
+	      //-webkit-transform-origin: 50% 100%;
+	      //transform-origin: 50% 100%;
+	    }
+	    .sign-abnormal img{
+	      position: absolute;
+	      left: 4%;
+	      bottom: 24%;
+	      display: block;
+	      z-index: 1;
+	      transform: scale(0.3);
+	      //-webkit-transform-origin: 50% 100%;
+	      //transform-origin: 50% 100%;
+	    }
+
+  }
+  .record-info{
+    //height: 15%;
+    min-height: 7%;
+    width: 100%;
+    background-color: #fff;
+    border-bottom: 1px solid #DDDDDD;
+    border-top: 1px solid #DDDDDD;
+  }
+  .item-sign{
+    width: 95%;
+    padding: 3% 5% 3% 7%;
+    //border-bottom: 1px solid #DDDDDD;
+    margin-left: 5%;
+    background: url("../img/demo/attendance/record.png") no-repeat 0 50%;
+    background-size: 6%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .item-records{
+    width: 95%;
+    padding: 3% 5% 3% 0;
+    margin-left: 5%;
+
+  }
+  .more-list1 span,.more-list1 i{
+    color:#7E7E7E;
+  }
+  .leave-early{
+    position: relative;
+  }
+  .month-records{
+    margin-top: 2%;
+    min-height: 14%;
+    width: 100%;
+    background: #fff;
+    padding: 0;
+  }
+  .total-title{
+    height: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    position: relative;
+    border-bottom: 1px solid #ddd;
+    span.total-info{
+      display: inline-block;
+      width: 30%;
+      background: url("../img/demo/attendance/al.png") no-repeat;
+      background-position: 5% 57%;
+    }
+  }
+  .total-info{
+    padding-left: 5%;
+  }
+  .line-info-left{
+    display: inline-block;
+    width: 8%;
+    height: 2%;
+    background: #DEDEDE;
+    position: absolute;
+    top:52%;
+    left:26%;
+  }
+  .line-info-right{
+    display: inline-block;
+    width: 8%;
+    height: 2%;
+    background: #DEDEDE;
+    position: absolute;
+    top:52%;
+    right:29%;
+  }
+  .classify-total{
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    display: table;
+    .classify-detail{
+      display: table-row;
+      width: 100%;
+      div{
+        padding: 5% 0;
+        width: 33%;
+        display:table-cell;
+      }
+      .classify-border{
+        border-right: 1px solid #ddd;
+      }
+    }
+  }
+  .day-records{
+    margin-top: 2%;
+    min-height: 14%;
+    width: 100%;
+    background: #fff;
+    margin-bottom: 5%;
+    padding: 0;
+  }
+  .abNomal{
+  	background:#fff;
+  	margin-top:2%;
+  	padding:0;
+  }
+  .date-detail{
+    height: 2.5rem;
+    line-height: 2.5rem;
+    padding-left: 5%;
+    border-bottom: 1px solid #ddd;
+  }
+  .sign-addr{
+    padding: 3% 0 0 5%;
+    .addr-box{
+      border-bottom: 1px solid #ddd;
+      .get-sign{
+        padding-left: 5%;
+        margin-left: 3%;
+        border-left: 1px solid #ddd;
+      }
+      .address{
+        margin-top: 2%;
+        padding-bottom: 2%;
+        padding-left: 7%;
+      }
+    }
+
+  }
+  .time-detail{
+    color:#B01730;
+    font-size: 1.1rem;
+    display: inline-block;
+    min-width: 15%;
+  }
+  
+}

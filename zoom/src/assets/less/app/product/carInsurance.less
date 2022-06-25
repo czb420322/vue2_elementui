@@ -1,0 +1,67 @@
+@charset "utf-8";
+
+.confirmInsured {
+	.banner {
+		width: 100%;
+		height: 49.87vw;
+		box-sizing: content-box;
+		background-color: #0252ff;
+		background-image: url(../../../../../public/img/carInsurance/banner_icon.png);
+		background-size: 100% 100%;
+
+		display: flex;
+		flex-wrap: wrap;
+		align-content: baseline;
+		.name{
+			font-size: 1.5rem;
+			color: white;
+			font-weight: normal;
+			margin: .8em 4% .4em;
+		}
+		.txt{
+			color: #FCFFAD;
+			margin: .2em 4%;
+			font-size: .7rem;
+			width: 92%;
+		}
+	}
+
+	.content {
+		position     : relative;
+		width        : 93%;
+		background   : white;
+		margin       : -25px auto 0;
+		border-radius: 6px;
+		box-shadow: 0 0 10px rgba(0,0,0,.1);
+		margin-bottom: 25px;
+		.list{
+			.name{
+				margin: 4%;
+				color: #F77E5E;
+			}
+			.btn_bar{
+				margin: 2rem 16px 0;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+				.btn{
+					padding: 1rem 0;
+					color: #3B3B3B;
+					font-size: .78rem;
+					display: flex;
+					align-items: center;
+					background-repeat: no-repeat;
+					padding-left: 1.2rem;
+					background-size: 1.1rem;
+					background-position: left center;
+				}
+				.share_btn{
+					background-image: url(../../../../../public/img/carInsurance/share_icon.png);
+				}
+				.enquiry_btn{
+					background-image: url(../../../../../public/img/carInsurance/enquiry_icon.png);
+				}
+			}
+		}
+	}
+}

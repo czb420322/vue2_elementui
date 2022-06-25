@@ -1,0 +1,148 @@
+.orderDetailPage {
+	.flex1 {
+			flex: 1;
+	}
+
+	.flex2 {
+			flex: 2;
+	}
+
+	.textAlign {
+			text-align: center;
+	}
+
+	.yans {
+			color: #323233;
+	}
+
+	.red {
+			color: red;
+	}
+	.fail_icon{
+			position: absolute;
+			top: 2rem;
+			right: .8rem;
+			width: 4.3rem;
+			height: 4.3rem;
+			opacity: .6;
+	}
+
+	.van-hairline--top-bottom::after,
+	.van-hairline-unset--top-bottom::after {
+			border-width: 0
+	}
+
+	.carOrderDetail_box {
+			.carOrderDetail_order {
+					display: flex;
+					justify-content: space-between;
+					background: #0252FF;
+					color: #fff;
+					padding: 10px 18px;
+					padding-bottom: 65px;
+			}
+
+			.mb12 {
+					margin-bottom: 12px !important;
+			}
+
+			.mt12 {
+					margin-top: 12px !important;
+			}
+
+			.carOrderDetail_list {
+					// margin-top: -52px;
+					// padding-bottom: 12px;
+					// overflow: auto;
+					position: fixed;
+					top: 45px;
+					left: 0;
+					right: 0;
+					bottom: 50px;
+					overflow-y: scroll;
+					-webkit-overflow-scrolling: touch;
+					padding-bottom: constant(safe-area-inset-bottom);
+					padding-bottom: env(safe-area-inset-bottom);
+
+					.carOrderDetail_item {
+							border: solid 4px #fff;
+							margin: 0 12px;
+							background: #fff;
+							box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+							border-radius: 6px;
+					}
+
+					.carOrderDetail_item .van-cell {
+							font-weight: bold;
+					}
+
+					.carOrderDetail_list_grid {
+							display: flex;
+							justify-content: space-between;
+
+							.carOrderDetail_list_grid_name {
+									color: #A7BACC;
+									width: 120px;
+							}
+
+							.carOrderDetail_list_grid_txt {
+									color: #323233;
+							}
+							.carOrderDetail_list_grid_txt_value{
+									color: #323233;
+							}
+					}
+
+					.datum_box {
+							.detaiUser {
+									padding-bottom: 10px;
+
+									.detaiUser_name {
+											margin-right: 6px;
+									}
+							}
+					}
+
+					.detailCheck {
+							margin: 0 12px;
+							font-size: .75rem;
+
+							.detailCheck_span {
+									color: #0894ec;
+							}
+					}
+
+			}
+
+			.payment_box {
+					position: fixed;
+					bottom: 0;
+					left: 0;
+					width: 94%;
+					display: flex;
+					text-align: left;
+					align-items: center;
+					justify-content: space-between;
+					padding: 0 3%;
+					background: #fff;
+					height: 50px;
+					box-sizing: content-box;
+					padding-bottom: constant(safe-area-inset-bottom);
+					padding-bottom: env(safe-area-inset-bottom);
+					box-shadow: 0 -0.17143rem 0.17143rem rgba(0, 0, 0, 0.06);
+
+					.payment_grid_name {
+							color: #999;
+					}
+
+					.payment_grid_txt {
+							color: #FF7938;
+					}
+
+					.ubmit_btn {
+							width: 100px;
+							font-size: 14px;
+					}
+			}
+	}
+}

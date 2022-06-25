@@ -1,0 +1,29 @@
+{
+	"projectName": "rbt-app-h5",
+	"buildName": "rbt-app-h5",
+	"config": {
+		"ctx_base": "/rbt-h5",
+		"http_base": "https://devyun.guorenpcic.com",
+		"guorenpcic": "https://gluttonuat.guorenpcic.com",
+		"http_check_url": "https://devyun.guorenpcic.com/agent-restful/restful/agent/common/check",
+		"http_base_agent": "https://devyun.guorenpcic.com/rbt-agent",
+		"http_base_verify": "https://devyun.guorenpcic.com/rbt-agent",
+		"http_base_proposal": "https://devyun.guorenpcic.com/proposal-restful/restful/proposal",
+		"http_base_calculation": "https://devyun.guorenpcic.com/calculation-restful/restful/calculation",
+		"http_base_esp": "https://devyun.guorenpcic.com/esp-restful/restful/esp",
+		"http_base_life": "https://devyun.guorenpcic.com/rbt-noncar",
+		"http_base_print": "https://devyun.guorenpcic.com/print-api",
+		"http_base_customer": "https://devyun.guorenpcic.com/customer-restful/restful/customer",
+		"appid_wx": "wx7254e6506e89e538",
+		"agent_wx": "1000016",
+		"appid_alipay": "204400000000000000",
+		"platForm": ""
+	},
+	"APPID": "wx7254e6506e89e538",
+	"appKey": "2Hu8diFtYqM3rkfAeaFBuhpiPdSw",
+	"redirect": "https://76543.activity-1.m.duiba.com.cn/projectx/pde0fa17e/index.html?appID=76543",
+	"download": {
+		"ios": "https://www.pgyer.com/nhBV",
+		"android": "https://underwrite.oss-cn-beijing.aliyuncs.com/5653435656763523546674/app/46b58782b759472cbded77b5d9042bc8.1?Expires=1628315747&OSSAccessKeyId=LTAI3qJF5LvvqmHA&Signature=pGHdj9c6HYM5BoVRTeNoK3mgKCc%3D"
+	}
+}

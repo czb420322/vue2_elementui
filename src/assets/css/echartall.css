@@ -1,0 +1,269 @@
+.navBar {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    min-width: 12rem;
+    box-sizing: border-box;
+    overflow: hidden;
+    background: url('../../assets/images/echartsImg/bg01.png')
+}
+
+.header {
+    margin: 0 auto;
+    width: 100%;
+    height: 65px;
+    max-width: 1920px;
+    background: url("../../assets/images/echartsImg/header.png") center no-repeat;
+}
+
+.header h3 {
+    margin: 0;
+    padding: 0;
+    line-height: 50px;
+    text-align: center;
+    font-size: 24px;
+    color: #5dc2fe;
+}
+
+.contentBody {
+    position: absolute;
+    top: 70px;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    padding: 10px 10px 0 10px;
+    min-height: 500px;
+    background-size: 100% 100%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.nav-left {
+    width: 69%;
+    height: 100%;
+    float: left;
+    position: relative;
+}
+
+.nav-right {
+    width: 30%;
+    height: 100%;
+    float: right;
+    position: relative;
+}
+
+.nav-above {
+    height: 61.5%;
+    margin-bottom: 0.2rem;
+}
+
+.container-fluid {
+    height: 100%;
+    min-height: 100%;
+}
+
+.padding-10 {
+    padding: 0.1rem;
+}
+
+.navBar-top-left {
+    width: 4.6rem;
+    height: 100%;
+    margin-right: 0.2rem;
+    float: left;
+    background: url("../../assets/images/echartsImg/panel.png") center no-repeat;
+    background-size: 100% 100%;
+    box-sizing: border-box;
+}
+
+.navBar-top-right {
+    width: 8rem;
+    height: 100%;
+    float: left;
+    background: url("../../assets/images/echartsImg/panel.png") center no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+}
+
+.navBar-bottom-left {
+    width: 4.6rem;
+    height: 36%;
+    margin-right: 0.2rem;
+    float: left;
+    background: url("../../assets/images/echartsImg/panel.png") center no-repeat;
+    background-size: 100% 100%;
+    box-sizing: border-box;
+}
+
+.navBar-bottom-right {
+    width: 8rem;
+    height: 36%;
+    float: left;
+    background: url("../../assets/images/echartsImg/panel.png") center no-repeat;
+    background-size: 100% 100%;
+    box-sizing: border-box;
+}
+
+.right-content {
+    width: 100%;
+    height: 100%;
+    background: url("../../assets/images/echartsImg/panel.png") center no-repeat;
+    background-size: 100% 100%;
+}
+
+.caseStatis {
+    line-height: 30px;
+    font-weight: 600;
+    font-size: 16px;
+    padding-left: 10px;
+    color: #0382d0;
+}
+
+.contentTable {
+    height: 95%;
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
+}
+
+.hr {
+    border: 0.01rem solid #1c5da7;
+}
+
+.caseMonth {
+    width: 1rem;
+    height: 0.3rem;
+    margin-top: 0.1rem;
+    border-radius: 5px;
+    background: #08234b;
+    text-align: center;
+    line-height: 30px;
+    color: #c3c3c3;
+}
+
+.caseYear {
+    width: 1.3rem;
+    height: 0.3rem;
+    margin-top: 0.1rem;
+    border-radius: 5px;
+    background: #08234b;
+    text-align: center;
+    line-height: 30px;
+    color: #c3c3c3;
+}
+
+.main-top {
+    height: 20%;
+    margin-top: 0.1rem;
+}
+
+.main-top-left {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    float: left;
+}
+
+.rose-top-left {
+    width: 50%;
+    height: 22%;
+    position: relative;
+    float: left;
+    margin-bottom: 0.15rem;
+}
+
+.btntitle {
+    width: 50%;
+    top: 0;
+    right: 0;
+    position: absolute;
+    height: 100%;
+}
+
+.general {
+    margin-top: 0.3rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.styleColor {
+    color: #cecfb0;
+}
+
+.chart-div {
+    position: absolute;
+    top: 32px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.chart-loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0);
+    transition: all 0.8s;
+}
+
+.chart-loader .loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 60px;
+    height: 60px;
+    margin: -30px 0 0 -30px;
+    border: 3px solid transparent;
+    border-top-color: #3498db;
+    border-radius: 50% !important;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+.chart-loader .loader:before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border: 3px solid transparent;
+    border-top-color: #e74c3c;
+    border-radius: 50% !important;
+    -webkit-animation: spin 3s linear infinite;
+    animation: spin 3s linear infinite;
+}
+
+.chart-loader .loader:after {
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border: 3px solid transparent;
+    border-top-color: #f9c922;
+    border-radius: 50% !important;
+    -webkit-animation: spin 1.5s linear infinite;
+    animation: spin 1.5s linear infinite;
+}
+
+.map-dialog-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 20px;
+    z-index: 99;
+    background: #074668;
+    color: #fff;
+    width: 0.25rem;
+    height: 0.25rem;
+    cursor: pointer;
+}
+
+.map-dialog-close:before {
+    line-height: 0.25rem;
+    margin-left: 3px;
+}

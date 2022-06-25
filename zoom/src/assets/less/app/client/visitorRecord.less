@@ -1,0 +1,79 @@
+@charset "utf-8";
+
+ .content-client-page-rec{
+    padding: 0;
+    background-color: #f3f3f3;  
+    .record{
+        background-color: #ffffff;  
+        border-bottom: 0;
+        padding: 1rem 0;
+        padding: 0.75rem;
+        .rec-box{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 5rem;
+            .left{
+                background-color: #f3f3f3;
+                border-radius: 0.6rem;
+                width: 18%;
+                height: 3.5rem;
+                float:left;
+            }
+            .right{
+                width: 78%;
+                height: 4rem;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: baseline;
+                float: right;
+                .up{
+                    font-weight: 500;
+                    color: #333333;
+                    font-size: 0.9rem;
+                }
+                .dow{
+                    width: 100%;
+                    margin-top: 0.2rem;
+                    display: flex;
+                    justify-content: space-between;
+                    color: #999999;
+                    .pser{
+                        display: flex;
+                        .visitor-avatars{
+                            width: 2rem;
+                            height: 1rem;
+                            overflow: hidden;
+                            white-space: nowrap;
+                        }
+                        .hred{
+                            width: 1rem;
+                            height: 1rem;
+                            background-color: #f3f3f3;
+                            border-radius: 50%;
+                            float: left;
+                            overflow: hidden;
+                        }
+                        .visitor-txt{
+                            width: 4rem;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                        }
+                    }
+                    .time{
+                        color: #999999;
+                    }
+                }
+            }
+        }
+    }
+    .noData{
+        text-align: center;
+        margin: 1rem 0;
+        color: #999999;
+        font-weight: 300;
+    }
+ } 
+ 

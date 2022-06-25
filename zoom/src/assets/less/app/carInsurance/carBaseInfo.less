@@ -1,0 +1,618 @@
+﻿@charset "utf-8";
+
+.carBaseInfo {
+	.content {
+		position: relative;
+	}
+	ol,.content {
+		padding-bottom: calc( 66px + constant(safe-area-inset-bottom));
+		padding-bottom: calc( 66px + env(safe-area-inset-bottom));
+		overflow: hidden;
+		.list {
+			width: 93%;
+			margin: 14px auto 0;
+
+			.banner {
+				display: block;
+				width: 100%;
+				margin: 4% 0;
+			}
+
+			.carInfo {
+				display: flex;
+				align-items: center;
+				background-color: white;
+				padding: .85rem;
+				border-radius: .5rem;
+
+				img {
+					display: block;
+					width: 2.7rem;
+				}
+
+				.name {
+					flex: 1;
+					margin-left: .5rem;
+
+					h3 {
+						margin: 0;
+						font-size: 1rem;
+					}
+
+					p {
+						margin: 0;
+						opacity: .4;
+						font-size: .8rem;
+					}
+				}
+			}
+
+			.info-box {
+				background-color: white;
+				box-shadow: 0 0 5px rgba(0, 0, 0, .05);
+				border-radius: 8px;
+				overflow: hidden;
+
+				.cell_title::after {
+					right: 0;
+					left: 0;
+				}
+
+				.van-cell__title {
+					display: flex;
+					align-items: center;
+
+					.custom-title {
+						font-size: .9rem;
+						font-weight: 500;
+						margin-left: .3rem;
+						padding: .4rem 0;
+					}
+				}
+
+				.btn_bar {
+					margin: 2rem 16px 0;
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: space-between;
+
+					.van-button {
+						margin: 0.4rem .8rem .3rem 0;
+					}
+
+					.txt {
+						width: 100%;
+						text-align: center;
+						font-size: .7rem;
+						color: #999;
+
+						.van-hairline--right {
+							padding-right: .5rem;
+							margin-right: .5rem;
+						}
+					}
+				}
+
+				.van-icon-clock-o {
+					transform: rotate(-45deg);
+					font-size: .88rem;
+				}
+
+				.price {
+					margin-right: .4rem;
+
+					p {
+						margin: 0;
+						line-height: 1em;
+					}
+
+					.presentPrice {
+						color: #ff7937;
+						font-size: 1rem;
+						text-align: right;
+					}
+
+					.originalPrice {
+						color: #999;
+						font-size: .75rem;
+						text-align: right;
+						text-decoration: line-through;
+					}
+
+					.placeholder {
+						color: #ccc;
+					}
+
+				}
+
+				.many_checkbox {
+					.van-cell__title {
+						margin-bottom: 1.8rem;
+					}
+
+					.many_checkbox_box {
+						.row {
+							display: flex;
+							align-items: center;
+							padding: .3rem 0;
+						}
+					}
+				}
+
+				.cell {
+					display: flex;
+					justify-content: space-between;
+					width: 92%;
+					margin: .8rem 4% .5rem;
+					font-size: .8rem;
+					color: #111;
+					.effective_date{
+						display: flex;
+						align-items: center;
+					}
+				}
+
+				.table {
+					width: 92%;
+					margin: 0 4%;
+					padding-bottom: .5rem;
+
+					.tr.header {
+						color: #999;
+					}
+
+					.tr {
+						display: flex;
+						justify-content: space-between;
+						padding: .36rem 0;
+						opacity: .9;
+
+						span {
+							font-size: .75rem;
+						}
+
+						.project {
+							flex: 2;
+						}
+
+						.quota {
+							flex: 1;
+							display: flex;
+							align-items: center;
+							justify-content: flex-end;
+							margin-left: .2rem;
+						}
+						input.quota {
+							width: 0;
+							border: 0;
+							appearance: none;
+							font-size: 0.75rem;
+							text-align: right;
+						}
+						input.quota::-webkit-input-placeholder{
+							color: #999;
+						}
+						input.quota::-moz-placeholder{   /* Mozilla Firefox 19+ */
+							color: #999;
+						}
+						input.quota:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
+							color: #999;
+						}
+						input.quota:-ms-input-placeholder{  /* Internet Explorer 10-11 */ 
+							color: #999;
+						}
+
+						.cost {
+							flex: 1;
+							text-align: right;
+							display: flex;
+							justify-content: flex-end;
+							align-items: center;
+						}
+					}
+
+					.van-tabs__wrap{
+						display: none;
+					}
+				}
+
+				.table.recommend {
+					.tr {
+						.cost {
+							color: #ff7937;
+							font-size: 1rem;
+						}
+					}
+				}
+
+				.more {
+					color: #1989fa;
+					text-align: center;
+					font-size: .73rem;
+					padding: 0.75rem 0;
+					margin: 0 4%;
+				}
+
+				.title_cell::after {
+					right: 0;
+					left: 0;
+				}
+
+				.SchemeSelection {
+					display: flex;
+					justify-content: space-evenly;
+					margin: 4% 4% 2%;
+
+					li {
+						color: #3c76ef;
+						border: 1px solid #3c76ef;
+						border-radius: .3rem;
+						background-color: #e5f3fe;
+						width: 30%;
+						padding: .3rem 0;
+						text-align: center;
+						font-size: .74rem;
+						opacity: .85;
+					}
+
+					li.active {
+						color: white;
+						background: linear-gradient(to right, rgb(36, 92, 246), rgb(69, 156, 248));
+						border: none;
+						opacity: 1;
+						box-shadow: 0 3px 3px rgba(25, 137, 250, .5);
+					}
+				}
+				.unladenMass{
+					display: flex;
+					align-items: center;
+					.van-cell {
+						width: 90%;
+					}
+					span{
+						flex: 1;
+						font-size: 14px;
+					}
+				}
+				.tonCount-box{
+					display: flex;
+					align-items: center;
+					.van-cell {
+						width: 90%;
+					}
+					span{
+						flex: 1;
+						font-size: 14px;
+					}
+				}
+			}
+
+			.info-box.discount_bar{
+				.custom-title{
+					margin: 0;
+					padding: .2rem 0;
+					font-size: .82rem;
+				}
+			}
+
+			.title_bar {
+				font-size: .92rem;
+				margin: 1.5em 0 .6em;
+			}
+
+			.van-grid {
+				border-radius: 8px;
+				overflow: hidden;
+			}
+		}
+	}
+
+	.van-button {
+		border-radius: 5px;
+	}
+
+	.footer_btn_bar {
+		position: fixed;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-box-align: center;
+		-webkit-align-items: center;
+		align-items: center;
+		box-sizing: content-box;
+		padding-bottom: constant(safe-area-inset-bottom);
+		padding-bottom: env(safe-area-inset-bottom);
+		background-color: #fff;
+		box-shadow: 0 0 10px rgba(0, 0, 0, .13);
+
+		.van-button {
+			margin: 0.4rem .8rem .3rem 0;
+			font-size: .9rem;
+		}
+
+		.van-goods-action-icon {
+			margin: .3rem .8rem;
+		}
+
+		.price_bar {
+			padding: 0 1.2rem;
+
+			p {
+				margin: 0;
+				line-height: 1em;
+				text-align: right;
+			}
+
+			.price {
+				font-size: 1.12rem;
+				color: #ff7937;
+				display: flex;
+				span {
+					font-size: 1rem;
+				}
+			}
+
+			.originalPrice {
+				margin: 0;
+				text-decoration: line-through;
+				font-size: .78rem;
+				color: #999;
+			}
+		}
+	}
+
+	
+	.van-icon-success {
+		border-color: #1989fa;
+	}
+	.showBaselnfo{
+		text-align: center;
+    margin: 18px 0;
+    font-size: 14px;
+	}
+	.showBaselnfo_box{
+		overflow: scroll;
+		max-height: 85vw;
+		-webkit-overflow-scrolling: touch;
+	}
+	.special_popup{
+		.name{
+			text-align: center;
+		}
+		.special_box{
+			width: 90vw;
+			height: 70%;
+			overflow: scroll;
+			.van-cell{
+				height: 100%;
+				overflow: scroll;
+			}
+		}
+		.special_bt{
+			width: 80%;
+			margin-left: 10%;
+			font-size: 14px;
+			position: fixed;
+    	bottom: 5%;
+		}
+	}
+	.readonly_cell{
+		opacity: .5;
+	}
+}
+
+.carConfirmInfo {
+	.block {
+		padding: .4rem 0;
+
+		.title_bar {
+			margin: 1rem 4% !important;
+			font-size: 1rem;
+
+			.tag {
+				color: #fff;
+				background-color: #1989fa;
+				padding: .1rem .2rem;
+				border-radius: .15rem;
+				font-size: .7rem;
+			}
+		}
+
+		.van-row {
+			margin: .5rem 4%;
+
+			.name {
+				color: #abbaca;
+			}
+
+			.txt {
+				color: #222222;
+			}
+		}
+
+		.personnel {
+			overflow: hidden;
+		}
+	}
+
+	.van-hairline--top {
+		margin: 1rem 16px 0;
+		height: 1px;
+		padding: 0;
+	}
+}
+
+.carSelectPage{
+	.content{
+		opacity: .88;
+	}
+	.van-cell__title{
+		display: flex;
+	}
+	.header_bar{
+		position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+		display: flex;
+		align-items: center;
+		background: #0252ff;
+		.left_icon{
+			margin: .8rem .2rem .8rem .8rem;
+		}
+		.van-search{
+			flex: 1;
+			.van-search__action{
+				color: white;
+			}
+		}
+	}
+}
+
+.carConfirmInsured{
+	.personnel{
+		margin-top: .4rem;
+	}
+	.custom-title.price{
+		font-size: .98rem!important;
+		span{
+			font-weight: normal;
+			opacity: .5;
+			font-size: .7rem;
+			padding-top: .5rem;
+			display: block;
+		}
+	}
+	.qcCode {
+		width  : 36%;
+		margin : auto;
+		display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+		.icon {
+			display: block;
+			display: inline-block;
+			border: 1px solid #e5e5e5;
+			padding: .35rem;
+			width: 33.4vw;
+			height: 33.4vw;
+		}
+
+		.btn {
+			display        : block;
+			font-size      : 15px;
+			width          : 100%;
+			margin         : 10px auto 30px;
+			height         : 40px;
+			// background     : #0252FF;
+			border-radius  : 4px;
+			display        : flex;
+			align-items    : center;
+			justify-content: center;
+			color          : rgba(255, 255, 255, .85);
+			background: linear-gradient(to right, rgb(36, 92, 246), rgb(69, 156, 248));
+		}
+	}
+	.van-nav-bar{
+		background: #0252ff;
+	}
+	.van-nav-bar__title{
+		color: #fff;
+	}
+}
+
+.selfAdjustRateTips{
+	color: red;
+	padding: 0;
+	margin: 10px 0 10px 16px;
+	font-size: .75rem;
+}
+
+.carQuotedPricePage {
+  .quotedPriceContent {
+    opacity: 0;
+    width: 750px;
+    position: fixed;
+    z-index: -1;
+    .content_ {
+      padding: 20px;
+      background: white;
+      header {
+        position: relative;
+        border-bottom: 1px solid #ccc;
+        .logo {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 40px;
+        }
+        h2 {
+          text-align: center;
+        }
+      }
+      ol {
+        display: flex;
+        flex-wrap: wrap;
+        li {
+          width: 50%;
+          padding: 4px 0;
+          p {
+            margin: 0.5em 0;
+          }
+        }
+      }
+      table {
+        width: 100%;
+        text-align: center;
+        border-collapse: collapse;
+        border: none;
+        margin-top: 10px;
+        th {
+          border: solid #ccc 1px;
+          padding: 3px 0;
+        }
+        td {
+          border: solid #ccc 1px;
+          padding: 3px 0;
+        }
+      }
+    }
+  }
+  .quotedPrice {
+    .photo {
+      display: block;
+      width: 100%;
+    }
+    .btn-box {
+      width: 50%;
+      margin: auto;
+			padding: 40px 0;
+      .btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 44px;
+        border-radius: 4px;
+        font-size: 0.85rem;
+      }
+      .btn.share {
+        color: white;
+        background: linear-gradient(to right, #245cf6, #459cf8);
+      }
+      .btn.save {
+        color: #245cf6;
+        border: 1px solid #245cf6;
+        margin-top: 12px;
+      }
+    }
+    .txt {
+      color: #e75015;
+      text-align: center;
+    }
+  }
+}

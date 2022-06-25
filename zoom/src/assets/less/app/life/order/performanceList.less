@@ -1,0 +1,157 @@
+@charset "utf-8";
+
+p {
+	margin: 0;
+}
+
+.performancePage {
+	margin-top: 45px;
+
+	.tabs-box {
+		background-color: #0252ff;
+		margin          : auto;
+
+		.van-tabs {
+			width : 90%;
+			margin: auto;
+		}
+
+		.van-tabs__line {
+			width           : 1.5em !important;
+			background-color: white;
+			bottom          : 20px;
+		}
+
+		.van-tab--active {
+			font-weight: normal;
+		}
+	}
+
+	.list-box {
+		.item {
+			.desc-box{
+				display: flex;
+				flex-wrap: wrap;
+			}
+			.name {
+				display      : flex;
+				margin       : 0;
+				padding      : 0.5rem;
+				align-items  : center;
+				align-content: center;
+
+				.icon {
+					display     : block;
+					width       : 1rem;
+					margin-right: 0.2rem;
+				}
+			}
+
+			.van-card__title {
+				font-weight: normal;
+				font-size  : 16px;
+				color      : #333;
+				margin     : 2px 0 4px;
+			}
+
+			.list-content {
+				display        : flex;
+				justify-content: space-between;
+				margin-top     : 12px;
+
+				.price {
+					color    : #fb7125;
+					font-size: 14px;
+
+					span {
+						font-size: 18px;
+					}
+				}
+			}
+
+			.van-card:not(:first-child) {
+				margin-top: 0;
+			}
+
+			.van-card:not(:first-child)::after {
+				position         : absolute;
+				box-sizing       : border-box;
+				content          : ' ';
+				pointer-events   : none;
+				top              : -50%;
+				right            : -50%;
+				bottom           : -50%;
+				left             : -50%;
+				border           : 0 solid #ebedf0;
+				-webkit-transform: scale(0.5);
+				transform        : scale(0.5);
+				border-width     : 1px 0;
+			}
+		}
+	}
+	p.tip {
+		color      : #999;
+		text-align : center;
+		font-size  : 14px;
+		padding-top: 20px;
+	}
+	.list-box {
+		.list {
+			width        : 93%;
+			background   : white;
+			margin       : -25px auto 0;
+			border-radius: 6px;
+			box-shadow: 0 0 10px rgba(0,0,0,.1);
+			margin: 12px auto;
+			.name {
+				display      : flex;
+				margin       : 0 .95rem;
+				padding      : 0.55rem 0;
+				align-items  : center;
+				align-content: center;
+				color        : #999;
+				font-size    : 15px;
+				font-weight  : normal;
+				justify-content: space-between;
+				.icon {
+					display     : block;
+					width       : 1rem;
+					margin-right: 0.2rem;
+				}
+			}
+
+			.info-box {
+				padding: 0 0.55rem 0.55rem;
+
+				.item {
+					display: flex;
+					margin : 0;
+					padding: .15rem .4rem;
+
+					.label {
+						font-size: 14px;
+						width    : 4.2rem;
+					}
+
+					.txt {
+						font-size: 14px;
+						color    : #9C9C9C;
+						flex     : 1;
+					}
+				}
+				.monthType{
+					padding-top: 0.7rem;
+					display: flex;
+					justify-content: space-between;
+					.txt{
+						color: #9C9C9C;
+					}
+				}
+			}
+		}
+	}
+	.list_baodan{
+		width: 4.2rem;
+    display: inline-block;
+	}
+}

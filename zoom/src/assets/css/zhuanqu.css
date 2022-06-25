@@ -1,0 +1,136 @@
+.page{
+    background: #fff;
+}
+.my_top{
+    background: #007bc7;
+    padding: 1.25rem;
+    padding-bottom: 1.75rem;
+    position: relative;
+}
+.my_top .slogan{
+    color: #fff;
+    font-size: 0.9rem;
+}
+.my_top .slogan span{
+    display: block;
+    font-size: 0.7rem;
+}
+.my_top .yuanhu{
+    position: absolute;
+    bottom: -0.85rem;
+    left: 0;
+    right: 0;
+}
+.my_top .yuanhu img{
+    display: block;
+    width: 100%;
+}
+
+.padding30{
+    padding: 0 0.75rem;
+    margin-top: -1.5rem;
+    padding-bottom:4rem;
+}
+.shadow{
+    background: #fff;
+    border-radius: 0.25rem;
+    box-shadow: 0px 3px 8px #deeef8;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 1.5rem;
+}
+.college{
+    padding: 0.5rem 0.75rem;
+    position: relative;
+}
+.college .niao01{
+    display: block;
+    height: 3rem;
+    float: left;
+}
+.college .classroom{
+    padding-left: 2.6rem;
+    height: 3rem;
+}
+.college .classroom h3{
+    font-size: 0.85rem;
+    color: #222;
+    margin: 0;
+    line-height: 1.75rem;
+}
+.college .classroom h3 span{
+    display: inline-block;
+    height: 1rem;
+    padding: 0 0.25rem;
+    border-radius: 0.5rem;
+    border:1px solid #007bc7;
+    font-size: 0.6rem;
+    color: #007bc7;
+    line-height: 1rem;
+    font-weight: normal;
+    margin-left: 0.5rem;
+}
+.college .classroom p{
+    font-size: 0.6rem;
+    color: #999;
+    margin: 0;
+}
+.college .niao02{
+    display: block;
+    height: 3.5rem;
+    position: absolute;
+    right: 0.75rem;
+    top: -3.15rem;
+}
+.three{
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+}
+.three img{
+    display: block;
+    width: 1.25rem;
+    margin: 0 auto;
+    margin-bottom: 0.5rem;
+}
+.three div{
+    color: #333;
+    font-size: 0.6rem;
+    text-align: center;
+}
+
+.extension .tg_title img{
+    display: block;
+    width: 7rem;
+    margin: 1rem auto;
+}
+.extension{
+    margin-left: -0.25rem;
+    margin-right: -0.25rem;
+}
+.extension a{
+    height: 4rem;
+    padding: 0.25rem;
+    position: relative;
+}
+.extension a img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.extension a div{
+    position: absolute;
+    left: 0.25rem;
+    right: 0.25rem;
+    top:0.25rem;
+    bottom: 0.25rem;
+    color: #000;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    padding-left: 0.5rem;
+    padding-top: 0.5rem;
+}
+.extension a div span{
+    display: block;
+    color: #999;
+    font-size: 0.6rem;
+}

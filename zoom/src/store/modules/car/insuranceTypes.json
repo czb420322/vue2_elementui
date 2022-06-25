@@ -1,0 +1,1970 @@
+{
+    "NEWCAR": [
+        {
+            "plan": "A|B",
+            "kindCode": "21A",
+            "kindName": "新能源汽车损失保险",
+            "itemKindNo": "63",
+            "isDeductible": "0",
+            "quantity": "",
+            "amount": "",
+            "flag": " 1  1 ",
+            "mainKindFlag": "M",
+            "checked": false,
+            "disabled": false,
+            "additional": [
+                "21F1",
+                "21Z1",
+                "21Z2",
+                "21Z3",
+                "21Z4",
+                "20L",
+                "20T1",
+                "20X",
+                "20E2",
+                "20D2",
+                "20J",
+                "20E1"
+            ],
+            "struct": {
+                "type": "inputSelect",
+                "holder": "请选择",
+                "value": "",
+                "unit": "元",
+                "data": [
+                    {
+                        "text": "0元",
+                        "value": "0"
+                    },
+                    {
+                        "text": "300元",
+                        "value": "300"
+                    },
+                    {
+                        "text": "500元",
+                        "value": "500"
+                    },
+                    {
+                        "text": "1000元",
+                        "value": "1000"
+                    },
+                    {
+                        "text": "2000元",
+                        "value": "2000"
+                    }
+                ]
+            }
+        },
+        {
+            "plan": "A|B",
+            "kindCode": "21B",
+            "kindName": "新能源汽车第三者责任保险",
+            "itemKindNo": "62",
+            "deductible": "",
+            "isDeductible": "0",
+            "quantity": "",
+            "amount": "",
+            "flag": " 1  1 ",
+            "mainKindFlag": "M",
+            "checked": false,
+            "disabled": false,
+            "additional": [
+                "21C1",
+                "21C2",
+                "21Z1",
+                "21Z2",
+                "21Z3",
+                "21Z4",
+                "20L",
+                "20T1",
+                "20X",
+                "20E2",
+                "20D2",
+                "20R1",
+                "20J",
+                "20Y",
+                "20E3"
+            ],
+            "struct": {
+                "type": "select",
+                "holder": "请选择",
+                "value": {
+                    "text": "200万元",
+                    "value": "2000000"
+                },
+                "data": [
+                    {
+                        "text": "10万元",
+                        "value": "100000"
+                    },
+                    {
+                        "text": "15万元",
+                        "value": "150000"
+                    },
+                    {
+                        "text": "20万元",
+                        "value": "200000"
+                    },
+                    {
+                        "text": "30万元",
+                        "value": "300000"
+                    },
+                    {
+                        "text": "50万元",
+                        "value": "500000"
+                    },
+                    {
+                        "text": "100万元",
+                        "value": "1000000"
+                    },
+                    {
+                        "text": "150万元",
+                        "value": "1500000"
+                    },
+                    {
+                        "text": "200万元",
+                        "value": "2000000"
+                    },
+                    {
+                        "text": "250万元",
+                        "value": "2500000"
+                    },
+                    {
+                        "text": "300万元",
+                        "value": "3000000"
+                    },
+                    {
+                        "text": "350万元",
+                        "value": "3500000"
+                    },
+                    {
+                        "text": "400万元",
+                        "value": "4000000"
+                    },
+                    {
+                        "text": "450万元",
+                        "value": "4500000"
+                    },
+                    {
+                        "text": "500万元",
+                        "value": "5000000"
+                    },
+                    {
+                        "text": "550万元",
+                        "value": "5500000"
+                    },
+                    {
+                        "text": "600万元",
+                        "value": "6000000"
+                    },
+                    {
+                        "text": "650万元",
+                        "value": "6500000"
+                    },
+                    {
+                        "text": "700万元",
+                        "value": "7000000"
+                    },
+                    {
+                        "text": "750万元",
+                        "value": "7500000"
+                    },
+                    {
+                        "text": "800万元",
+                        "value": "8000000"
+                    },
+                    {
+                        "text": "850万元",
+                        "value": "8500000"
+                    },
+                    {
+                        "text": "900万元",
+                        "value": "9000000"
+                    },
+                    {
+                        "text": "950万元",
+                        "value": "9500000"
+                    },
+                    {
+                        "text": "1000万元",
+                        "value": "10000000"
+                    }
+                ]
+            }
+        },
+        {
+            "plan": "B",
+            "kindCode": "21D3",
+            "kindName": "新能源汽车车上人员责任保险（司机）",
+            "itemKindNo": "64",
+            "deductible": "",
+            "isDeductible": "0",
+            "quantity": "1",
+            "amount": "",
+            "flag": " 1  1 ",
+            "mainKindFlag": "M",
+            "checked": false,
+            "disabled": false,
+            "additional": [
+                "21Z1",
+                "21Z2",
+                "21Z3",
+                "21Z4",
+                "20L",
+                "20T1",
+                "20X",
+                "20E2",
+                "20D2",
+                "20R1",
+                "20J",
+                "20Y1",
+                "20E4"
+            ],
+            "struct": {
+                "type": "select",
+                "holder": "请选择",
+                "unit": "万元",
+                "value": {
+                    "text": "2万/座",
+                    "value": "20000"
+                },
+                "data": [
+                    {
+                        "text": "1万元",
+                        "value": "10000"
+                    },
+                    {
+                        "text": "2万元",
+                        "value": "20000"
+                    },
+                    {
+                        "text": "3万元",
+                        "value": "30000"
+                    },
+                    {
+                        "text": "5万元",
+                        "value": "50000"
+                    },
+                    {
+                        "text": "10万元",
+                        "value": "100000"
+                    },
+                    {
+                        "text": "20万元",
+                        "value": "200000"
+                    },
+                    {
+                        "text": "50万元",
+                        "value": "500000"
+                    },
+                    {
+                        "text": "80万元",
+                        "value": "800000"
+                    }
+                ]
+            }
+        },
+        {
+            "plan": "B",
+            "kindCode": "21D4",
+            "kindName": "新能源汽车车上人员责任保险（乘客）",
+            "itemKindNo": "65",
+            "deductible": "",
+            "isDeductible": "0",
+            "quantity": "4",
+            "unitAmount": "10000",
+            "amount": "",
+            "flag": " 1  1 ",
+            "mainKindFlag": "M",
+            "checked": false,
+            "disabled": false,
+            "additional": [
+                "21Z1",
+                "21Z2",
+                "21Z3",
+                "21Z4",
+                "20L",
+                "20T1",
+                "20X",
+                "20E2",
+                "20D2",
+                "20R1",
+                "20J",
+                "20Y2",
+                "20E5"
+            ],
+            "struct": {
+                "type": "select",
+                "holder": "请选择",
+                "unit": "万元",
+                "value": {
+                    "text": "2万/座",
+                    "value": "20000"
+                },
+                "data": [
+                    {
+                        "text": "1万元",
+                        "value": "10000"
+                    },
+                    {
+                        "text": "2万元",
+                        "value": "20000"
+                    },
+                    {
+                        "text": "3万元",
+                        "value": "30000"
+                    },
+                    {
+                        "text": "5万元",
+                        "value": "50000"
+                    },
+                    {
+                        "text": "10万元",
+                        "value": "100000"
+                    },
+                    {
+                        "text": "20万元",
+                        "value": "200000"
+                    },
+                    {
+                        "text": "50万元",
+                        "value": "500000"
+                    },
+                    {
+                        "text": "80万元",
+                        "value": "800000"
+                    }
+                ]
+            }
+        },
+        {
+            "plan": "",
+            "kindCode": "21F1",
+            "kindName": "附加外部电网故障损失险",
+            "itemKindNo": "70",
+            "deductible": "",
+            "isDeductible": "0",
+            "quantity": "",
+            "amount": "",
+            "flag": " 2  0 ",
+            "mainKindFlag": "S",
+            "checked": false,
+            "disabled": true,
+            "struct": {
+                "type": "input",
+                "holder": "请输入",
+                "value": "",
+                "unit": "元"
+            }
+        },
+        {
+            "plan": "",
+            "kindCode": "21C1",
+            "kindName": "附加自用充电桩损失保险",
+            "itemKindNo": "71",
+            "deductible": "",
+            "isDeductible": "0",
+            "quantity": "",
+            "amount": "",
+            "flag": " 2  0 ",
+            "mainKindFlag": "S",
+            "checked": false,
+            "disabled": true,
+            "struct": {
+                "type": "input",
+                "holder": "请输入",
+                "value": "",
+                "unit": "元"
+            }
+        },
+        {
+            "plan": "",
+            "kindCode": "21C2",
+            "kindName": "附加自用充电桩责任保险",
+            "itemKindNo": "72",
+            "deductible": "",
+            "isDeductible": "0",
+            "quantity": "",
+            "amount": "",
+            "flag": " 2  0 ",
+            "mainKindFlag": "S",
+            "checked": false,
+            "disabled": true,
+            "struct": {
+                "type": "input",
+                "holder": "请输入",
+                "value": "",
+                "unit": "元"
+            }
+        },
+        {
+            "plan": "",
+            "kindCode": "21Z1",
+            "kindName": "新能源汽车道路救援服务特约条款",
+            "itemKindNo": "66",
+            "deductible": "",
+            "isDeductible": "0",
+            "quantity": "5",
+            "amount": "",
+            "flag": " 2  1 ",
+            "mainKindFlag": "S",
+            "checked": false,
+            "disabled": true,
+            "struct": {
+                "type": "select",
+                "holder": "请选择",
+                "value": "",
+                "data": [
+                    {
+                        "text": "2次",
+                        "value": "2"
+                    },
+                    {
+                        "text": "5+2次",
+                        "value": "7"
+                    },
+                    {
+                        "text": "10+2次",
+                        "value": "12"
+                    },
+                    {
+                        "text": "15+2次",
+                        "value": "17"
+                    },
+                    {
+                        "text": "20+2次",
+                        "value": "22"
+                    }
+                ]
+            }
+        },
+        {
+            "plan": "",
+            "kindCode": "21Z2",
+            "kindName": "新能源汽车车辆安全检测特约条款",
+            "itemKindNo": "67",
+            "deductible": "",
+            "isDeductible": "0",
+            "quantity": "",
+            "amount": "",
+            "flag": " 2  1 ",
+            "mainKindFlag": "S",
+            "checked": false,
+            "disabled": true,
+            "struct": {
+                "type": "input",
+                "holder": "请输入",
+                "value": "",
+                "unit": "次"
+            }
+        },
+        {
+            "plan": "",
+            "kindCode": "21Z3",
+            "kindName": "新能源汽车代为驾驶服务特约条款",
+            "itemKindNo": "68",
+            "deductible": "",
+            "isDeductible": "0",
+            "quantity": "",
+            "amount": "",
+            "flag": " 2  1 ",
+            "mainKindFlag": "S",
+            "checked": false,
+            "disabled": true,
+            "struct": {
+                "type": "input",
+                "holder": "请输入",
+                "value": "",
+                "unit": "次"
+            }
+        },
+        {
+            "plan": "",
+            "kindCode": "21Z4",
+            "kindName": "新能源汽车代为送检服务特约条款",
+            "itemKindNo": "69",
+            "deductible": "",
+            "isDeductible": "0",
+            "quantity": "",
+            "amount": "",
+            "flag": " 2  1 ",
+            "mainKindFlag": "S",
+            "checked": false,
+            "disabled": true,
+            "struct": {
+                "type": "input",
+                "holder": "请输入",
+                "value": "",
+                "unit": "次"
+            }
+        },
+        {
+            "plan": "",
+            "kindCode": "20L",
+            "kindName": "附加车身划痕损失险",
+            "itemKindNo": "47",
+            "deductible": "",
+            "isDeductible": "0",
+            "quantity": "",
+            "amount": "",
+            "flag": " 2  0 ",
+            "mainKindFlag": "S",
+            "checked": false,
+            "disabled": true,
+            "struct": {
+                "type": "select",
+                "holder": "请选择",
+                "value": "",
+                "data": [
+                    {
+                        "text": "2000元",
+                        "value": "2000"
+                    },
+                    {
+                        "text": "5000元",
+                        "value": "5000"
+                    },
+                    {
+                        "text": "10000元",
+                        "value": "10000"
+                    },
+                    {
+                        "text": "20000元",
+                        "value": "20000"
+                    }
+                ]
+            }
+        },
+        {
+            "plan": "",
+            "kindCode": "20T1",
+            "kindName": "附加修理期间费用补偿险",
+            "itemKindNo": "53",
+            "deductible": "",
+            "isDeductible": "0",
+            "quantity": "1",
+            "unitAmount": "",
+            "amount": "",
+            "flag": " 2  0 ",
+            "mainKindFlag": "S",
+            "checked": false,
+            "disabled": true,
+            "struct": {
+                "type": "inputSelect",
+                "holder": "请选择",
+                "value": "",
+                "unit": "元",
+                "RegEx": ""
+            }
+        },
+        {
+            "plan": "",
+            "kindCode": "20E2",
+            "kindName": "附加车轮单独损失险",
+            "itemKindNo": "40",
+            "deductible": "",
+            "isDeductible": "0",
+            "quantity": "",
+            "amount": "",
+            "flag": " 2  0 ",
+            "mainKindFlag": "S",
+            "checked": false,
+            "disabled": true,
+            "struct": {
+                "type": "select",
+                "holder": "请选择",
+                "value": "",
+                "data": [
+                    {
+                        "text": "1000元",
+                        "value": "1000"
+                    },
+                    {
+                        "text": "1500元",
+                        "value": "1500"
+                    },
+                    {
+                        "text": "2000元",
+                        "value": "2000"
+                    },
+                    {
+                        "text": "3000元",
+                        "value": "3000"
+                    },
+                    {
+                        "text": "5000元",
+                        "value": "5000"
+                    },
+                    {
+                        "text": "10000元",
+                        "value": "10000"
+                    }
+                ]
+            }
+        },
+        {
+            "plan": "",
+            "kindCode": "20R1",
+            "kindName": "附加精神损害抚慰金责任险（三者险）",
+            "itemKindNo": "49",
+            "deductible": "",
+            "isDeductible": "0",
+            "quantity": "",
+            "amount": "",
+            "flag": " 2  0 ",
+            "mainKindFlag": "S",
+            "checked": false,
+            "disabled": true,
+            "struct": {
+                "type": "input",
+                "holder": "请输入",
+                "value": "",
+                "unit": "元"
+            }
+        },
+        {
+            "plan": "",
+            "kindCode": "20R2",
+            "kindName": "附加精神损害抚慰金责任险（驾驶员）",
+            "itemKindNo": "48",
+            "deductible": "",
+            "isDeductible": "0",
+            "quantity": "",
+            "amount": "",
+            "flag": " 2  0 ",
+            "mainKindFlag": "S",
+            "checked": false,
+            "disabled": true,
+            "struct": {
+                "type": "input",
+                "holder": "请输入",
+                "value": "",
+                "unit": "元"
+            }
+        },
+        {
+            "plan": "",
+            "kindCode": "20R3",
+            "kindName": "附加精神损害抚慰金责任险（乘客）",
+            "itemKindNo": "52",
+            "deductible": "",
+            "isDeductible": "0",
+            "quantity": "",
+            "amount": "",
+            "flag": " 2  0 ",
+            "mainKindFlag": "S",
+            "checked": false,
+            "disabled": true,
+            "struct": {
+                "type": "input",
+                "holder": "请输入",
+                "value": "",
+                "unit": "元"
+            }
+        },
+        {
+            "plan": "",
+            "kindCode": "20J",
+            "kindName": "附加法定节假日限额翻倍险",
+            "itemKindNo": "45",
+            "deductible": "",
+            "isDeductible": "0",
+            "quantity": "",
+            "amount": "",
+            "flag": " 2  0 ",
+            "mainKindFlag": "S",
+            "checked": false,
+            "disabled": true,
+            "struct": {
+                "type": "selectDisabled",
+                "holder": "",
+                "value": "",
+                "data": [
+                    {
+                        "text": "10万元",
+                        "value": "100000"
+                    },
+                    {
+                        "text": "15万元",
+                        "value": "150000"
+                    },
+                    {
+                        "text": "20万元",
+                        "value": "200000"
+                    },
+                    {
+                        "text": "30万元",
+                        "value": "300000"
+                    },
+                    {
+                        "text": "50万元",
+                        "value": "500000"
+                    },
+                    {
+                        "text": "100万元",
+                        "value": "1000000"
+                    },
+                    {
+                        "text": "150万元",
+                        "value": "1500000"
+                    },
+                    {
+                        "text": "200万元",
+                        "value": "2000000"
+                    },
+                    {
+                        "text": "250万元",
+                        "value": "2500000"
+                    },
+                    {
+                        "text": "300万元",
+                        "value": "3000000"
+                    },
+                    {
+                        "text": "350万元",
+                        "value": "3500000"
+                    },
+                    {
+                        "text": "400万元",
+                        "value": "4000000"
+                    },
+                    {
+                        "text": "450万元",
+                        "value": "4500000"
+                    },
+                    {
+                        "text": "500万元",
+                        "value": "5000000"
+                    },
+                    {
+                        "text": "550万元",
+                        "value": "5500000"
+                    },
+                    {
+                        "text": "600万元",
+                        "value": "6000000"
+                    },
+                    {
+                        "text": "650万元",
+                        "value": "6500000"
+                    },
+                    {
+                        "text": "700万元",
+                        "value": "7000000"
+                    },
+                    {
+                        "text": "750万元",
+                        "value": "7500000"
+                    },
+                    {
+                        "text": "800万元",
+                        "value": "8000000"
+                    },
+                    {
+                        "text": "850万元",
+                        "value": "8500000"
+                    },
+                    {
+                        "text": "900万元",
+                        "value": "9000000"
+                    },
+                    {
+                        "text": "950万元",
+                        "value": "9500000"
+                    },
+                    {
+                        "text": "1000万元",
+                        "value": "10000000"
+                    }
+                ]
+            }
+        },
+        {
+            "plan": "",
+            "kindCode": "20Y",
+            "kindName": "附加医保外医疗费用责任险（三者险）",
+            "itemKindNo": "54",
+            "deductible": "",
+            "isDeductible": "0",
+            "quantity": "",
+            "amount": "",
+            "flag": " 2  0 ",
+            "mainKindFlag": "S",
+            "checked": false,
+            "disabled": true,
+            "struct": {
+                "type": "select",
+                "holder": "请选择",
+                "value": "",
+                "data": [
+                    {
+                        "text": "2万元",
+                        "value": "20000"
+                    },
+                    {
+                        "text": "4万元",
+                        "value": "40000"
+                    },
+                    {
+                        "text": "5万元",
+                        "value": "50000"
+                    },
+                    {
+                        "text": "10万元",
+                        "value": "100000"
+                    },
+                    {
+                        "text": "15万元",
+                        "value": "150000"
+                    },
+                    {
+                        "text": "20万元",
+                        "value": "200000"
+                    }
+                ]
+            }
+        },
+        {
+            "plan": "",
+            "kindCode": "20Y1",
+            "kindName": "附加医保外医疗费用责任险（驾驶员）",
+            "itemKindNo": "55",
+            "deductible": "",
+            "isDeductible": "0",
+            "quantity": "",
+            "amount": "",
+            "flag": " 2  0 ",
+            "mainKindFlag": "S",
+            "checked": false,
+            "disabled": true,
+            "struct": {
+                "type": "select",
+                "holder": "请选择",
+                "value": "",
+                "data": [
+                    {
+                        "text": "2万元",
+                        "value": "20000"
+                    },
+                    {
+                        "text": "4万元",
+                        "value": "40000"
+                    },
+                    {
+                        "text": "5万元",
+                        "value": "50000"
+                    },
+                    {
+                        "text": "10万元",
+                        "value": "100000"
+                    },
+                    {
+                        "text": "15万元",
+                        "value": "150000"
+                    },
+                    {
+                        "text": "20万元",
+                        "value": "200000"
+                    }
+                ]
+            }
+        },
+        {
+            "plan": "",
+            "kindCode": "20Y2",
+            "kindName": "附加医保外医疗费用责任险（乘客）",
+            "itemKindNo": "56",
+            "deductible": "",
+            "isDeductible": "0",
+            "quantity": "",
+            "amount": "",
+            "flag": " 2  0 ",
+            "mainKindFlag": "S",
+            "checked": false,
+            "disabled": true,
+            "struct": {
+                "type": "select",
+                "holder": "请选择",
+                "value": "",
+                "data": [
+                    {
+                        "text": "2万元",
+                        "value": "20000"
+                    },
+                    {
+                        "text": "4万元",
+                        "value": "40000"
+                    },
+                    {
+                        "text": "5万元",
+                        "value": "50000"
+                    },
+                    {
+                        "text": "10万元",
+                        "value": "100000"
+                    },
+                    {
+                        "text": "15万元",
+                        "value": "150000"
+                    },
+                    {
+                        "text": "20万元",
+                        "value": "200000"
+                    }
+                ]
+            }
+        },
+        {
+            "plan": "",
+            "kindCode": "20E1",
+            "kindName": "附加绝对免赔率特约条款（机动车损失保险）",
+            "itemKindNo": "39",
+            "deductible": "",
+            "isDeductible": "0",
+            "quantity": "",
+            "amount": "",
+            "flag": " 2  0 ",
+            "mainKindFlag": "S",
+            "checked": false,
+            "disabled": true,
+            "struct": {
+                "type": "select",
+                "holder": "请选择",
+                "value": "",
+                "data": [
+                    {
+                        "text": "5%",
+                        "value": "0.05"
+                    },
+                    {
+                        "text": "10%",
+                        "value": "0.1"
+                    },
+                    {
+                        "text": "15%",
+                        "value": "0.15"
+                    },
+                    {
+                        "text": "20%",
+                        "value": "0.2"
+                    }
+                ]
+            }
+        },
+        {
+            "plan": "",
+            "kindCode": "20E3",
+            "kindName": "附加绝对免赔率特约条款（机动车第三者责任保险）",
+            "itemKindNo": "41",
+            "deductible": "",
+            "isDeductible": "0",
+            "quantity": "",
+            "amount": "",
+            "flag": " 2  0 ",
+            "mainKindFlag": "S",
+            "checked": false,
+            "disabled": true,
+            "struct": {
+                "type": "select",
+                "holder": "请选择",
+                "value": "",
+                "data": [
+                    {
+                        "text": "5%",
+                        "value": "0.05"
+                    },
+                    {
+                        "text": "10%",
+                        "value": "0.1"
+                    },
+                    {
+                        "text": "15%",
+                        "value": "0.15"
+                    },
+                    {
+                        "text": "20%",
+                        "value": "0.2"
+                    }
+                ]
+            }
+        },
+        {
+            "plan": "",
+            "kindCode": "20E4",
+            "kindName": "附加绝对免赔率特约条款（机动车车上人员责任保险（驾驶员））",
+            "itemKindNo": "42",
+            "deductible": "",
+            "isDeductible": "0",
+            "quantity": "",
+            "amount": "",
+            "flag": " 2  0 ",
+            "mainKindFlag": "S",
+            "checked": false,
+            "disabled": true,
+            "struct": {
+                "type": "select",
+                "holder": "请选择",
+                "value": "",
+                "data": [
+                    {
+                        "text": "5%",
+                        "value": "0.05"
+                    },
+                    {
+                        "text": "10%",
+                        "value": "0.1"
+                    },
+                    {
+                        "text": "15%",
+                        "value": "0.15"
+                    },
+                    {
+                        "text": "20%",
+                        "value": "0.2"
+                    }
+                ]
+            }
+        },
+        {
+            "plan": "",
+            "kindCode": "20E5",
+            "kindName": "附加绝对免赔率特约条款（机动车车上人员责任保险（乘客））",
+            "itemKindNo": "43",
+            "deductible": "",
+            "isDeductible": "0",
+            "quantity": "",
+            "amount": "",
+            "flag": " 2  0 ",
+            "mainKindFlag": "S",
+            "checked": false,
+            "disabled": true,
+            "struct": {
+                "type": "select",
+                "holder": "请选择",
+                "value": "",
+                "data": [
+                    {
+                        "text": "5%",
+                        "value": "0.05"
+                    },
+                    {
+                        "text": "10%",
+                        "value": "0.1"
+                    },
+                    {
+                        "text": "15%",
+                        "value": "0.15"
+                    },
+                    {
+                        "text": "20%",
+                        "value": "0.2"
+                    }
+                ]
+            }
+        },
+        {
+            "plan": "",
+            "kindCode": "BZ",
+            "kindName": "机动车交通事故责任强制保险",
+            "itemKindNo": "",
+            "deductible": "",
+            "isDeductible": "0",
+            "quantity": "",
+            "amount": "",
+            "flag": " 2  03",
+            "mainKindFlag": "S",
+            "checked": false,
+            "disabled": true
+        }
+    ],
+    "CAR": [
+        {
+            "plan": "A|B",
+            "kindCode": "20A",
+            "kindName": "机动车损失保险",
+            "itemKindNo": "34",
+            "isDeductible": "0",
+            "quantity": "",
+            "amount": "",
+            "flag": " 1  1 ",
+            "mainKindFlag": "M",
+            "checked": false,
+            "disabled": false,
+            "additional": [
+                "20L",
+                "20E2",
+                "20T1",
+                "20F",
+                "20E1"
+            ],
+            "struct": {
+                "type": "inputSelect",
+                "holder": "请选择",
+                "value": "",
+                "unit": "元",
+                "data": [
+                    {
+                        "text": "0元",
+                        "value": "0"
+                    },
+                    {
+                        "text": "300元",
+                        "value": "300"
+                    },
+                    {
+                        "text": "500元",
+                        "value": "500"
+                    },
+                    {
+                        "text": "1000元",
+                        "value": "1000"
+                    },
+                    {
+                        "text": "2000元",
+                        "value": "2000"
+                    }
+                ]
+            }
+        },
+        {
+            "plan": "A|B",
+            "kindCode": "20B",
+            "kindName": "机动车第三者责任保险",
+            "itemKindNo": "33",
+            "deductible": "",
+            "isDeductible": "0",
+            "quantity": "",
+            "amount": "",
+            "flag": " 1  1 ",
+            "mainKindFlag": "M",
+            "checked": false,
+            "disabled": false,
+            "additional": [
+                "20J",
+                "20E3",
+                "20R1",
+                "20Y"
+            ],
+            "struct": {
+                "type": "select",
+                "holder": "请选择",
+                "value": "",
+                "data": [
+                    {
+                        "text": "10万元",
+                        "value": "100000"
+                    },
+                    {
+                        "text": "15万元",
+                        "value": "150000"
+                    },
+                    {
+                        "text": "20万元",
+                        "value": "200000"
+                    },
+                    {
+                        "text": "30万元",
+                        "value": "300000"
+                    },
+                    {
+                        "text": "50万元",
+                        "value": "500000"
+                    },
+                    {
+                        "text": "100万元",
+                        "value": "1000000"
+                    },
+                    {
+                        "text": "150万元",
+                        "value": "1500000"
+                    },
+                    {
+                        "text": "200万元",
+                        "value": "2000000"
+                    },
+                    {
+                        "text": "250万元",
+                        "value": "2500000"
+                    },
+                    {
+                        "text": "300万元",
+                        "value": "3000000"
+                    },
+                    {
+                        "text": "350万元",
+                        "value": "3500000"
+                    },
+                    {
+                        "text": "400万元",
+                        "value": "4000000"
+                    },
+                    {
+                        "text": "450万元",
+                        "value": "4500000"
+                    },
+                    {
+                        "text": "500万元",
+                        "value": "5000000"
+                    },
+                    {
+                        "text": "550万元",
+                        "value": "5500000"
+                    },
+                    {
+                        "text": "600万元",
+                        "value": "6000000"
+                    },
+                    {
+                        "text": "650万元",
+                        "value": "6500000"
+                    },
+                    {
+                        "text": "700万元",
+                        "value": "7000000"
+                    },
+                    {
+                        "text": "750万元",
+                        "value": "7500000"
+                    },
+                    {
+                        "text": "800万元",
+                        "value": "8000000"
+                    },
+                    {
+                        "text": "850万元",
+                        "value": "8500000"
+                    },
+                    {
+                        "text": "900万元",
+                        "value": "9000000"
+                    },
+                    {
+                        "text": "950万元",
+                        "value": "9500000"
+                    },
+                    {
+                        "text": "1000万元",
+                        "value": "10000000"
+                    }
+                ]
+            }
+        },
+        {
+            "plan": "B",
+            "kindCode": "20D3",
+            "kindName": "机动车车上人员责任保险（驾驶员）",
+            "itemKindNo": "35",
+            "deductible": "",
+            "isDeductible": "0",
+            "quantity": "1",
+            "amount": "",
+            "flag": " 1  1 ",
+            "mainKindFlag": "M",
+            "checked": false,
+            "disabled": false,
+            "additional": [
+                "20E4",
+                "20R2",
+                "20Y1"
+            ],
+            "struct": {
+                "type": "select",
+                "holder": "请选择",
+                "value": "",
+                "data": [
+                    {
+                        "text": "1万元",
+                        "value": "10000"
+                    },
+                    {
+                        "text": "2万元",
+                        "value": "20000"
+                    },
+                    {
+                        "text": "3万元",
+                        "value": "30000"
+                    },
+                    {
+                        "text": "5万元",
+                        "value": "50000"
+                    },
+                    {
+                        "text": "10万元",
+                        "value": "100000"
+                    },
+                    {
+                        "text": "20万元",
+                        "value": "200000"
+                    },
+                    {
+                        "text": "50万元",
+                        "value": "500000"
+                    },
+                    {
+                        "text": "80万元",
+                        "value": "800000"
+                    }
+                ]
+            }
+        },
+        {
+            "plan": "B",
+            "kindCode": "20D4",
+            "kindName": "机动车车上人员责任保险（乘客）",
+            "itemKindNo": "37",
+            "deductible": "",
+            "isDeductible": "0",
+            "quantity": "4",
+            "unitAmount": "10000",
+            "amount": "",
+            "flag": " 1  1 ",
+            "mainKindFlag": "M",
+            "checked": false,
+            "disabled": false,
+            "additional": [
+                "20E5",
+                "20R3",
+                "20Y2"
+            ],
+            "struct": {
+                "type": "select",
+                "holder": "请选择",
+                "value": "",
+                "data": [
+                    {
+                        "text": "1万元",
+                        "value": "10000"
+                    },
+                    {
+                        "text": "2万元",
+                        "value": "20000"
+                    },
+                    {
+                        "text": "3万元",
+                        "value": "30000"
+                    },
+                    {
+                        "text": "5万元",
+                        "value": "50000"
+                    },
+                    {
+                        "text": "10万元",
+                        "value": "100000"
+                    },
+                    {
+                        "text": "20万元",
+                        "value": "200000"
+                    },
+                    {
+                        "text": "50万元",
+                        "value": "500000"
+                    },
+                    {
+                        "text": "80万元",
+                        "value": "800000"
+                    }
+                ]
+            }
+        },
+        {
+            "plan": "",
+            "kindCode": "20Z1",
+            "kindName": "道路救援服务特约条款",
+            "itemKindNo": "57",
+            "deductible": "",
+            "isDeductible": "0",
+            "quantity": "5",
+            "amount": "",
+            "flag": " 2  1 ",
+            "mainKindFlag": "S",
+            "checked": false,
+            "disabled": true,
+            "struct": {
+                "type": "select",
+                "holder": "请选择",
+                "value": "",
+                "data": [
+                    {
+                        "text": "2次",
+                        "value": "2"
+                    },
+                    {
+                        "text": "5+2次",
+                        "value": "7"
+                    },
+                    {
+                        "text": "10+2次",
+                        "value": "12"
+                    },
+                    {
+                        "text": "15+2次",
+                        "value": "17"
+                    },
+                    {
+                        "text": "20+2次",
+                        "value": "22"
+                    }
+                ]
+            }
+        },
+        {
+            "plan": "",
+            "kindCode": "20Z4",
+            "kindName": "代为送检服务特约条款",
+            "itemKindNo": "38",
+            "deductible": "",
+            "isDeductible": "0",
+            "quantity": "",
+            "amount": "",
+            "flag": " 2  1 ",
+            "mainKindFlag": "S",
+            "checked": false,
+            "disabled": true,
+            "struct": {
+                "type": "input",
+                "holder": "请输入",
+                "value": "",
+                "unit": "次"
+            }
+        },
+        {
+            "plan": "",
+            "kindCode": "20L",
+            "kindName": "附加车身划痕损失险",
+            "itemKindNo": "47",
+            "deductible": "",
+            "isDeductible": "0",
+            "quantity": "",
+            "amount": "",
+            "flag": " 2  0 ",
+            "mainKindFlag": "S",
+            "checked": false,
+            "disabled": true,
+            "struct": {
+                "type": "select",
+                "holder": "请选择",
+                "value": "",
+                "data": [
+                    {
+                        "text": "2000元",
+                        "value": "2000"
+                    },
+                    {
+                        "text": "5000元",
+                        "value": "5000"
+                    },
+                    {
+                        "text": "10000元",
+                        "value": "10000"
+                    },
+                    {
+                        "text": "20000元",
+                        "value": "20000"
+                    }
+                ]
+            }
+        },
+        {
+            "plan": "",
+            "kindCode": "20E2",
+            "kindName": "附加车轮单独损失险",
+            "itemKindNo": "40",
+            "deductible": "",
+            "isDeductible": "0",
+            "quantity": "",
+            "amount": "",
+            "flag": " 2  0 ",
+            "mainKindFlag": "S",
+            "checked": false,
+            "disabled": true,
+            "struct": {
+                "type": "select",
+                "holder": "请选择",
+                "value": "",
+                "data": [
+                    {
+                        "text": "1000元",
+                        "value": "1000"
+                    },
+                    {
+                        "text": "1500元",
+                        "value": "1500"
+                    },
+                    {
+                        "text": "2000元",
+                        "value": "2000"
+                    },
+                    {
+                        "text": "3000元",
+                        "value": "3000"
+                    },
+                    {
+                        "text": "5000元",
+                        "value": "5000"
+                    },
+                    {
+                        "text": "10000元",
+                        "value": "10000"
+                    }
+                ]
+            }
+        },
+        {
+            "plan": "",
+            "kindCode": "20T1",
+            "kindName": "附加修理期间费用补偿险",
+            "itemKindNo": "53",
+            "deductible": "",
+            "isDeductible": "0",
+            "quantity": "1",
+            "unitAmount": "",
+            "amount": "",
+            "flag": " 2  0 ",
+            "mainKindFlag": "S",
+            "checked": false,
+            "disabled": true,
+            "struct": {
+                "type": "inputSelect",
+                "holder": "请选择",
+                "value": "",
+                "unit": "元",
+                "RegEx": ""
+            }
+        },
+        {
+            "plan": "",
+            "kindCode": "20J",
+            "kindName": "附加法定节假日限额翻倍险",
+            "itemKindNo": "45",
+            "deductible": "",
+            "isDeductible": "0",
+            "quantity": "",
+            "amount": "",
+            "flag": " 2  0 ",
+            "mainKindFlag": "S",
+            "checked": false,
+            "disabled": true,
+            "struct": {
+                "type": "selectDisabled",
+                "holder": "",
+                "value": ""
+            }
+        },
+        {
+            "plan": "",
+            "kindCode": "20F",
+            "kindName": "附加发动机进水损坏除外特约条款",
+            "itemKindNo": "44",
+            "deductible": "",
+            "isDeductible": "0",
+            "quantity": "",
+            "amount": "0",
+            "flag": " 2  0 ",
+            "mainKindFlag": "S",
+            "checked": false,
+            "disabled": true,
+            "struct": {
+                "type": "text",
+                "value": "0",
+                "unit": "元"
+            }
+        },
+        {
+            "plan": "",
+            "kindCode": "20E1",
+            "kindName": "附加绝对免赔率特约险(机动车损失保险)",
+            "itemKindNo": "39",
+            "deductible": "",
+            "isDeductible": "0",
+            "quantity": "",
+            "amount": "",
+            "flag": " 2  0 ",
+            "mainKindFlag": "S",
+            "checked": false,
+            "disabled": true,
+            "struct": {
+                "type": "select",
+                "holder": "请选择",
+                "value": "",
+                "data": [
+                    {
+                        "text": "5%",
+                        "value": "0.05"
+                    },
+                    {
+                        "text": "10%",
+                        "value": "0.1"
+                    },
+                    {
+                        "text": "15%",
+                        "value": "0.15"
+                    },
+                    {
+                        "text": "20%",
+                        "value": "0.2"
+                    }
+                ]
+            }
+        },
+        {
+            "plan": "",
+            "kindCode": "20E3",
+            "kindName": "附加绝对免赔率特约险(机动车第三者责任保险)",
+            "itemKindNo": "41",
+            "deductible": "",
+            "isDeductible": "0",
+            "quantity": "",
+            "amount": "",
+            "flag": " 2  0 ",
+            "mainKindFlag": "S",
+            "checked": false,
+            "disabled": true,
+            "struct": {
+                "type": "select",
+                "holder": "请选择",
+                "value": "",
+                "data": [
+                    {
+                        "text": "5%",
+                        "value": "0.05"
+                    },
+                    {
+                        "text": "10%",
+                        "value": "0.1"
+                    },
+                    {
+                        "text": "15%",
+                        "value": "0.15"
+                    },
+                    {
+                        "text": "20%",
+                        "value": "0.2"
+                    }
+                ]
+            }
+        },
+        {
+            "plan": "",
+            "kindCode": "20E4",
+            "kindName": "附加绝对免赔率特约险(机动车车上人员责任保险（司机）)",
+            "itemKindNo": "42",
+            "deductible": "",
+            "isDeductible": "0",
+            "quantity": "",
+            "amount": "",
+            "flag": " 2  0 ",
+            "mainKindFlag": "S",
+            "checked": false,
+            "disabled": true,
+            "struct": {
+                "type": "select",
+                "holder": "请选择",
+                "value": "",
+                "data": [
+                    {
+                        "text": "5%",
+                        "value": "0.05"
+                    },
+                    {
+                        "text": "10%",
+                        "value": "0.1"
+                    },
+                    {
+                        "text": "15%",
+                        "value": "0.15"
+                    },
+                    {
+                        "text": "20%",
+                        "value": "0.2"
+                    }
+                ]
+            }
+        },
+        {
+            "plan": "",
+            "kindCode": "20E5",
+            "kindName": "附加绝对免赔率特约险(机动车车上人员责任保险（乘客）)",
+            "itemKindNo": "43",
+            "deductible": "",
+            "isDeductible": "0",
+            "quantity": "",
+            "amount": "",
+            "flag": " 2  0 ",
+            "mainKindFlag": "S",
+            "checked": false,
+            "disabled": true,
+            "struct": {
+                "type": "select",
+                "holder": "请选择",
+                "value": "",
+                "data": [
+                    {
+                        "text": "5%",
+                        "value": "0.05"
+                    },
+                    {
+                        "text": "10%",
+                        "value": "0.1"
+                    },
+                    {
+                        "text": "15%",
+                        "value": "0.15"
+                    },
+                    {
+                        "text": "20%",
+                        "value": "0.2"
+                    }
+                ]
+            }
+        },
+        {
+            "plan": "",
+            "kindCode": "20R1",
+            "kindName": "附加精神损害抚慰金责任险-三者险",
+            "itemKindNo": "49",
+            "deductible": "",
+            "isDeductible": "0",
+            "quantity": "",
+            "amount": "",
+            "flag": " 2  0 ",
+            "mainKindFlag": "S",
+            "checked": false,
+            "disabled": true,
+            "struct": {
+                "type": "input",
+                "holder": "请输入",
+                "value": "",
+                "unit": "元"
+            }
+        },
+        {
+            "plan": "",
+            "kindCode": "20R2",
+            "kindName": "附加精神损害抚慰金责任险-驾驶员",
+            "itemKindNo": "48",
+            "deductible": "",
+            "isDeductible": "0",
+            "quantity": "",
+            "amount": "",
+            "flag": " 2  0 ",
+            "mainKindFlag": "S",
+            "checked": false,
+            "disabled": true,
+            "struct": {
+                "type": "input",
+                "holder": "请输入",
+                "value": "",
+                "unit": "元"
+            }
+        },
+        {
+            "plan": "",
+            "kindCode": "20R3",
+            "kindName": "附加精神损害抚慰金责任险-乘客",
+            "itemKindNo": "52",
+            "deductible": "",
+            "isDeductible": "0",
+            "quantity": "",
+            "amount": "",
+            "flag": " 2  0 ",
+            "mainKindFlag": "S",
+            "checked": false,
+            "disabled": true,
+            "struct": {
+                "type": "input",
+                "holder": "请输入",
+                "value": "",
+                "unit": "元"
+            }
+        },
+        {
+            "plan": "",
+            "kindCode": "20Y",
+            "kindName": "附加医保外医疗费用责任险-三者险",
+            "itemKindNo": "54",
+            "deductible": "",
+            "isDeductible": "0",
+            "quantity": "",
+            "amount": "",
+            "flag": " 2  0 ",
+            "mainKindFlag": "S",
+            "checked": false,
+            "disabled": true,
+            "struct": {
+                "type": "select",
+                "holder": "请选择",
+                "value": "",
+                "data": [
+                    {
+                        "text": "2万元",
+                        "value": "20000"
+                    },
+                    {
+                        "text": "4万元",
+                        "value": "40000"
+                    },
+                    {
+                        "text": "5万元",
+                        "value": "50000"
+                    },
+                    {
+                        "text": "10万元",
+                        "value": "100000"
+                    },
+                    {
+                        "text": "15万元",
+                        "value": "150000"
+                    },
+                    {
+                        "text": "20万元",
+                        "value": "200000"
+                    }
+                ]
+            }
+        },
+        {
+            "plan": "",
+            "kindCode": "20Y1",
+            "kindName": "附加医保外医疗费用责任险-驾驶员",
+            "itemKindNo": "55",
+            "deductible": "",
+            "isDeductible": "0",
+            "quantity": "",
+            "amount": "",
+            "flag": " 2  0 ",
+            "mainKindFlag": "S",
+            "checked": false,
+            "disabled": true,
+            "struct": {
+                "type": "select",
+                "holder": "请选择",
+                "value": "",
+                "data": [
+                    {
+                        "text": "2万元",
+                        "value": "20000"
+                    },
+                    {
+                        "text": "4万元",
+                        "value": "40000"
+                    },
+                    {
+                        "text": "5万元",
+                        "value": "50000"
+                    },
+                    {
+                        "text": "10万元",
+                        "value": "100000"
+                    },
+                    {
+                        "text": "15万元",
+                        "value": "150000"
+                    },
+                    {
+                        "text": "20万元",
+                        "value": "200000"
+                    }
+                ]
+            }
+        },
+        {
+            "plan": "",
+            "kindCode": "20Y2",
+            "kindName": "附加医保外医疗费用责任险-乘客",
+            "itemKindNo": "56",
+            "deductible": "",
+            "isDeductible": "0",
+            "quantity": "",
+            "amount": "",
+            "flag": " 2  0 ",
+            "mainKindFlag": "S",
+            "checked": false,
+            "disabled": true,
+            "struct": {
+                "type": "select",
+                "holder": "请选择",
+                "value": "",
+                "data": [
+                    {
+                        "text": "2万元",
+                        "value": "20000"
+                    },
+                    {
+                        "text": "4万元",
+                        "value": "40000"
+                    },
+                    {
+                        "text": "5万元",
+                        "value": "50000"
+                    },
+                    {
+                        "text": "10万元",
+                        "value": "100000"
+                    },
+                    {
+                        "text": "15万元",
+                        "value": "150000"
+                    },
+                    {
+                        "text": "20万元",
+                        "value": "200000"
+                    }
+                ]
+            }
+        },
+        {
+            "plan": "",
+            "kindCode": "20Z2",
+            "kindName": "车辆安全检测特约条款",
+            "itemKindNo": "58",
+            "deductible": "",
+            "isDeductible": "0",
+            "quantity": "",
+            "amount": "",
+            "flag": " 2  1 ",
+            "mainKindFlag": "S",
+            "checked": false,
+            "disabled": true,
+            "struct": {
+                "type": "input",
+                "holder": "请输入",
+                "value": "",
+                "unit": "次"
+            }
+        },
+        {
+            "plan": "",
+            "kindCode": "20Z3",
+            "kindName": "代为驾驶服务特约条款",
+            "itemKindNo": "59",
+            "deductible": "",
+            "isDeductible": "0",
+            "quantity": "",
+            "amount": "",
+            "flag": " 2  1 ",
+            "mainKindFlag": "S",
+            "checked": false,
+            "disabled": true,
+            "struct": {
+                "type": "input",
+                "holder": "请输入",
+                "value": "",
+                "unit": "次"
+            }
+        },
+        {
+            "plan": "",
+            "kindCode": "BZ",
+            "kindName": "机动车交通事故责任强制保险",
+            "itemKindNo": "",
+            "deductible": "",
+            "isDeductible": "0",
+            "quantity": "",
+            "amount": "",
+            "flag": " 2  03",
+            "mainKindFlag": "S",
+            "checked": false,
+            "disabled": true
+        }
+    ]
+}

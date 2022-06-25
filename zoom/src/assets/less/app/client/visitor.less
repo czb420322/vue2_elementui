@@ -1,0 +1,135 @@
+@charset "utf-8";
+
+ .content-client-page-vis{
+	padding: 0.75rem;
+    background-color: #ffffff;  
+    .title-box{
+        display: flex;
+        justify-content: space-between;
+        >div:first-child{
+            font-family:PingFang;
+            font-weight:500;
+            color:rgba(51,51,51,1);
+        }
+        >div:last-child,a{
+            font-family:PingFang;
+            font-weight:500;
+            color:rgba(153,153,153,1);
+        }
+    }
+    .person{
+        display: flex;
+        margin: 1rem 0;
+        >div{
+            margin-right: 1rem;
+            >div:first-child{
+                width: 3rem;
+                height: 3rem;
+                background-color: #f3f3ff;
+                border-radius: 50%;
+            }
+            >div:last-child{
+                margin-top: 0.2rem;
+                text-align: center;
+            }
+        }
+    }
+    .bor{
+        height: 3rem;
+        align-items: center;
+        border-bottom: 1px solid #f3f3f3;
+    }
+    .weig{
+        font-family:PingFang !important;
+        font-weight:bold !important;
+        color:rgba(51,51,51,1) !important;
+        font-size: 1rem;
+    }
+    .advertisement >img{
+		width: 100%;
+		margin: 1.5rem 0;
+	}
+    .record{
+        border-bottom: 0.8px solid #f3f3f3;
+        padding: 1rem 0;
+        .rec-box{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 5rem;
+            .left{
+                background-color: #f3f3f3;
+                border-radius: 0.6rem;
+                width: 18%;
+                height: 4rem;
+            }
+            .right{
+                width: 78%;
+                height: 4rem;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: baseline;
+                .up{
+                    font-weight: 500;
+                }
+                .dow{
+                    width: 100%;
+                    margin-top: 1.5rem;
+                    display: flex;
+                    justify-content: space-between;
+                    .pser{
+                        display: flex;
+                        .visitor-avatars{
+                            width: 2rem;
+                            height: 1rem;
+                            overflow: hidden;
+                            white-space: nowrap;
+                        }
+                        .hred{
+                            width: 1rem;
+                            height: 1rem;
+                            background-color: #f3f3f3;
+                            border-radius: 50%;
+                            float: left;
+                            overflow: hidden;
+                        }
+                        .visitor-txt{
+                            width: 4rem;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                        }
+                    }
+                    .time{
+                        color: #999999;
+                    }
+                }
+            }
+        }
+    }
+    .other{
+        margin-bottom: 1rem;
+        .other-box{
+            margin-top: 1rem;
+            display: flex;
+            justify-content: space-around;
+            >div{
+                display: flex;
+            }
+            .icon{
+                width: 2rem;
+                img{
+                    width: 100%;
+                };
+            }
+            .fot{
+                margin-left: 0.5rem;
+                width: 5rem;
+                line-height: 2rem;
+            }
+        }
+    }
+    
+ } 
+ 

@@ -1,0 +1,256 @@
+.page {
+    background: #fff;
+}
+.home_box{
+    overflow-x: hidden;
+}
+.backfff {
+    background-color: #fff;
+}
+.search_box{
+    display: flex;
+    align-items: center;
+    background: rgb(2, 82, 255);
+}
+.search_fence{
+    flex: 1;
+}
+
+.gr_top {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: .5rem .7rem;
+}
+
+.gr_top span {
+    position : absolute;
+    left     : 0.75rem;
+    font-size: 0.75rem;
+}
+
+.gr_top span img {
+    width      : 0.375rem;
+    float      : right;
+    margin-top : 1.2rem;
+    margin-left: 0.25rem;
+}
+
+.gr_top .news {
+    display : block;
+    width: 22px;
+    margin-top: .5rem;
+}
+.gr_top .xx_w{
+    width: 18px;
+}
+.gr_top .name{
+    margin: 0;
+    font-size: 12px;
+    transform: scale(.8);
+}
+
+.swiper-container {
+    padding-bottom: 0;
+}
+
+.swiper-container img {
+    width: 100%;
+}
+
+.swiper-pagination-bullet {
+    background   : #b8d6f1;
+    width        : 0.75rem;
+    height       : 0.1rem;
+    border-radius: 0.05rem;
+}
+
+.swiper-pagination-bullet-active {
+    background: #fff;
+}
+
+.swiper-container-horizontal>.swiper-pagination {
+    bottom: 1.5rem;
+}
+
+.padding30 {
+    padding   : 0 0.75rem;
+}
+
+.gr_icon {
+    background   : #fff;
+    border-radius: 0.25rem;
+    /* padding      : 0.75rem 0; */
+    padding-top: 0.75rem;
+    position     : relative;
+    z-index      : 2;
+    /* box-shadow   : 0px 3px 8px #deeef8; */
+}
+
+.gr_icon img {
+    display: block;
+    width  : 2.25rem;
+    height : 2rem;
+    margin : 0 auto;
+}
+
+.gr_icon div {
+    color     : #333;
+    font-size : 0.7rem;
+    text-align: center;
+}
+
+.headlines {
+    padding: 0.75rem 0;
+}
+
+.headlines img {
+    display: block;
+    height : 0.7rem;
+    float  : left;
+}
+
+.headlines p {
+    font-size   : 0.65rem;
+    padding-left: 3.25rem;
+    line-height : 0.7rem;
+    margin      : 0;
+}
+
+.advertisement img {
+    display: block;
+    width  : 100%;
+    margin-top: 14px;
+}
+
+.hot .gr_title {
+    font-size    : 0.8rem;
+    color        : #000;
+    font-weight  : bold;
+    margin-top   : 1rem;
+    margin-bottom: 0.75rem;
+    line-height  : 0.8rem;
+}
+
+.hot .gr_title span {
+    float      : right;
+    font-size  : 0.6rem;
+    color      : #999;
+    font-weight: normal;
+}
+
+.hot .product img {
+    display      : block;
+    width        : 100%;
+    margin-bottom: 0.5rem;
+}
+.hot .product-list .wj_home_item .van-image__img{
+    border-radius: 8px;
+}
+
+.hot .product .cp50 {
+    margin-left : -0.25rem;
+    margin-right: -0.25rem;
+}
+
+.hot .product .cp50 div {
+    padding: 0 0.25rem;
+}
+
+.hot .product .cp50 img:last-child {
+    float: right;
+}
+.hot .product-list .wj_home_item .van-image__img{
+    border-radius: 8px;
+}
+.logo_hui img {
+    display      : block;
+    height       : 1rem;
+    margin       : 0.5rem auto;
+    margin-bottom: 4rem;
+}
+.search_banner{
+    z-index: 9;
+    position: relative;
+}
+.search_banner .van-image__img{
+    border-radius: 8px;
+}
+.search_backdrop_box{
+    background: #fff;
+    position: relative;
+}
+.search_backdrop_cover{
+    height: 25vw;
+    background: #0252FF;
+    position: absolute;
+    width: 150%;
+    left: -25%;
+    top: 0;
+    border-radius: 0 0 50% 50%;
+    z-index: -1;
+    box-sizing: content-box;
+}
+
+/* .mytabbar a img {
+    display: block;
+    width  : 1.4rem;
+    margin : 0 auto;
+}
+
+.mytabbar .dlan {
+    width      : 7rem;
+    height     : 1.4rem;
+    position   : absolute;
+    top        : -1.4rem;
+    left       : 50%;
+    margin-left: -3.5rem;
+}
+
+.mytabbar .dlan img {
+    display: block;
+    width  : 100%;
+}
+
+.mytabbar .dlan span {
+    display : block;
+    width   : 1rem;
+    height  : 1.15rem;
+    position: absolute;
+    right   : 0;
+    top     : 0;
+} */
+
+.my-swipe {
+    /* min-height: 260px; */
+    margin: 0 0.75rem;
+    border-radius:4px;
+}
+
+.my-swipe img {
+    width  : 100%;
+    display: block;
+}
+
+.product-list {
+    /* display        : flex; */
+    /* flex-wrap      : wrap; */
+    /* justify-content: space-between; */
+    overflow: hidden;
+}
+
+.product-list .item {
+    display: block;
+    width  : 48.5%;
+    margin-bottom: 11px;
+    float: left;
+    border-radius: .3rem;
+}
+
+.product-list .item:nth-of-type(2n){
+    margin-right: 3%;
+}
+.product-list .item:nth-of-type(1){
+    width: 100%;
+}

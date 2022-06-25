@@ -1,0 +1,222 @@
+.study_page {
+    header {
+        padding-top: 32px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 11111;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 4%;
+        background-color: white;
+
+        .van-tabs {
+            width: 80%;
+        }
+
+        .van-tab--active {
+            font-size: 16px;
+        }
+
+        .van-tabs__line {
+            bottom: 20px;
+        }
+    }
+
+    nav {
+        display: flex;
+        background-color: white;
+
+        .van-tabs {
+            flex: 1;
+            width: 0;
+
+            .van-tab__text {
+                font-size: 13px;
+                color: #999999;
+            }
+
+            .van-tab--active {
+                .van-tab__text {
+                    color: #0252ff;
+                    background-color: #dee8fe;
+                    border-radius: 20px;
+                    padding: 0.2rem 0.6rem;
+                    font-weight: normal;
+                }
+            }
+        }
+
+        .sort {
+            display: flex;
+            align-items: center;
+            align-content: center;
+
+            >span {
+                padding: 0 3.5%;
+                font-size: 13px;
+                width: 7em;
+                text-align: center;
+            }
+        }
+    }
+
+    .my-swipe {
+        margin: 3%;
+        border-radius: 5px;
+        overflow: hidden;
+        min-height: auto;
+        height: 37vw;
+
+        .van-swipe-item {
+            img {
+                display: block;
+                width: 100%;
+                height: 37vw;
+            }
+        }
+    }
+
+    .itemTitel {
+        margin: 0 3.5% 0;
+        padding-top: 12px;
+        font-size: 16px;
+    }
+
+    .articleList {
+        .list {
+            background: white;
+            margin-bottom: 10px;
+        }
+    }
+
+    .video_item {
+        margin: 0 3.5%;
+        padding: 14px 0;
+        position: relative;
+
+        .name {
+            width: 100%;
+            font-size: 16px;
+        }
+
+        .photo {
+            display: block;
+            width: 100%;
+            border-radius: 4px;
+        }
+
+        .txt {
+            width: 100%;
+            font-size: 12px;
+            opacity: 0.4;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 5px;
+        }
+
+        .icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -11px 0 0 -11px;
+        }
+    }
+
+    .video_content {
+        .item {
+            position: relative;
+            margin: 3.5%;
+            border-radius: 4px;
+            overflow: hidden;
+
+            .photo {
+                display: block;
+                width: 100%;
+            }
+
+            .txt {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                padding: 10px;
+                background-image: linear-gradient(rgba(255, 255, 255, 0),
+                        rgba(0, 0, 0, 0.5));
+
+                p {
+                    display: flex;
+                    justify-content: space-between;
+                    margin: 0;
+                    color: white;
+                    font-size: 13px;
+
+                    .flex {
+                        align-items: center;
+                    }
+                }
+            }
+        }
+    }
+
+    ._Overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+.studyPersonal_page {
+    .header_box {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+
+        .userInfo {
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            background: white;
+
+            .photo {
+                display: block;
+                width: 3.5rem;
+                height: 3.5rem;
+                border-radius: 50%;
+            }
+
+            .name {
+                width: 100%;
+                text-align: center;
+                font-size: 1rem;
+                margin: 0.5rem 0;
+            }
+
+            .van-icon-arrow-left {
+                position: absolute;
+                left: 16px;
+            }
+        }
+
+        .nav_bar {
+            background-color: white;
+            box-shadow: 0 5px 5px rgba(0, 0, 0, 0.06);
+            position: relative;
+
+            .van-tabs {
+                margin: 0 4%;
+            }
+
+            .van-tabs__line {
+                bottom: 18px;
+            }
+        }
+    }
+}

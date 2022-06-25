@@ -1,0 +1,65 @@
+@charset "utf-8";
+
+.yeji-page{
+   background: #f7f7f7;
+   .yjtop {
+	  background: -webkit-linear-gradient(left,#ff5a5b,#c9151e);
+	  background: -o-linear-gradient(right,#ff5a5b,#c9151e);
+	  background: -moz-linear-gradient(right,#ff5a5b,#c9151e);
+	  background: linear-gradient(to right,#ff5a5b,#c9151e);
+	  height: 4rem;
+	  width: 100%;
+	  position: relative;
+	  .flex {
+	    position: absolute;
+	    right: 0.8rem;
+	    top: 1rem;
+	  }
+	  input {
+	    background: none;
+	    border: none;
+	    color: #fff;
+	    text-align: right;
+	  }
+	  .icon {
+	    color: #fff;
+	  }
+	}
+	.cardtop {
+	  margin-top: -1rem;
+	  text-align: center;
+	  padding: 1rem 0 0.8rem 0;
+	  .txt {
+	    font-size: 0.7rem;
+	    color: #999;
+	  }
+	  .num {
+	    font-size: 1rem;
+	    color: #333;
+	  }
+	}
+	.yjcard {
+	  padding: 0.6rem;
+	  .flex {
+	    .flexitem {
+	      height: 2.6rem;
+	      line-height: 2.6rem;
+	      text-align: center;
+	    }
+	    &:nth-child(even) {
+	      .flexitem {
+	        &:first-child {
+	          background: #f7e2b6;
+	        }
+	        &:last-child {
+	          background: #f8f8f8;
+	        }
+	      }
+	    }
+	  }
+	  .yjtitle {
+	    padding-bottom: 0.4rem;
+	  }
+	}
+	   
+}

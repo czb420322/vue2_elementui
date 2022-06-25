@@ -1,0 +1,107 @@
+@charset "utf-8";
+
+.claimDetail {
+	.bg-box {
+		height          : 90px;
+		display         : block;
+		background-color: #0252FF;
+	}
+
+	.content {
+		position     : relative;
+		width        : 93%;
+		background   : white;
+		margin       : -35px auto 0;
+		border-radius: 6px;
+		box-shadow   : 0 0 10px rgba(0, 0, 0, .1);
+		margin-bottom: 25px;
+
+		.list {
+
+			.name {
+				display      : flex;
+				margin       : 0 .55rem;
+				padding      : 0.55rem 0;
+				align-items  : center;
+				align-content: center;
+				color        : #111;
+				font-size    : 16px;
+				font-weight  : normal;
+
+				.icon {
+					display     : block;
+					width       : 1rem;
+					margin-right: 0.2rem;
+				}
+
+				.van-icon {
+					position: absolute;
+					right   : 0;
+				}
+			}
+
+			.info-box {
+				padding: 0.55rem;
+
+				.item {
+					display: flex;
+					margin : 0;
+					padding: .15rem .4rem;
+
+					.label {
+						font-size: 14px;
+						width    : 5rem;
+					}
+
+					.txt {
+						font-size: 14px;
+						color    : #9C9C9C;
+						flex     : 1;
+					}
+				}
+			}
+		}
+	}
+
+	.van-submit-bar {
+		position: inherit;
+		padding : .6rem 0;
+
+		.van-submit-bar__price {
+			color: #FB7125;
+		}
+
+		.van-button--danger {
+			background: linear-gradient(to right, #3374ff, #0252FF);
+		}
+	}
+
+	.van-cell-group {
+		margin-bottom: 14px;
+
+		.title_bar {
+			font-size  : 0.9rem;
+			font-weight: 500;
+		}
+	}
+
+	.van-cell__value {
+		flex: 4;
+	}
+
+	.agree_bar {
+		width: 92%;
+		margin: auto;
+		font-size: 0.7rem;
+		margin-bottom: 14px;
+		.van-checkbox__label{
+			color: #999;
+		}
+		.sign {
+		  color: #0252ff;
+		}
+	}
+	.van-submit-bar__text{
+		text-align: left;
+	}
+}

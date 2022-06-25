@@ -1,0 +1,112 @@
+﻿@charset "utf-8";
+
+.carInsurancePage {
+	.content {
+		.list {
+			width: 93%;
+			margin: auto;
+
+			.banner {
+				display: block;
+				width: 100%;
+				margin: 4% 0;
+			}
+
+			.info-box {
+				background-color: white;
+				box-shadow: 0 0 5px rgba(0, 0, 0, .05);
+				border-radius: 8px;
+				overflow: hidden;
+				padding: 10px 0;
+
+				.btn_bar {
+					margin: 1rem 16px 0;
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: space-between;
+
+					.van-button {
+						font-size: .9rem;
+					}
+
+					.txt {
+						width: 100%;
+						text-align: center;
+						font-size: .7rem;
+						color: #999;
+						margin: 1rem 0 .5rem 0;
+
+						.van-hairline--right {
+							padding-right: .5rem;
+							margin-right: .5rem;
+						}
+					}
+				}
+
+				.van-icon-clock-o {
+					transform: rotate(-45deg);
+					font-size: .88rem;
+				}
+
+				.car_area{
+					display: flex;
+					align-items: center;
+					margin-right: .4rem;
+					width: 2.2rem;
+				}
+			}
+
+			.title_bar {
+				font-size: .9rem;
+				margin: 1.5em 0 .6em;
+				font-weight: 500;
+			}
+
+			.van-grid {
+				border-radius: 8px;
+				overflow: hidden;
+			}
+		}
+	}
+
+	.question{
+		margin: 0 3.5vw 0 3.5vw;
+    height: 95px;
+    // &:last-child{
+		// 	margin-right: 3.5vw;
+    // }
+    img{
+        width: 18px;
+        height: 18px;
+        margin-right: 8px;
+    }
+    div{
+        font-size: 12px;
+        &.flexbox{
+            margin-bottom: 5px;
+            .answer{
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp:3;
+                -webkit-box-orient: vertical;
+                margin-bottom: 0;
+                color: #999;
+            }
+        }
+		}
+		.flexbox{
+			display: flex;
+			&.flex-center{
+				align-items: center;
+			}
+			.flexitem{
+				flex: 1;
+			}
+		}
+	}
+
+	.van-button {
+		border-radius: 5px;
+	}
+}

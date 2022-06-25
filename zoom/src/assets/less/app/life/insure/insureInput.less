@@ -1,0 +1,36 @@
+@charset "utf-8";
+.insuredInfoPage {
+	.confirm_bar {
+		position        : fixed;
+		left            : 0;
+		bottom          : 0;
+		right           : 0;
+		height          : 50px;
+		display         : flex;
+		align-items     : center;
+		background-color: white;
+		box-shadow      : 0 0 10px rgba(0, 0, 0, 0.13);
+		margin-bottom: constant(safe-area-inset-bottom);
+		margin-bottom: env(safe-area-inset-bottom);
+		.name {
+			font-size: 12px;
+			margin   : 0 24px;
+		}
+
+		.price {
+			flex     : 1.5;
+			color    : #FB7125;
+			font-size: 22px;
+		}
+
+		.btn {
+			display         : flex;
+			align-items     : center;
+			justify-content : center;
+			height          : inherit;
+			flex            : 1;
+			background-color: #0252FF;
+			color           : rgba(255, 255, 255, .8);
+		}
+	}
+}

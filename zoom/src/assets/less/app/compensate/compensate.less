@@ -1,0 +1,241 @@
+@charset "utf-8";
+
+p {
+	margin: 0;
+}
+
+.compensate {
+	margin-top: 45px;
+
+	.tabs-box {
+		background-color: #0252ff;
+		margin          : auto;
+
+		.van-tabs {
+			width : 90%;
+			margin: auto;
+		}
+
+		.van-tabs__line {
+			width           : 1.5em !important;
+			background-color: white;
+			bottom          : 20px;
+		}
+
+		.van-tab--active {
+			font-weight: normal;
+		}
+	}
+
+	.list-box {
+		.item {
+			.desc-box{
+				display: flex;
+				flex-wrap: wrap;
+			}
+			.name {
+				display      : flex;
+				margin       : 0;
+				padding      : 0.5rem;
+				align-items  : center;
+				align-content: center;
+
+				.icon {
+					display     : block;
+					width       : 1rem;
+					margin-right: 0.2rem;
+				}
+				
+			}
+
+			.van-card__title {
+				font-weight: normal;
+				font-size  : 16px;
+				color      : #333;
+				margin     : 2px 0 4px;
+			}
+
+			.list-content {
+				display        : flex;
+				justify-content: space-between;
+				margin-top     : 12px;
+
+				.price {
+					color    : #fb7125;
+					font-size: 14px;
+
+					span {
+						font-size: 18px;
+					}
+				}
+			}
+
+			.van-card:not(:first-child) {
+				margin-top: 0;
+			}
+
+			.van-card:not(:first-child)::after {
+				position         : absolute;
+				box-sizing       : border-box;
+				content          : ' ';
+				pointer-events   : none;
+				top              : -50%;
+				right            : -50%;
+				bottom           : -50%;
+				left             : -50%;
+				border           : 0 solid #ebedf0;
+				-webkit-transform: scale(0.5);
+				transform        : scale(0.5);
+				border-width     : 1px 0;
+			}
+		}
+	}
+	p.tip {
+		color      : #999;
+		text-align : center;
+		font-size  : 14px;
+		padding-top: 20px;
+	}
+	.list-box {
+		.list {
+			width        : 93%;
+			background   : white;
+			margin       : -25px auto 0;
+			border-radius: 6px;
+			box-shadow: 0 0 10px rgba(0,0,0,.1);
+			margin: 12px auto;
+			.name {
+				// display      : flex;
+				// margin       : 0 .95rem;
+				// padding      : 0.55rem 0;
+				// align-items  : center;
+				// align-content: center;
+				// color        : #999;
+				// font-size    : 15px;
+				// font-weight  : normal;
+				// justify-content: space-between;
+				   display: flex;
+				   padding:0.5rem 0.95rem 0;
+				.icon {
+					display     : block;
+					width       : 1rem;
+					margin-right: 0.2rem;
+				}
+				.left_img{
+					width: 20px;
+					height: 20px;
+				}
+			}
+
+			.info-box {
+				padding: 0 0.55rem 0.55rem;
+                position: relative;
+				.item {
+					display: flex;
+					margin : 0;
+					padding: .15rem .4rem;
+
+					.label {
+						font-size: 14px;
+						width    : 4.2rem;
+					}
+
+					.txt {
+						font-size: 14px;
+						// color    : #9C9C9C;
+						flex     : 1;
+					}
+					.time{
+						font-weight: bold;
+						color: #000;
+					}
+					
+				}
+				.money{
+					position: absolute;
+					top: -23px;
+					right: 0.55rem;
+					color: red;
+					font-weight: bold;
+					font-size: 14px;
+					.txt_money1{
+						margin-left: 5px;
+					}
+				}
+				.btn_detail{
+				   padding: 5px;
+                   position: absolute;
+                   bottom: 0.95rem;
+                   right: 0.95rem;
+                   font-size: 12px;
+                   line-height: 12px;
+                   border-radius: 5px;
+                   background-color: #0252ff;
+                   color: #fff;
+				}
+				.monthType{
+					padding-top: 0.7rem;
+					display: flex;
+					justify-content: space-between;
+					.txt{
+						color: #9C9C9C;
+					}
+				}
+			}
+		}
+	}
+	.list_baodan{
+		font-size: 15px;
+		font-weight: bold;
+		margin-left: 5px;
+		width: 140px;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		white-space: nowrap;
+		font-weight: bold;
+	    color: #000;
+	}
+	.list_baodan:hover{
+	    text-overflow:inherit; 
+        overflow: visible; 
+        white-space: pre-line;
+	
+   }
+   .baodan_txt{
+	font-weight: bold;
+	color: #000;
+	margin-left: 5px;
+	font-size: 15px;
+   }
+   
+	.search_box{
+		background: #eeeeee;
+		display: flex;
+		padding: 10px 12px 0 12px;
+		.van-dropdown-menu{
+			height: 48px;
+			width: 32%;
+		}
+		.van-dropdown-menu__bar{
+			border-radius: 6px 0 0 6px;
+			.van-dropdown-menu__title{
+				padding-left: 0;
+			}
+		}
+		.van-search {
+			width: 100%;
+			border-radius: 0 6px 6px 0;
+			padding: 7px 4px;
+			height: 48px;
+			.name_s{
+				background: #0252ff;
+				padding: 0px 4px;
+				border-radius: 6px;
+				color: #fff;
+				width: 50px;
+				text-align: center;
+			}
+		
+		}
+	}
+}

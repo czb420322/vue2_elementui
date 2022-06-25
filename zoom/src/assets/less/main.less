@@ -1,0 +1,68 @@
+.required {
+    .van-field__label{
+        display: flex;
+    }
+    .van-cell__title {
+        span {
+            position: relative;
+        }
+
+        span::before {
+            position : absolute;
+            right    : -8px;
+            color    : #ee0a24;
+            font-size: 16px;
+            content  : '*';
+        }
+    }
+}
+
+.my-empty {
+    margin: auto;
+}
+
+.cdropdown-menu {
+    background: transparent;
+
+    .van-dropdown-menu__bar {
+        background-color: transparent;
+    }
+
+    .van-dropdown-menu__title {
+        color: #fff;
+    }
+
+    .titleclass {
+        color: #fff
+    }
+}
+
+#app.iosSystem {
+    .van-nav-bar {
+        margin-top: 32px;
+    }
+
+    .van-nav-bar ::after {
+        position        : absolute;
+        top             : -32px;
+        left            : 0;
+        right           : 0;
+        content         : ' ';
+        height          : 32px;
+       // background-color: #0252ff;
+    }
+
+    #index-page .gr_top {
+        top: 32px;
+    }
+
+    #my-page .my_top {
+        padding-top: 32px;
+    }
+    .teamPage{
+        margin-top: 69px;
+    }
+    // .page-group{
+    //     top: 24px;
+    // }
+}

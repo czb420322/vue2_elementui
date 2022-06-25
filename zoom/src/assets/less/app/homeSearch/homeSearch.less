@@ -1,0 +1,133 @@
+@charset "utf-8";
+
+p {
+	margin: 0;
+}
+
+.homeSearch {
+	margin-top: 45px;
+
+	.tabs-box {
+		background-color: #0252ff;
+		margin: auto;
+
+		.van-tabs {
+			width: 68%;
+			margin: auto;
+		}
+
+		.van-tabs__line {
+			width: 1.25em !important;
+			background-color: white;
+			bottom: 20px;
+		}
+
+		.van-tab--active {
+			font-weight: normal;
+		}
+	}
+
+	.list-box {
+		.item {
+			.desc-box {
+				display: flex;
+				flex-wrap: wrap;
+				opacity: .5;
+                margin-top: 5px;
+
+			}
+
+			.name {
+				display: flex;
+				margin: 0;
+				padding: 0.5rem;
+				align-items: center;
+				align-content: center;
+
+				.icon {
+					display: block;
+					width: 1rem;
+					margin-right: 0.2rem;
+				}
+			}
+
+			.van-card__title {
+				font-size: 16px;
+				color: #333;
+				margin: 6px 0 4px;
+				font-weight: bold;
+				line-height: 1.1em;
+			}
+
+			.tag {
+				margin:  .2rem 0 0;
+				.van-tag--default.van-tag--plain{
+					margin: .2rem .4rem .2rem 0;
+				}
+			}
+
+			.list-content {
+				display: flex;
+				justify-content: space-between;
+				margin-top: 4px;
+				.price {
+					color: #fb7125;
+					font-size: .75rem;
+					font-weight: bold;
+
+					span {
+						font-size: 1.1rem;
+						font-weight: bold;
+					}
+				}
+
+				.add_bar {
+					display: flex;
+					align-items: center;
+					font-size: .75rem;
+					color: #fb7125;
+
+					.drill {
+						display: block;
+						width: 1em;
+					}
+
+					.saleDesc {
+						display: flex;
+						align-items: center;
+					}
+				}
+			}
+			.van-card{
+				background-color: #fbfbfb;
+				padding: 0 16px;
+			}
+
+			.van-card:not(:first-child) {
+				margin-top: 10px;
+			}
+
+			// .van-card:not(:first-child)::after {
+			// 	position: absolute;
+			// 	box-sizing: border-box;
+			// 	content: ' ';
+			// 	pointer-events: none;
+			// 	top: -50%;
+			// 	right: -50%;
+			// 	bottom: -50%;
+			// 	left: -50%;
+			// 	border: 0 solid #ebedf0;
+			// 	-webkit-transform: scale(0.5);
+			// 	transform: scale(0.5);
+			// 	border-width: 1px 0;
+			// }
+		}
+	}
+
+	p.tip {
+		color: #999;
+		text-align: center;
+		font-size: 14px;
+		padding-top: 20px;
+	}
+}
